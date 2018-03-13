@@ -86,7 +86,7 @@ def set_dirs(arglist):
     if arglist.display:
         return
 
-    exp_dir = './experiments'
+    exp_dir = './exp_results'
     if arglist.exp_name is None:
         arglist.exp_name = 'exp_' + arglist.scenario + '_' + time.strftime("%d-%m-%Y_%H-%M-%S")
     exp_dir = osp.join(exp_dir, arglist.exp_name)
