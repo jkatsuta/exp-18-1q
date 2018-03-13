@@ -235,7 +235,7 @@ def train(arglist):
                 save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
 
             # saves final episode reward for plotting training curve later
-            if len(episode_rewards) > arglist.num_episodes:
+            if len(episode_rewards) >= arglist.num_episodes:
                 save_model(saver, arglist, episode_rewards)
                 save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
                 print('...Finished total of {} episodes.'.format(len(episode_rewards)))
