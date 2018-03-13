@@ -155,7 +155,7 @@ def train(arglist):
         final_ep_rewards = []  # sum of rewards for training curve
         final_ep_ag_rewards = []  # agent rewards for training curve
         agent_info = [[[]]]  # placeholder for benchmarking info
-        saver = tf.train.Saver()
+        saver = tf.train.Saver(max_to_keep=None)
         obs_n = env.reset()
         episode_step = 0
         train_step = 0
@@ -222,7 +222,8 @@ def train(arglist):
                 loss = agent.update(trainers, train_step)
 
             # save model, display training output
-            if terminal and (len(episode_rewards) % arglist.save_rate == 0):
+            n_episode = len(episode_rewards)
+            if terminal and (n_episode % arglist.save_rate == 0):
                 # print statement depends on whether or not there are adversaries
                 print_reward(num_adversaries, train_step, agent_rewards,
                              episode_rewards, arglist.save_rate, t_start)
@@ -231,11 +232,13 @@ def train(arglist):
                 final_ep_rewards.append(np.mean(episode_rewards[-arglist.save_rate:]))
                 final_ep_ag_rewards.append([np.mean(rew[-arglist.save_rate:])
                                             for rew in agent_rewards])
-                save_model(saver, arglist, episode_rewards)
                 save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
+                if ((n_episode < arglist.save_rate * 10) or
+                    (n_episode % (arglist.save_rate * 10) == 0)):
+                    save_model(saver, arglist, episode_rewards)
 
             # saves final episode reward for plotting training curve later
-            if len(episode_rewards) >= arglist.num_episodes:
+            if n_episode >= arglist.num_episodes:
                 save_model(saver, arglist, episode_rewards)
                 save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
                 print('...Finished total of {} episodes.'.format(len(episode_rewards)))

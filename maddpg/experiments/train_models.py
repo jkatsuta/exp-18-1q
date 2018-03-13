@@ -7,5 +7,5 @@ num_episode = 60000
 
 for scenario in scenarios:
     print(scenario)
-    os.system('python train.py --scenario %s --num-episode %d'
+    os.system('python train.py --scenario %s --num-episode %d &'
               % (scenario, num_episode))
