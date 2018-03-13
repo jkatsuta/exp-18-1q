@@ -233,8 +233,9 @@ def train(arglist):
                 final_ep_ag_rewards.append([np.mean(rew[-arglist.save_rate:])
                                             for rew in agent_rewards])
                 save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
+                # thin out the saved models; 10 and 5 can be any int values.
                 if ((n_episode < arglist.save_rate * 10) or
-                    (n_episode % (arglist.save_rate * 10) == 0)):
+                    (n_episode % (arglist.save_rate * 5) == 0)):
                     save_model(saver, arglist, episode_rewards)
 
             # saves final episode reward for plotting training curve later
