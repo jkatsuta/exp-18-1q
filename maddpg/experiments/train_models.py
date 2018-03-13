@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os
-scenarios = ['simple', 'simple_adversary']
+scenarios = ['simple', 'simple_adversary', 'simple_speaker_listener']
 num_episode = 10000
 
 for scenario in scenarios:
