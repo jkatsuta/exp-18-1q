@@ -316,7 +316,11 @@ def make_pdtype(ac_space):
         return SoftCategoricalPdType(ac_space.n)
     elif isinstance(ac_space, spaces.MultiDiscrete):
         #return MultiCategoricalPdType(ac_space.low, ac_space.high)
-        return SoftMultiCategoricalPdType(ac_space.low, ac_space.high)
+        # return SoftMultiCategoricalPdType(ac_space.low, ac_space.high)
+        # JK mod
+        low = np.zeros_like(ac_space.nvec)
+        hig = ac_space.nvec - 1
+        return SoftMultiCategoricalPdType(low, hig)
     elif isinstance(ac_space, spaces.MultiBinary):
         return BernoulliPdType(ac_space.n)
     else:

@@ -57,7 +57,9 @@ class MultiAgentEnv(gym.Env):
             if len(total_action_space) > 1:
                 # all action spaces are discrete, so simplify to MultiDiscrete action space
                 if all([isinstance(act_space, spaces.Discrete) for act_space in total_action_space]):
-                    act_space = spaces.MultiDiscrete([[0,act_space.n-1] for act_space in total_action_space])
+                    # act_space = spaces.MultiDiscrete([[0,act_space.n-1] for act_space in total_action_space])
+                    # JK mod
+                    act_space = spaces.MultiDiscrete([act_space.n for act_space in total_action_space])
                 else:
                     act_space = spaces.Tuple(total_action_space)
                 self.action_space.append(act_space)
@@ -146,9 +148,11 @@ class MultiAgentEnv(gym.Env):
         # process action
         if isinstance(action_space, spaces.MultiDiscrete):
             act = []
-            size = action_space.high - action_space.low + 1
             index = 0
-            for s in size:
+            # JK mod
+            # size = action_space.high - action_space.low + 1
+            # for s in size:
+            for s in action_space.nvec:
                 act.append(action[index:(index+s)])
                 index += s
             action = act
