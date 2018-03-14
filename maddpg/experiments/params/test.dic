@@ -1,0 +1,5 @@
+{
+'scenarios': ['simple_world_comm'],
+'num_episodes': 2000,
+'is_parallel': False,
+}

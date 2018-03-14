@@ -43,7 +43,7 @@ def parse_args():
     # JK
     parser.add_argument("--video-record", action="store_true", default=False, help='if ture, record a video')
     parser.add_argument("--video-file-name", type=str, default=None)
-    parser.add_argument("--video-frames-per-second", type=int, default=7, help='only used on the video recording')
+    parser.add_argument("--video-frames-per-second", type=int, default=10, help='only used on the video recording')
     return parser.parse_args()
 
 
@@ -136,7 +136,7 @@ def save_curves(final_ep_rewards, final_ep_ag_rewards, arglist):
             .format('step', *(tuple(['agent%d_rew' % i for i in range(n_agents)]))).rstrip(', ')
         g.write(header + '\n')
         for i, v in enumerate(final_ep_ag_rewards, 1):
-            g.write(('{}, ' * (len(v) + 1)).format(i * arglist.save_rate, *v)[:-1] + '\n')
+            g.write(('{}, ' * (len(v) + 1)).format(i * arglist.save_rate, *v).rstrip(', ') + '\n')
 
 
 def train(arglist):
