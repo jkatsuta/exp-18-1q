@@ -11,6 +11,8 @@ import maddpg.common.tf_util as U
 from maddpg.trainer.maddpg import MADDPGAgentTrainer
 import tensorflow.contrib.layers as layers
 
+from gym.wrappers.monitoring import video_recorder as gvr
+
 
 def parse_args():
     parser = argparse.ArgumentParser("Reinforcement Learning experiments for multiagent environments")
@@ -38,6 +40,10 @@ def parse_args():
     parser.add_argument("--benchmark-iters", type=int, default=100000, help="number of iterations run for benchmarking")
     parser.add_argument("--benchmark-dir", type=str, default="./benchmark_files/", help="directory where benchmark data is saved")
     parser.add_argument("--plots-dir", type=str, default=None, help="directory where plot data is saved")
+    # JK
+    parser.add_argument("--video-record", action="store_true", default=False, help='if ture, record a video')
+    parser.add_argument("--video-file-name", type=str, default=None)
+    parser.add_argument("--video-frames-per-second", type=int, default=7, help='only used on the video recording')
     return parser.parse_args()
 
 
@@ -88,7 +94,7 @@ def set_dirs(arglist):
 
     exp_dir = './exp_results'
     if arglist.exp_name is None:
-        arglist.exp_name = 'exp_' + arglist.scenario + '_' + time.strftime("%d-%m-%Y_%H-%M-%S")
+        arglist.exp_name = arglist.scenario + '__' + time.strftime("%Y-%m-%d-_%H-%M-%S")
     exp_dir = osp.join(exp_dir, arglist.exp_name)
 
     if arglist.plots_dir is None:
@@ -119,20 +125,26 @@ def save_model(saver, arglist, episode_rewards):
 def save_curves(final_ep_rewards, final_ep_ag_rewards, arglist):
     rew_file_name = osp.join(arglist.plots_dir, 'rewards.csv')
     with open(rew_file_name, 'w') as g:
+        g.write('step, total_reward\n')
         for i, v in enumerate(final_ep_rewards, 1):
-            g.write('%d %f\n' % (i * arglist.save_rate, v))
+            g.write('%d, %f\n' % (i * arglist.save_rate, v))
 
     agrew_file_name = osp.join(arglist.plots_dir, 'agents_rewards.csv')
     with open(agrew_file_name, 'w') as g:
+        n_agents = len(final_ep_ag_rewards[0])
+        header = ('{}, ' * (n_agents + 1))\
+            .format('step', *(tuple(['agent%d_rew' % i for i in range(n_agents)]))).rstrip(', ')
+        g.write(header + '\n')
         for i, v in enumerate(final_ep_ag_rewards, 1):
-            g.write(('{} ' * (len(v) + 1)).format(i * arglist.save_rate, *v) + '\n')
+            g.write(('{}, ' * (len(v) + 1)).format(i * arglist.save_rate, *v)[:-1] + '\n')
 
 
 def train(arglist):
     set_dirs(arglist)
-    with U.single_threaded_session():
+    # with U.single_threaded_session():
+    with tf.Session():
         # Create environment
-        env = make_env(arglist.scenario, arglist, arglist.benchmark)  # XXXXXXXXXX, what is env.n?
+        env = make_env(arglist.scenario, arglist, arglist.benchmark)
         # Create agent trainers
         obs_shape_n = [env.observation_space[i].shape for i in range(env.n)]
         num_adversaries = min(env.n, arglist.num_adversaries)
@@ -161,7 +173,12 @@ def train(arglist):
         train_step = 0
         t_start = time.time()
 
-        print('Starting iterations...')
+        if arglist.video_record:
+            env.metadata['video.frames_per_second'] = arglist.video_frames_per_second
+            recorder = gvr.VideoRecorder(env, arglist.video_file_name, enabled=True)
+
+        if arglist.exp_name is not None:
+            print('Starting iterations of %s...' % arglist.exp_name)
         while True:
             # get action
             action_n = [agent.action(obs) for agent, obs in zip(trainers,obs_n)]
@@ -183,8 +200,11 @@ def train(arglist):
                 if arglist.display:
                     print_reward(num_adversaries, train_step, agent_rewards,
                                  episode_rewards, 1, t_start)
-                    # print(episode_rewards)
                     t_start = time.time()
+                    if len(episode_rewards) >= arglist.num_episodes:
+                        if arglist.video_record:
+                            recorder.env.close()
+                        break
 
                 obs_n = env.reset()
                 episode_step = 0
@@ -210,8 +230,11 @@ def train(arglist):
 
             # for displaying learned policies
             if arglist.display:
-                time.sleep(0.1)
-                env.render()
+                time.sleep(0.05)
+                if arglist.video_record:
+                    recorder.capture_frame()
+                else:
+                    env.render()
                 continue
 
             # update all trainers, if not in display or benchmark mode

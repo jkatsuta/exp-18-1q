@@ -1,0 +1,7 @@
+{
+'scenarios': ['simple', 'simple_adversary', 'simple_crypto',
+              'simple_push', 'simple_reference', 'simple_speaker_listener',
+              'simple_spread', 'simple_tag', 'simple_world_comm'],
+'num_episodes': 60000,
+'is_parallel': True,
+}

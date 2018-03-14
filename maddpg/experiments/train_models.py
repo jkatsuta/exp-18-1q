@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 import os
-scenarios = ['simple', 'simple_adversary', 'simple_crypto',
-             'simple_push', 'simple_reference', 'simple_speaker_listener',
-             'simple_spread', 'simple_tag', 'simple_world_comm']
-num_episode = 60000
+import sys
 
-for scenario in scenarios:
-    print(scenario)
-    os.system('python train.py --scenario %s --num-episode %d &'
-              % (scenario, num_episode))
+params = eval(open(sys.argv[1]).read())
+
+for scenario in params['scenarios']:
+    com = 'python train.py --scenario %s --num-episodes %d'\
+        % (scenario, params['num_episodes'])
+    if params['is_parallel']:
+        com += ' &'
+    os.system(com)
+    # print(com)

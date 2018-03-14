@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 import os
-import sys
 import re
+import argparse
+import os.path as osp
 
 
-def get_scenario_name(model):
+def _get_scenario_of_oldexp(model):
     repat = re.compile('^exp_([!-~]+)_\d{2}-\d{2}-\d{4}_\d{2}-\d{2}-\d{2}$')
     for dir_name in model.split('/'):
         m = repat.match(dir_name)
@@ -13,8 +14,49 @@ def get_scenario_name(model):
             return scenario_name
 
 
-trained_model = sys.argv[1]
-scenario = get_scenario_name(trained_model)
+def _get_scenario_of_newexp(model):
+    for dir_name in model.split('/'):
+        if dir_name.find('__') > 0:
+            scenario_name = dir_name.split('__')[0]
+            return scenario_name
 
-os.system('python train.py --display --scenario %s --load-model %s'
-          % (scenario, trained_model))
+
+def get_scenario_name(model):
+    if model.find('__') > 0:
+        return _get_scenario_of_newexp(model)
+    else:
+        return _get_scenario_of_oldexp(model)
+
+
+def _get_video_dir(model):
+    video_dir = osp.dirname(model)
+    if osp.dirname(video_dir):
+        video_dir = osp.dirname(video_dir)
+    return osp.join(video_dir, 'videos')
+
+
+def get_video_file_name(model):
+    video_dir = _get_video_dir(model)
+    if not osp.exists(video_dir):
+        os.makedirs(video_dir)
+    n_iter = model.split('-')[-1]
+    return osp.join(video_dir, 'video-%s.mp4' % n_iter)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser('Play trained model of MADDPG')
+    parser.add_argument('--model', type=str, default=None)
+    parser.add_argument('--num-episodes', type=int, default=5, help='number of episodes')
+    parser.add_argument('--skip-video-record', action='store_true', default=False)
+    args = parser.parse_args()
+
+    trained_model = args.model
+    scenario = get_scenario_name(trained_model)
+    video_file_name = get_video_file_name(trained_model)
+
+    com = 'python train.py --display --num-episodes %d ' % args.num_episodes
+    com += '--scenario %s --load-model %s ' % (scenario, trained_model)
+    if not args.skip_video_record:
+        com += '--video-record --video-file-name %s ' % video_file_name
+    os.system(com)
+    # print(com)
