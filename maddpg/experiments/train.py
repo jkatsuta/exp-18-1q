@@ -235,7 +235,7 @@ def train(arglist):
                     recorder.capture_frame()
                 else:
                     env.render()
-                continue
+                continue  # <- In the dispaly mode, no training (we don't go down from here)
 
             # update all trainers, if not in display or benchmark mode
             loss = None
