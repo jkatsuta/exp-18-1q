@@ -47,6 +47,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser('Play trained model of MADDPG')
     parser.add_argument('--model', type=str, default=None)
     parser.add_argument('--num-episodes', type=int, default=5, help='number of episodes')
+    parser.add_argument("--max-episode-len", type=int, default=25, help="maximum episode length")
     parser.add_argument('--skip-video-record', action='store_true', default=False)
     args = parser.parse_args()
 
@@ -56,6 +57,7 @@ if __name__ == '__main__':
 
     com = 'python train.py --display --num-episodes %d ' % args.num_episodes
     com += '--scenario %s --load-model %s ' % (scenario, trained_model)
+    com += '--max-episode-len %d ' % args.max_episode_len
     if not args.skip_video_record:
         com += '--video-record --video-file-name %s ' % video_file_name
     os.system(com)

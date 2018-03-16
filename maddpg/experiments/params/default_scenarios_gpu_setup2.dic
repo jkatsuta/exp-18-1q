@@ -1,6 +1,6 @@
 {
 'scenarios': ['simple_tag', 'simple_world_comm'],
-'num_episodes': 5000,
-'max_episode_len': 400,
+'num_episodes': [60000, 40000],
+'max_episode_lens': [50, 100],
 'is_parallel': False,
 }
