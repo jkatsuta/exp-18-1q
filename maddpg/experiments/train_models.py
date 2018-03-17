@@ -14,5 +14,5 @@ for scenario in params['scenarios']:
         com += '--max-episode-len %d ' % max_episode_len
         if params['is_parallel']:
             com += ' &'
-        # os.system(com)
-        print(com)
+        os.system(com)
+        #print(com)
