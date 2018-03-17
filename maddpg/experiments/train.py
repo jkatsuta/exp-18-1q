@@ -138,7 +138,7 @@ def save_curves(n_episode, train_step,
         # for i, v in enumerate(final_ep_rewards, 1):
         g.write('%d, %d, %f\n' % (n_episode, train_step, final_ep_reward))
 
-    with open(agrew_file_name, 'w') as g:
+    with open(agrew_file_name, 'a') as g:
         n_agents = len(final_ep_ag_reward)
         if is_first_save:
             agent_names = ['agent%d_rew' % i for i in range(n_agents)]
