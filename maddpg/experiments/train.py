@@ -43,7 +43,7 @@ def parse_args():
     # JK
     parser.add_argument("--video-record", action="store_true", default=False, help='if ture, record a video')
     parser.add_argument("--video-file-name", type=str, default=None)
-    parser.add_argument("--video-frames-per-second", type=int, default=10, help='only used on the video recording')
+    parser.add_argument("--video-frames-per-second", type=int, default=20, help='only used on the video recording')
     return parser.parse_args()
 
 
@@ -94,7 +94,7 @@ def set_dirs(arglist):
 
     exp_dir = './exp_results'
     if arglist.exp_name is None:
-        arglist.exp_name = arglist.scenario + '__' + time.strftime("%Y-%m-%d-_%H-%M-%S")
+        arglist.exp_name = arglist.scenario + '__' + time.strftime("%Y-%m-%d_%H-%M-%S")
     exp_dir = osp.join(exp_dir, arglist.exp_name)
 
     if arglist.plots_dir is None:
@@ -175,6 +175,7 @@ def train(arglist):
 
         if arglist.video_record:
             env.metadata['video.frames_per_second'] = arglist.video_frames_per_second
+            print(env.metadata['video.frames_per_second'])
             recorder = gvr.VideoRecorder(env, arglist.video_file_name, enabled=True)
 
         if arglist.exp_name is not None:
@@ -230,14 +231,14 @@ def train(arglist):
 
             # for displaying learned policies
             if arglist.display:
-                time.sleep(0.05)
+                time.sleep(0.01)
                 if arglist.video_record:
                     recorder.capture_frame()
                 else:
                     env.render()
                 if True:
                     for i, agent in enumerate(trainers):
-                        print(i, rew_n[i])
+                        print(i, obs_n[i], rew_n[i])
                 continue  # <- In the dispaly mode, no training (we don't go down from here)
 
             # update all trainers, if not in display or benchmark mode
