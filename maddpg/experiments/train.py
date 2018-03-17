@@ -6,6 +6,7 @@ import tensorflow as tf
 import time
 import pickle
 import os.path as osp
+import math
 
 import maddpg.common.tf_util as U
 from maddpg.trainer.maddpg import MADDPGAgentTrainer
@@ -44,7 +45,7 @@ def parse_args():
     parser.add_argument("--video-record", action="store_true", default=False, help='if ture, record a video')
     parser.add_argument("--video-file-name", type=str, default=None)
     parser.add_argument("--video-frames-per-second", type=int, default=20, help='only used on the video recording')
-    parser.add_argument("--variable-max-episode-len", action="store_true", default=False)
+    parser.add_argument("--dic-variable-max-episode-len", type=str, default='{}')
     return parser.parse_args()
 
 
@@ -123,44 +124,47 @@ def save_model(saver, arglist, episode_rewards):
     U.save_state(saved_model, saver=saver)
 
 
-def save_curves(final_ep_rewards, final_ep_ag_rewards, arglist):
+def save_curves(n_episode, train_step,
+                final_ep_reward, final_ep_ag_reward, arglist):
     rew_file_name = osp.join(arglist.plots_dir, 'rewards.csv')
-    with open(rew_file_name, 'w') as g:
-        g.write('step, total_reward\n')
-        for i, v in enumerate(final_ep_rewards, 1):
-            g.write('%d, %f\n' % (i * arglist.save_rate, v))
-
     agrew_file_name = osp.join(arglist.plots_dir, 'agents_rewards.csv')
+    is_first_save = False
+    if not osp.exists(rew_file_name):
+        is_first_save = True
+
+    with open(rew_file_name, 'a') as g:
+        if is_first_save:
+            g.write('episode, step, total_reward\n')
+        # for i, v in enumerate(final_ep_rewards, 1):
+        g.write('%d, %d, %f\n' % (n_episode, train_step, final_ep_reward))
+
     with open(agrew_file_name, 'w') as g:
-        n_agents = len(final_ep_ag_rewards[0])
-        header = ('{}, ' * (n_agents + 1))\
-            .format('step', *(tuple(['agent%d_rew' % i for i in range(n_agents)]))).rstrip(', ')
-        g.write(header + '\n')
-        for i, v in enumerate(final_ep_ag_rewards, 1):
-            g.write(('{}, ' * (len(v) + 1)).format(i * arglist.save_rate, *v).rstrip(', ') + '\n')
-
-dic_par = dict(min_max_episode_len=25,
-               max_max_episode_len=200,
-               change_period=5.0e+5)
-
-def get_min_max_episode_len():
-    return dic_par['min_max_episode_len']
+        n_agents = len(final_ep_ag_reward)
+        if is_first_save:
+            agent_names = ['agent%d_rew' % i for i in range(n_agents)]
+            header = ('{}, ' * (n_agents + 2))\
+                .format('episode', 'step', *(agent_names)).rstrip(', ')
+            g.write(header + '\n')
+        # for i, v in enumerate(final_ep_ag_rewards, 1):
+        g.write(('{}, ' * (n_agents + 2)).format(n_episode, train_step,
+                                                 *final_ep_ag_reward).rstrip(', ') + '\n')
 
 
-def get_variable_max_episode_len(train_step):
-    min_max_episode_len = dic_par['min_max_episode_len']
-    max_max_episode_len = dic_par['max_max_episode_len']
-    change_period = dic_par['change_period']
+def get_min_max_episode_len(dic):
+    return dic['min_max_episode_len']
 
-    delta = (max_max_episode_len - min_max_episode_len)
-    max_episode_len = min_max_episode_len + delta * (train_step / change_period)
-    return int(min(max_episode_len, max_max_episode_len))
+
+def get_variable_max_episode_len(dic, n_episode):
+    max_episode_len = dic['min_max_episode_len']\
+        * np.power(2, n_episode / dic['twice_episodes'])
+    return int(min(max_episode_len, dic['max_max_episode_len']))
 
 
 def train(arglist):
     set_dirs(arglist)
-    if arglist.variable_max_episode_len:
-        arglist.max_episode_len = get_min_max_episode_len()
+    dic_par_var_epi_len = eval(arglist.dic_variable_max_episode_len)
+    if len(dic_par_var_epi_len):
+        arglist.max_episode_len = get_min_max_episode_len(dic_par_var_epi_len)
     max_episode_len = arglist.max_episode_len
     # with U.single_threaded_session():
     with tf.Session():
@@ -219,13 +223,15 @@ def train(arglist):
                 agent_rewards[i][-1] += rew
 
             if done or terminal:
-                if arglist.variable_max_episode_len:
-                    max_episode_len = get_variable_max_episode_len(train_step)
+                n_episode = len(episode_rewards)
+                if len(dic_par_var_epi_len):
+                    max_episode_len =\
+                        get_variable_max_episode_len(dic_par_var_epi_len, n_episode)
                 if arglist.display:
                     print_reward(num_adversaries, train_step, agent_rewards,
                                  episode_rewards, 1, t_start)
                     t_start = time.time()
-                    if len(episode_rewards) >= arglist.num_episodes:
+                    if n_episode >= arglist.num_episodes:
                         if arglist.video_record:
                             recorder.env.close()
                         break
@@ -274,6 +280,7 @@ def train(arglist):
             # save model, display training output
             n_episode = len(episode_rewards)
             if terminal and (n_episode % arglist.save_rate == 0):
+                print(n_episode, max_episode_len)
                 # print statement depends on whether or not there are adversaries
                 print_reward(num_adversaries, train_step, agent_rewards,
                              episode_rewards, arglist.save_rate, t_start)
@@ -282,7 +289,8 @@ def train(arglist):
                 final_ep_rewards.append(np.mean(episode_rewards[-arglist.save_rate:]))
                 final_ep_ag_rewards.append([np.mean(rew[-arglist.save_rate:])
                                             for rew in agent_rewards])
-                save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
+                save_curves(n_episode, train_step,
+                            final_ep_rewards[-1], final_ep_ag_rewards[-1], arglist)
                 # thin out the saved models; 10 and 5 can be any int values.
                 if ((n_episode < arglist.save_rate * 10) or
                     (n_episode % (arglist.save_rate * 5) == 0)):

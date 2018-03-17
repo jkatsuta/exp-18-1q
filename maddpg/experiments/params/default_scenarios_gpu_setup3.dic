@@ -1,5 +1,0 @@
-{
-'scenarios': ['simple_tag'],
-'num_episodes': [40000],
-'is_parallel': False,
-}
