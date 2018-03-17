@@ -35,12 +35,16 @@ def _get_video_dir(model):
     return osp.join(video_dir, 'videos')
 
 
-def get_video_file_name(model):
+def get_video_file_name(model, suffix):
     video_dir = _get_video_dir(model)
     if not osp.exists(video_dir):
         os.makedirs(video_dir)
     n_iter = model.split('-')[-1]
-    return osp.join(video_dir, 'video-%s.mp4' % n_iter)
+    if suffix is None:
+        basename = 'video-%s.mp4' % n_iter
+    else:
+        basename = 'video-%s_%s.mp4' % (n_iter, suffix)
+    return osp.join(video_dir, basename)
 
 
 if __name__ == '__main__':
@@ -49,11 +53,12 @@ if __name__ == '__main__':
     parser.add_argument('--num-episodes', type=int, default=5, help='number of episodes')
     parser.add_argument("--max-episode-len", type=int, default=25, help="maximum episode length")
     parser.add_argument('--skip-video-record', action='store_true', default=False)
+    parser.add_argument('--outfile-suffix', type=str, default=None)
     args = parser.parse_args()
 
     trained_model = args.model
     scenario = get_scenario_name(trained_model)
-    video_file_name = get_video_file_name(trained_model)
+    video_file_name = get_video_file_name(trained_model, args.outfile_suffix)
 
     com = 'python train.py --display --num-episodes %d ' % args.num_episodes
     com += '--scenario %s --load-model %s ' % (scenario, trained_model)

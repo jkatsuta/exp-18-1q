@@ -139,6 +139,16 @@ def save_curves(final_ep_rewards, final_ep_ag_rewards, arglist):
             g.write(('{}, ' * (len(v) + 1)).format(i * arglist.save_rate, *v).rstrip(', ') + '\n')
 
 
+def get_max_episode_len(train_step):
+    min_max_episode_len = 25
+    max_max_episode_len = 200
+    change_period = 5.0e+5
+
+    delta = (max_max_episode_len - min_max_episode_len)
+    max_episode_len = min_max_episode_len + delta * (train_step / change_period)
+    return int(min(max_episode_len, max_max_episode_len))
+
+
 def train(arglist):
     set_dirs(arglist)
     # with U.single_threaded_session():
@@ -175,19 +185,21 @@ def train(arglist):
 
         if arglist.video_record:
             env.metadata['video.frames_per_second'] = arglist.video_frames_per_second
-            print(env.metadata['video.frames_per_second'])
             recorder = gvr.VideoRecorder(env, arglist.video_file_name, enabled=True)
 
         if arglist.exp_name is not None:
             print('Starting iterations of %s...' % arglist.exp_name)
         while True:
+            max_episode_len = get_max_episode_len(train_step)
+
             # get action
             action_n = [agent.action(obs) for agent, obs in zip(trainers,obs_n)]
             # environment step
             new_obs_n, rew_n, done_n, info_n = env.step(action_n)
             episode_step += 1
             done = all(done_n)
-            terminal = (episode_step >= arglist.max_episode_len)
+            # terminal = (episode_step >= arglist.max_episode_len)
+            terminal = (episode_step >= max_episode_len)
             # collect experience
             for i, agent in enumerate(trainers):
                 agent.experience(obs_n[i], action_n[i], rew_n[i], new_obs_n[i], done_n[i], terminal)
@@ -236,9 +248,9 @@ def train(arglist):
                     recorder.capture_frame()
                 else:
                     env.render()
-                if True:
-                    for i, agent in enumerate(trainers):
-                        print(i, obs_n[i], rew_n[i])
+                # if True:
+                    # for i, agent in enumerate(trainers):
+                        # print(i, obs_n[i], rew_n[i])
                 continue  # <- In the dispaly mode, no training (we don't go down from here)
 
             # update all trainers, if not in display or benchmark mode
