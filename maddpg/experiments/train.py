@@ -44,6 +44,7 @@ def parse_args():
     parser.add_argument("--video-record", action="store_true", default=False, help='if ture, record a video')
     parser.add_argument("--video-file-name", type=str, default=None)
     parser.add_argument("--video-frames-per-second", type=int, default=20, help='only used on the video recording')
+    parser.add_argument("--variable-max-episode-len", action="store_true", default=False)
     return parser.parse_args()
 
 
@@ -138,11 +139,18 @@ def save_curves(final_ep_rewards, final_ep_ag_rewards, arglist):
         for i, v in enumerate(final_ep_ag_rewards, 1):
             g.write(('{}, ' * (len(v) + 1)).format(i * arglist.save_rate, *v).rstrip(', ') + '\n')
 
+dic_par = dict(min_max_episode_len=25,
+               max_max_episode_len=200,
+               change_period=5.0e+5)
 
-def get_max_episode_len(train_step):
-    min_max_episode_len = 25
-    max_max_episode_len = 200
-    change_period = 5.0e+5
+def get_min_max_episode_len():
+    return dic_par['min_max_episode_len']
+
+
+def get_variable_max_episode_len(train_step):
+    min_max_episode_len = dic_par['min_max_episode_len']
+    max_max_episode_len = dic_par['max_max_episode_len']
+    change_period = dic_par['change_period']
 
     delta = (max_max_episode_len - min_max_episode_len)
     max_episode_len = min_max_episode_len + delta * (train_step / change_period)
@@ -151,6 +159,9 @@ def get_max_episode_len(train_step):
 
 def train(arglist):
     set_dirs(arglist)
+    if arglist.variable_max_episode_len:
+        arglist.max_episode_len = get_min_max_episode_len()
+    max_episode_len = arglist.max_episode_len
     # with U.single_threaded_session():
     with tf.Session():
         # Create environment
@@ -190,8 +201,6 @@ def train(arglist):
         if arglist.exp_name is not None:
             print('Starting iterations of %s...' % arglist.exp_name)
         while True:
-            max_episode_len = get_max_episode_len(train_step)
-
             # get action
             action_n = [agent.action(obs) for agent, obs in zip(trainers,obs_n)]
             # environment step
@@ -210,6 +219,8 @@ def train(arglist):
                 agent_rewards[i][-1] += rew
 
             if done or terminal:
+                if arglist.variable_max_episode_len:
+                    max_episode_len = get_variable_max_episode_len(train_step)
                 if arglist.display:
                     print_reward(num_adversaries, train_step, agent_rewards,
                                  episode_rewards, 1, t_start)
