@@ -1,0 +1,239 @@
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:910] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX 1070
+major: 6 minor: 1 memoryClockRate (GHz) 1.683
+pciBusID 0000:01:00.0
+Total memory: 7.92GiB
+Free memory: 7.61GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Using good policy maddpg and adv policy maddpg
+Starting iterations of simple_tag__2018-03-18_00-16-15...
+1000 28
+steps: 26315, episodes: 1000, mean episode reward: -4.66944919075999, time: 57.601
+2000 32
+steps: 56591, episodes: 2000, mean episode reward: 0.3292696700238416, time: 91.146
+3000 37
+steps: 91477, episodes: 3000, mean episode reward: 10.715238278926398, time: 105.62
+4000 43
+steps: 131626, episodes: 4000, mean episode reward: 18.072989592972625, time: 121.502
+5000 49
+steps: 177788, episodes: 5000, mean episode reward: 43.900810930025095, time: 139.996
+6000 57
+steps: 230925, episodes: 6000, mean episode reward: 135.87189510306493, time: 161.721
+7000 65
+steps: 292007, episodes: 7000, mean episode reward: 169.16430701409615, time: 185.994
+8000 75
+steps: 362267, episodes: 8000, mean episode reward: 162.8544413693218, time: 214.176
+9000 87
+steps: 443035, episodes: 9000, mean episode reward: 74.59672733374153, time: 244.536
+10000 99
+steps: 535895, episodes: 10000, mean episode reward: 55.91712917966567, time: 279.634
+11000 114
+steps: 642641, episodes: 11000, mean episode reward: 53.37274974691352, time: 320.363
+12000 131
+steps: 765327, episodes: 12000, mean episode reward: 63.116341458571185, time: 368.012
+13000 151
+steps: 906336, episodes: 13000, mean episode reward: 89.44219347207523, time: 423.426
+14000 174
+steps: 1068379, episodes: 14000, mean episode reward: 43.28311303492066, time: 487.719
+15000 199
+steps: 1254599, episodes: 15000, mean episode reward: 90.40793600150873, time: 561.785
+16000 200
+steps: 1454598, episodes: 16000, mean episode reward: 273.9597243877696, time: 603.661
+17000 200
+steps: 1654598, episodes: 17000, mean episode reward: 231.14368551466615, time: 606.752
+18000 200
+steps: 1854598, episodes: 18000, mean episode reward: 151.7294511661085, time: 606.47
+19000 200
+steps: 2054598, episodes: 19000, mean episode reward: 168.5938172044115, time: 600.779
+20000 200
+steps: 2254598, episodes: 20000, mean episode reward: 121.0767358265398, time: 600.388
+21000 200
+steps: 2454598, episodes: 21000, mean episode reward: 146.97731468302857, time: 598.791
+22000 200
+steps: 2654598, episodes: 22000, mean episode reward: 133.55236343559977, time: 599.49
+23000 200
+steps: 2854598, episodes: 23000, mean episode reward: 141.45941284147622, time: 599.353
+24000 200
+steps: 3054598, episodes: 24000, mean episode reward: 154.43622682236034, time: 600.281
+25000 200
+steps: 3254598, episodes: 25000, mean episode reward: 173.53337804805733, time: 600.667
+26000 200
+steps: 3454598, episodes: 26000, mean episode reward: 195.95632678901697, time: 600.712
+27000 200
+steps: 3654598, episodes: 27000, mean episode reward: 237.72487124889037, time: 599.806
+28000 200
+steps: 3854598, episodes: 28000, mean episode reward: 213.86212482350308, time: 599.469
+29000 200
+steps: 4054598, episodes: 29000, mean episode reward: 184.33933662538354, time: 599.944
+30000 200
+steps: 4254598, episodes: 30000, mean episode reward: 190.49289631387143, time: 599.482
+31000 200
+steps: 4454598, episodes: 31000, mean episode reward: 190.22647802627907, time: 600.058
+32000 200
+steps: 4654598, episodes: 32000, mean episode reward: 142.69956029571262, time: 600.365
+33000 200
+steps: 4854598, episodes: 33000, mean episode reward: 193.42309782565775, time: 599.455
+34000 200
+steps: 5054598, episodes: 34000, mean episode reward: 234.23318093247858, time: 600.513
+35000 200
+steps: 5254598, episodes: 35000, mean episode reward: 221.04620875194533, time: 599.513
+36000 200
+steps: 5454598, episodes: 36000, mean episode reward: 221.3470343449174, time: 600.202
+37000 200
+steps: 5654598, episodes: 37000, mean episode reward: 214.6660367245599, time: 599.447
+38000 200
+steps: 5854598, episodes: 38000, mean episode reward: 155.99196377371928, time: 600.499
+39000 200
+steps: 6054598, episodes: 39000, mean episode reward: 152.6681651105759, time: 600.934
+40000 200
+steps: 6254598, episodes: 40000, mean episode reward: 86.43707092647338, time: 601.172
+Traceback (most recent call last):
+  File "train.py", line 309, in <module>
+    train(arglist)
+  File "train.py", line 302, in train
+    save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
+TypeError: save_curves() missing 2 required positional arguments: 'final_ep_ag_reward' and 'arglist'
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:910] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX 1070
+major: 6 minor: 1 memoryClockRate (GHz) 1.683
+pciBusID 0000:01:00.0
+Total memory: 7.92GiB
+Free memory: 7.61GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Using good policy maddpg and adv policy maddpg
+Starting iterations of simple_tag__2018-03-18_05-29-24...
+1000 26
+steps: 25408, episodes: 1000, mean episode reward: -0.8921720122811818, time: 54.296
+2000 28
+steps: 52660, episodes: 2000, mean episode reward: -1.5129226508551727, time: 82.304
+3000 30
+steps: 81885, episodes: 3000, mean episode reward: 9.58849034568575, time: 88.424
+4000 32
+steps: 113217, episodes: 4000, mean episode reward: 9.828588171310388, time: 94.871
+5000 35
+steps: 146916, episodes: 5000, mean episode reward: 32.99143140124751, time: 102.533
+6000 37
+steps: 182997, episodes: 6000, mean episode reward: 37.66014808642413, time: 109.728
+7000 40
+steps: 221756, episodes: 7000, mean episode reward: 24.067052394896322, time: 118.174
+8000 43
+steps: 263306, episodes: 8000, mean episode reward: 28.0467973399829, time: 126.556
+9000 46
+steps: 307869, episodes: 9000, mean episode reward: 26.58598356691703, time: 135.868
+10000 49
+steps: 355637, episodes: 10000, mean episode reward: 18.7130717192765, time: 145.504
+11000 53
+steps: 406940, episodes: 11000, mean episode reward: 14.819322111619938, time: 155.947
+12000 57
+steps: 461923, episodes: 12000, mean episode reward: 18.688211518957573, time: 165.665
+13000 61
+steps: 520889, episodes: 13000, mean episode reward: 27.228751765189003, time: 176.82
+14000 65
+steps: 584098, episodes: 14000, mean episode reward: 36.591662912873254, time: 189.397
+15000 70
+steps: 651925, episodes: 15000, mean episode reward: 56.79505815739703, time: 203.191
+16000 75
+steps: 724634, episodes: 16000, mean episode reward: 50.08125370523255, time: 218.061
+17000 81
+steps: 802600, episodes: 17000, mean episode reward: 24.557838784736546, time: 233.93
+18000 87
+steps: 886188, episodes: 18000, mean episode reward: 26.960414182420244, time: 250.937
+19000 93
+steps: 975835, episodes: 19000, mean episode reward: 60.311200032902185, time: 271.216
+20000 99
+steps: 1071923, episodes: 20000, mean episode reward: 64.56008109664674, time: 289.581
+21000 107
+steps: 1174970, episodes: 21000, mean episode reward: 83.43769487140413, time: 311.861
+22000 114
+steps: 1285436, episodes: 22000, mean episode reward: 113.46835414311299, time: 334.202
+23000 123
+steps: 1403866, episodes: 23000, mean episode reward: 106.83759232721275, time: 358.657
+24000 131
+steps: 1530832, episodes: 24000, mean episode reward: 111.30602886024903, time: 385.703
+25000 141
+steps: 1666959, episodes: 25000, mean episode reward: 111.16785032974198, time: 413.801
+26000 151
+steps: 1812882, episodes: 26000, mean episode reward: 97.74377690341962, time: 443.367
+27000 162
+steps: 1969314, episodes: 27000, mean episode reward: 98.51905094892314, time: 471.66
+28000 174
+steps: 2137004, episodes: 28000, mean episode reward: 117.89402076195108, time: 502.868
+29000 186
+steps: 2316778, episodes: 29000, mean episode reward: 139.89692571654797, time: 538.847
+30000 199
+steps: 2509476, episodes: 30000, mean episode reward: 187.36238921279858, time: 577.218
+31000 200
+steps: 2709475, episodes: 31000, mean episode reward: 198.2807823223194, time: 600.155
+32000 200
+steps: 2909475, episodes: 32000, mean episode reward: 166.4128391735205, time: 599.945
+33000 200
+steps: 3109475, episodes: 33000, mean episode reward: 137.89349768240598, time: 601.517
+34000 200
+steps: 3309475, episodes: 34000, mean episode reward: 159.47015464889625, time: 602.044
+35000 200
+steps: 3509475, episodes: 35000, mean episode reward: 173.13655381403927, time: 601.703
+36000 200
+steps: 3709475, episodes: 36000, mean episode reward: 161.64977204290477, time: 602.81
+37000 200
+steps: 3909475, episodes: 37000, mean episode reward: 159.06596970356253, time: 602.927
+38000 200
+steps: 4109475, episodes: 38000, mean episode reward: 225.25525524962438, time: 602.408
+39000 200
+steps: 4309475, episodes: 39000, mean episode reward: 237.26884844467608, time: 603.057
+40000 200
+steps: 4509475, episodes: 40000, mean episode reward: 240.19850032895638, time: 602.507
+Traceback (most recent call last):
+  File "train.py", line 309, in <module>
+    train(arglist)
+  File "train.py", line 302, in train
+    save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
+TypeError: save_curves() missing 2 required positional arguments: 'final_ep_ag_reward' and 'arglist'
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:910] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX 1070
+major: 6 minor: 1 memoryClockRate (GHz) 1.683
+pciBusID 0000:01:00.0
+Total memory: 7.92GiB
+Free memory: 7.61GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)

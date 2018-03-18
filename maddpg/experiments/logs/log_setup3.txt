@@ -256,3 +256,47 @@ Free memory: 7.60GiB
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+[<tf.Tensor 'agent_0_1/gradients/agent_0_1/split_grad/concat:0' shape=(?, 9) dtype=float32>, None, None]
+Using good policy maddpg and adv policy maddpg
+Starting iterations of simple_world_comm__2018-03-17-_06-33-56...
+steps: 99900, episodes: 1000, mean episode reward: -1347.2692940651652, time: 485.935
+steps: 199900, episodes: 2000, mean episode reward: -300.67706456417017, time: 669.126
+steps: 299900, episodes: 3000, mean episode reward: 63.7442748324303, time: 676.393
+steps: 399900, episodes: 4000, mean episode reward: 81.95541943088013, time: 677.224
+steps: 499900, episodes: 5000, mean episode reward: 105.80710065376651, time: 677.964
+steps: 599900, episodes: 6000, mean episode reward: 93.47740253205804, time: 678.931
+steps: 699900, episodes: 7000, mean episode reward: 88.99192600106356, time: 673.548
+steps: 799900, episodes: 8000, mean episode reward: 92.05639128752733, time: 667.802
+steps: 899900, episodes: 9000, mean episode reward: 105.5272634650002, time: 668.277
+steps: 999900, episodes: 10000, mean episode reward: 118.38143599923283, time: 669.932
+steps: 1099900, episodes: 11000, mean episode reward: 81.1526024939786, time: 670.301
+steps: 1199900, episodes: 12000, mean episode reward: 67.88602390232549, time: 670.662
+steps: 1299900, episodes: 13000, mean episode reward: 46.775509137034724, time: 671.061
+steps: 1399900, episodes: 14000, mean episode reward: 44.22138498731025, time: 671.934
+steps: 1499900, episodes: 15000, mean episode reward: 45.511301685557854, time: 672.666
+steps: 1599900, episodes: 16000, mean episode reward: 40.77719213736299, time: 675.047
+steps: 1699900, episodes: 17000, mean episode reward: 51.37917384229714, time: 676.535
+steps: 1799900, episodes: 18000, mean episode reward: 63.259901502406514, time: 677.914
+steps: 1899900, episodes: 19000, mean episode reward: 64.1347804553058, time: 679.785
+steps: 1999900, episodes: 20000, mean episode reward: 65.59937585171828, time: 680.452
+steps: 2099900, episodes: 21000, mean episode reward: 66.53373546786365, time: 680.42
+steps: 2199900, episodes: 22000, mean episode reward: 86.01164280734982, time: 679.361
+steps: 2299900, episodes: 23000, mean episode reward: 118.98794065754991, time: 679.157
+steps: 2399900, episodes: 24000, mean episode reward: 257.42630807364804, time: 679.554
+steps: 2499900, episodes: 25000, mean episode reward: 197.02197154616485, time: 680.463
+steps: 2599900, episodes: 26000, mean episode reward: 169.16439065393325, time: 680.892
+steps: 2699900, episodes: 27000, mean episode reward: 220.76959484167818, time: 681.293
+steps: 2799900, episodes: 28000, mean episode reward: 398.8260425060834, time: 680.885
+steps: 2899900, episodes: 29000, mean episode reward: 510.1418533199409, time: 682.071
+steps: 2999900, episodes: 30000, mean episode reward: 311.30922267576796, time: 681.881
+steps: 3099900, episodes: 31000, mean episode reward: 271.66299328891074, time: 682.194
+steps: 3199900, episodes: 32000, mean episode reward: 214.48944540984502, time: 682.545
+steps: 3299900, episodes: 33000, mean episode reward: 195.248363843497, time: 680.672
+steps: 3399900, episodes: 34000, mean episode reward: 189.48707634403183, time: 680.966
+steps: 3499900, episodes: 35000, mean episode reward: 194.63290128562463, time: 681.267
+steps: 3599900, episodes: 36000, mean episode reward: 186.50419349318378, time: 682.358
+steps: 3699900, episodes: 37000, mean episode reward: 164.91585842508078, time: 682.796
+steps: 3799900, episodes: 38000, mean episode reward: 182.87073521532932, time: 682.471
+steps: 3899900, episodes: 39000, mean episode reward: 172.2053145203406, time: 683.015
+steps: 3999900, episodes: 40000, mean episode reward: 163.53974894566508, time: 683.019
+...Finished total of 40000 episodes.
