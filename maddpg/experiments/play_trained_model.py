@@ -47,6 +47,18 @@ def get_video_file_name(model, suffix):
     return osp.join(video_dir, basename)
 
 
+def get_display_speed(key):
+    # ret value: n_per_frame, sleep_time
+    if key == 'slow':
+        return 10, 0.1
+    elif key == 'normal':
+        return 20, 0.03
+    elif key == 'high':
+        return 30, 0.01
+    else:
+        print('use slow/normal/high for display_speed.')
+        exit(1)
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Play trained model of MADDPG')
     parser.add_argument('--model', type=str, default=None)
@@ -54,6 +66,7 @@ if __name__ == '__main__':
     parser.add_argument("--max-episode-len", type=int, default=25, help="maximum episode length")
     parser.add_argument('--skip-video-record', action='store_true', default=False)
     parser.add_argument('--outfile-suffix', type=str, default=None)
+    parser.add_argument('--display-speed', type=str, default=None, help='slow/normal/high')
     args = parser.parse_args()
 
     trained_model = args.model
@@ -65,5 +78,9 @@ if __name__ == '__main__':
     com += '--max-episode-len %d ' % args.max_episode_len
     if not args.skip_video_record:
         com += '--video-record --video-file-name %s ' % video_file_name
+    if args.display_speed is not None:
+        frames_per_sec, sleep_time = get_display_speed(args.display_speed)
+        com += '--video-frames-per-second %d ' % frames_per_sec
+        com += '--display-sleep-second %f ' % sleep_time
     os.system(com)
     # print(com)

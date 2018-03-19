@@ -9,7 +9,8 @@ def _train_model(i_epi, scenario, num_episode, params, dic_var_epi_len):
     if len(dic_var_epi_len) > 0:
         com += '--dic-variable-max-episode-len "%s" ' % str(dic_var_epi_len)
     else:
-        com += '--max-episode-len %s ' % params['max_episode_lens'][i_epi]
+        if 'max_episode_lens' in params.keys():
+            com += '--max-episode-len %s ' % params['max_episode_lens'][i_epi]
     if params['is_parallel']:
         com += ' &'
     os.system(com)

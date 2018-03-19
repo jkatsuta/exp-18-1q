@@ -5,14 +5,16 @@ import os
 import tensorflow as tf
 import time
 import pickle
-import os.path as osp
-import math
 
 import maddpg.common.tf_util as U
 from maddpg.trainer.maddpg import MADDPGAgentTrainer
 import tensorflow.contrib.layers as layers
 
 from gym.wrappers.monitoring import video_recorder as gvr
+from collections import defaultdict
+import os.path as osp
+import pandas as pd
+import string
 
 
 def parse_args():
@@ -45,6 +47,7 @@ def parse_args():
     parser.add_argument("--video-record", action="store_true", default=False, help='if ture, record a video')
     parser.add_argument("--video-file-name", type=str, default=None)
     parser.add_argument("--video-frames-per-second", type=int, default=20, help='only used on the video recording')
+    parser.add_argument("--display-sleep-second", type=float, default=0.01, help='only used for display')
     parser.add_argument("--dic-variable-max-episode-len", type=str, default='{}')
     return parser.parse_args()
 
@@ -93,7 +96,6 @@ def get_trainers(env, num_adversaries, obs_shape_n, arglist):
 def set_dirs(arglist):
     if arglist.display:
         return
-
     exp_dir = './exp_results'
     if arglist.exp_name is None:
         arglist.exp_name = arglist.scenario + '__' + time.strftime("%Y-%m-%d_%H-%M-%S")
@@ -134,7 +136,7 @@ def save_curves(n_episode, train_step,
 
     with open(rew_file_name, 'a') as g:
         if is_first_save:
-            g.write('episode, step, total_reward\n')
+            g.write('episode,step,total_reward\n')
         # for i, v in enumerate(final_ep_rewards, 1):
         g.write('%d, %d, %f\n' % (n_episode, train_step, final_ep_reward))
 
@@ -142,12 +144,24 @@ def save_curves(n_episode, train_step,
         n_agents = len(final_ep_ag_reward)
         if is_first_save:
             agent_names = ['agent%d_rew' % i for i in range(n_agents)]
-            header = ('{}, ' * (n_agents + 2))\
-                .format('episode', 'step', *(agent_names)).rstrip(', ')
+            header = ('{},' * (n_agents + 2))\
+                .format('episode', 'step', *(agent_names)).rstrip(',')
             g.write(header + '\n')
         # for i, v in enumerate(final_ep_ag_rewards, 1):
         g.write(('{}, ' * (n_agents + 2)).format(n_episode, train_step,
                                                  *final_ep_ag_reward).rstrip(', ') + '\n')
+
+
+def save_messages(dic_messages, video_file_name):
+    outfile = video_file_name.replace('.mp4', '_messages.csv')
+    df_out = []
+    for n_epi, messages in dic_messages.items():
+        df_each_epi = pd.DataFrame(messages)
+        df_each_epi['episode'] = n_epi
+        df_each_epi['step'] = np.arange(len(df_each_epi))
+        df_out.append(df_each_epi)
+    df_out = pd.concat(df_out, ignore_index=True)
+    df_out.to_csv(outfile, index=False)
 
 
 def get_min_max_episode_len(dic):
@@ -160,28 +174,47 @@ def get_variable_max_episode_len(dic, n_episode):
     return int(min(max_episode_len, dic['max_max_episode_len']))
 
 
+def get_messages(agents):
+    def rename(agent_name):
+        return agent_name.replace('agent ', 'a')
+
+    dic_message_step = {}
+    for agent in agents:
+        for other in agents:
+            if other is agent:
+                    continue
+            if np.all(other.state.c == 0):
+                word = '_'
+            else:
+                word = string.ascii_uppercase[np.argmax(other.state.c)]
+            key = '%s_to_%s' % (rename(other.name), rename(agent.name))
+            dic_message_step[key] = word
+    if len(dic_message_step) > 0:
+        print(str(dic_message_step).replace("'", "").strip('{}'))
+        return dic_message_step
+
+
 def train(arglist):
     set_dirs(arglist)
     dic_par_var_epi_len = eval(arglist.dic_variable_max_episode_len)
     if len(dic_par_var_epi_len):
         arglist.max_episode_len = get_min_max_episode_len(dic_par_var_epi_len)
     max_episode_len = arglist.max_episode_len
-    # with U.single_threaded_session():
+
     with tf.Session():
+    # with U.single_threaded_session():
         # Create environment
         env = make_env(arglist.scenario, arglist, arglist.benchmark)
         # Create agent trainers
         obs_shape_n = [env.observation_space[i].shape for i in range(env.n)]
         num_adversaries = min(env.n, arglist.num_adversaries)
         trainers = get_trainers(env, num_adversaries, obs_shape_n, arglist)
-        print('Using good policy {} and adv policy {}'.format(arglist.good_policy, arglist.adv_policy))
+        print('Using good policy {} and adv policy {}'
+              .format(arglist.good_policy, arglist.adv_policy))
 
         # Initialize
         U.initialize()
 
-        # Load previous results, if necessary
-        # if arglist.load_dir == "":
-            # arglist.load_dir = arglist.save_dir
         if arglist.display or arglist.restore or arglist.benchmark:
             # print('Loading previous state...')
             print('Loading %s...' % arglist.load_model)
@@ -196,6 +229,8 @@ def train(arglist):
         obs_n = env.reset()
         episode_step = 0
         train_step = 0
+        last_saved_episode = 0
+        dic_messages = defaultdict(list)  # for evaluation
         t_start = time.time()
 
         if arglist.video_record:
@@ -206,7 +241,7 @@ def train(arglist):
             print('Starting iterations of %s...' % arglist.exp_name)
         while True:
             # get action
-            action_n = [agent.action(obs) for agent, obs in zip(trainers,obs_n)]
+            action_n = [agent.action(obs) for agent, obs in zip(trainers, obs_n)]
             # environment step
             new_obs_n, rew_n, done_n, info_n = env.step(action_n)
             episode_step += 1
@@ -215,7 +250,8 @@ def train(arglist):
             terminal = (episode_step >= max_episode_len)
             # collect experience
             for i, agent in enumerate(trainers):
-                agent.experience(obs_n[i], action_n[i], rew_n[i], new_obs_n[i], done_n[i], terminal)
+                agent.experience(obs_n[i], action_n[i], rew_n[i],
+                                 new_obs_n[i], done_n[i], terminal)
             obs_n = new_obs_n
 
             for i, rew in enumerate(rew_n):
@@ -232,6 +268,8 @@ def train(arglist):
                                  episode_rewards, 1, t_start)
                     t_start = time.time()
                     if n_episode >= arglist.num_episodes:
+                        if len(dic_messages) > 0:
+                            save_messages(dic_messages, arglist.video_file_name)
                         if arglist.video_record:
                             recorder.env.close()
                         break
@@ -260,15 +298,17 @@ def train(arglist):
 
             # for displaying learned policies
             if arglist.display:
-                time.sleep(0.01)
+                n_episode = len(episode_rewards)
+                dic_messages[n_episode].append(get_messages(env.agents))
+                time.sleep(arglist.display_sleep_second)
                 if arglist.video_record:
                     recorder.capture_frame()
                 else:
                     env.render()
-                # if True:
-                    # for i, agent in enumerate(trainers):
-                        # print(i, obs_n[i], rew_n[i])
-                continue  # <- In the dispaly mode, no training (we don't go down from here)
+                if False:
+                    for i, agent in enumerate(trainers):
+                        print(i, obs_n[i], rew_n[i])
+                continue  # <- In the dispaly mode, no training (= we don't go down from here)
 
             # update all trainers, if not in display or benchmark mode
             loss = None
@@ -295,11 +335,13 @@ def train(arglist):
                 if ((n_episode < arglist.save_rate * 10) or
                     (n_episode % (arglist.save_rate * 5) == 0)):
                     save_model(saver, arglist, episode_rewards)
+                last_saved_episode = n_episode
 
             # saves final episode reward for plotting training curve later
             if n_episode >= arglist.num_episodes:
-                save_model(saver, arglist, episode_rewards)
-                save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
+                if n_episode > last_saved_episode:
+                    save_model(saver, arglist, episode_rewards)
+                    save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
                 print('...Finished total of {} episodes.'.format(len(episode_rewards)))
                 break
 
