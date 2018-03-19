@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import sys
 import os.path as osp
 
 
@@ -17,19 +18,17 @@ def play_trained_model(model, num_episodes, max_episode_len, outfile_suffix,
 
 
 if __name__ == '__main__':
-    exp_dir = 'simple_tag__2018-03-16-_19-15-55'
-    # exp_dir = 'simple_tag__2018-03-16-_21-44-54'
-    # exp_dir = 'simple_tag__2018-03-16-_19-15-55'
-    exp_dir = osp.join('./exp_results', exp_dir)
-    # n_epis = [10000, 20000, 40000]
-    n_epis = [60000]
-    num_episodes = 2
-    max_episode_len = 400
-    outfile_suffix = 'epi-len400'
-    # outfile_suffix = None
-    display_speed = 'high' #'slow'
+    fn_par = sys.argv[1]
+    dics_pars = eval(open(fn_par).read())
 
-    models = [osp.join(exp_dir, 'models/model-%d' % n_epi) for n_epi in n_epis]
-    for model in models:
-        play_trained_model(model, num_episodes, max_episode_len, outfile_suffix,
-                           display_speed)
+    for pars in dics_pars:
+        for n_epi in pars['n_epis']:
+            model = osp.join(pars['p_dir'], pars['exp_dir'],
+                             'models/model-%d' % n_epi)
+            play_trained_model(model,
+                               pars['num_episodes'],
+                               pars['max_episode_len'],
+                               pars['outfile_suffix'],
+                               pars['display_speed'])
+            # break
+        # break

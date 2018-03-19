@@ -1,0 +1,38 @@
+[
+{
+ 'p_dir': './exp_results/exp3_180317',
+ 'exp_dir': 'simple_world_comm__2018-03-17-_01-02-02',
+ 'n_epis': [30000, 60000],
+ 'num_episodes': 2,
+ 'max_episode_len': 200,
+ 'outfile_suffix': None,
+ 'display_speed': 'slow',
+},
+{
+ 'p_dir': './exp_results/exp3_180317',
+ 'exp_dir': 'simple_world_comm__2018-03-17-_06-33-56',
+ 'n_epis': [20000, 40000],
+ 'num_episodes': 2,
+ 'max_episode_len': 200,
+ 'outfile_suffix': None,
+ 'display_speed': 'slow',
+},
+{
+ 'p_dir': './exp_results/exp3_180317',
+ 'exp_dir': 'simple_world_comm__2018-03-18_09-15-43',
+ 'n_epis': [15000, 30000, 40000],
+ 'num_episodes': 2,
+ 'max_episode_len': 200,
+ 'outfile_suffix': None,
+ 'display_speed': 'slow',
+},
+{
+ 'p_dir': './exp_results/exp3_180317',
+ 'exp_dir': 'simple_world_comm__2018-03-18_21-12-56',
+ 'n_epis': [15000, 25000, 40000],
+ 'num_episodes': 2,
+ 'max_episode_len': 200,
+ 'outfile_suffix': None,
+ 'display_speed': 'slow',
+},
+]

@@ -11,6 +11,10 @@ def _train_model(i_epi, scenario, num_episode, params, dic_var_epi_len):
     else:
         if 'max_episode_lens' in params.keys():
             com += '--max-episode-len %s ' % params['max_episode_lens'][i_epi]
+    if 'good_policy' in params.keys():
+        com += '--good-policy %s ' % params['good_policy']
+    if 'adv_policy' in params.keys():
+        com += '--adv-policy %s ' % params['adv_policy']
     if params['is_parallel']:
         com += ' &'
     os.system(com)
@@ -30,4 +34,10 @@ def train_models(params):
 
 if __name__ == '__main__':
     fn_param = sys.argv[1]
-    train_models(eval(open(fn_param).read()))
+    dics_pars = eval(open(fn_param).read())
+    if isinstance(dics_pars, dict):
+        dics_pars = [dics_pars]
+
+    for dic_par in dics_pars:
+        train_models(dic_par)
+        # print(dic_par)
