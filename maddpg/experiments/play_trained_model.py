@@ -64,6 +64,8 @@ if __name__ == '__main__':
     parser.add_argument('--model', type=str, default=None)
     parser.add_argument('--num-episodes', type=int, default=5, help='number of episodes')
     parser.add_argument("--max-episode-len", type=int, default=25, help="maximum episode length")
+    parser.add_argument("--good-policy", type=str, default="maddpg", help="policy for good agents")
+    parser.add_argument("--adv-policy", type=str, default="maddpg", help="policy of adversaries")
     parser.add_argument('--skip-video-record', action='store_true', default=False)
     parser.add_argument('--outfile-suffix', type=str, default=None)
     parser.add_argument('--display-speed', type=str, default=None, help='slow/normal/high')
@@ -76,6 +78,7 @@ if __name__ == '__main__':
     com = 'python train.py --display --num-episodes %d ' % args.num_episodes
     com += '--scenario %s --load-model %s ' % (scenario, trained_model)
     com += '--max-episode-len %d ' % args.max_episode_len
+    com += '--good-policy %s --adv-policy %s ' % (args.good_policy, args.adv_policy)
     if not args.skip_video_record:
         com += '--video-record --video-file-name %s ' % video_file_name
     if args.display_speed is not None:

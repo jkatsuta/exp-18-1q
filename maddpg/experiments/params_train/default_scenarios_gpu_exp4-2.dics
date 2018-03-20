@@ -1,0 +1,30 @@
+[
+{
+'scenarios': ['simple_world_comm'],
+'num_episodes': [50000],
+'is_parallel': False,
+'is_variable_max_episode_len': True,
+'good_policy': 'ddpg',
+'par_variable_max_episode_lens':
+[
+ {'min_max_episode_len': 25,
+  'max_max_episode_len': 200,
+  'twice_episodes': 10000,
+ }
+ ]
+},
+{
+'scenarios': ['simple_world_comm'],
+'num_episodes': [50000],
+'is_parallel': False,
+'is_variable_max_episode_len': True,
+'adv_policy': 'ddpg',
+'par_variable_max_episode_lens':
+[
+ {'min_max_episode_len': 25,
+  'max_max_episode_len': 200,
+  'twice_episodes': 10000,
+ }
+ ]
+}
+]

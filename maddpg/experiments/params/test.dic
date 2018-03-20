@@ -1,5 +1,0 @@
-{
-'scenarios': ['simple_speaker_listener'],
-'num_episodes': [2000],
-'is_parallel': False,
-}

@@ -1,0 +1,11 @@
+[
+{
+ 'p_dir': './exp_results/exp3_180317',
+ 'exp_dir': 'simple_world_comm__2018-03-18_21-12-56',
+ 'n_epis': [30000, 35000],
+ 'num_episodes': 2,
+ 'max_episode_len': 200,
+ 'outfile_suffix': None,
+ 'display_speed': 'slow',
+},
+]

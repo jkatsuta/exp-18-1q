@@ -1,0 +1,22 @@
+[
+{
+ 'p_dir': './exp_results/exp4_180319',
+ 'exp_dir': 'simple_tag__2018-03-19_20-21-21',
+ 'n_epis': [50000],
+ 'num_episodes': 5,
+ 'max_episode_len': 400,
+ 'good_policy': 'ddpg',
+ 'outfile_suffix': 'try2',
+ 'display_speed': 'high',
+},
+{
+ 'p_dir': './exp_results/exp4_180319',
+ 'exp_dir': 'simple_tag__2018-03-20_01-48-56',
+ 'n_epis': [50000],
+ 'num_episodes': 5,
+ 'max_episode_len': 400,
+ 'adv_policy': 'ddpg',
+ 'outfile_suffix': 'try2',
+ 'display_speed': 'high',
+},
+]
