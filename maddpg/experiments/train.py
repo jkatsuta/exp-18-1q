@@ -96,6 +96,18 @@ def get_trainers(env, num_adversaries, obs_shape_n, arglist):
 def set_dirs(arglist):
     if arglist.display:
         return
+    elif arglist.restore:
+        _restore_dirs(arglist)
+    else:
+        _set_new_dirs(arglist)
+
+
+def _restore_dirs(arglist):
+    arglist.save_dir = osp.dirname(arglist.load_model)
+    arglist.plots_dir = arglist.save_dir.replace('models', 'learning_curves')
+
+
+def _set_new_dirs(arglist):
     exp_dir = './exp_results'
     if arglist.exp_name is None:
         arglist.exp_name = arglist.scenario + '__' + time.strftime("%Y-%m-%d_%H-%M-%S")
@@ -111,18 +123,29 @@ def set_dirs(arglist):
             os.makedirs(d, exist_ok=True)
 
 
-def print_reward(num_adversaries, train_step, agent_rewards, episode_rewards, save_rate, t_start):
+def restore_vars(load_model):
+    basename = osp.basename(load_model)
+    last_saved_episode = int(basename.split('-')[-1])
+    n_episode = last_saved_episode + 1
+    df_rew = pd.read_csv(osp.join(arglist.plots_dir, 'rewards.csv'))
+    train_step =\
+        int(df_rew.loc[df_rew['episode'] == last_saved_episode, 'step'].values[0])
+    return n_episode, train_step, last_saved_episode
+
+
+def print_reward(n_episode, num_adversaries, train_step, agent_rewards,
+                 episode_rewards, save_rate, t_start):
     if num_adversaries == 0:
         print("steps: {}, episodes: {}, mean episode reward: {}, time: {}".format(
-            train_step, len(episode_rewards), np.mean(episode_rewards[-save_rate:]), round(time.time()-t_start, 3)))
+            train_step, n_episode, np.mean(episode_rewards[-save_rate:]), round(time.time()-t_start, 3)))
     else:
         print("steps: {}, episodes: {}, mean episode reward: {}, agent episode reward: {}, time: {}".format(
-            train_step, len(episode_rewards), np.mean(episode_rewards[-save_rate:]),
+            train_step, n_episode, np.mean(episode_rewards[-save_rate:]),
             [np.mean(rew[-save_rate:]) for rew in agent_rewards], round(time.time()-t_start, 3)))
 
 
-def save_model(saver, arglist, episode_rewards):
-    saved_model = osp.join(arglist.save_dir, 'model-%d' % len(episode_rewards))
+def save_model(saver, arglist, episode_rewards, n_episode):
+    saved_model = osp.join(arglist.save_dir, 'model-%d' % n_episode)
     U.save_state(saved_model, saver=saver)
 
 
@@ -227,18 +250,24 @@ def train(arglist):
         agent_info = [[[]]]  # placeholder for benchmarking info
         saver = tf.train.Saver(max_to_keep=None)
         obs_n = env.reset()
+        n_episode = 1
         episode_step = 0
         train_step = 0
-        last_saved_episode = 0
+        last_saved_episode = -1
         dic_messages = defaultdict(list)  # for evaluation
-        t_start = time.time()
+        t_start = t_start0 = time.time()
 
+        # restore some variables of the restored model
+        if arglist.restore:
+            n_episode, train_step, last_saved_episode =\
+                restore_vars(arglist.load_model)
+        n_episode0 = n_episode
         if arglist.video_record:
             env.metadata['video.frames_per_second'] = arglist.video_frames_per_second
             recorder = gvr.VideoRecorder(env, arglist.video_file_name, enabled=True)
-
         if arglist.exp_name is not None:
             print('Starting iterations of %s...' % arglist.exp_name)
+
         while True:
             # get action
             action_n = [agent.action(obs) for agent, obs in zip(trainers, obs_n)]
@@ -246,7 +275,6 @@ def train(arglist):
             new_obs_n, rew_n, done_n, info_n = env.step(action_n)
             episode_step += 1
             done = all(done_n)
-            # terminal = (episode_step >= arglist.max_episode_len)
             terminal = (episode_step >= max_episode_len)
             # collect experience
             for i, agent in enumerate(trainers):
@@ -259,12 +287,12 @@ def train(arglist):
                 agent_rewards[i][-1] += rew
 
             if done or terminal:
-                n_episode = len(episode_rewards)
+                # n_episode = len(episode_rewards)
                 if len(dic_par_var_epi_len):
                     max_episode_len =\
                         get_variable_max_episode_len(dic_par_var_epi_len, n_episode)
                 if arglist.display:
-                    print_reward(num_adversaries, train_step, agent_rewards,
+                    print_reward(n_episode, num_adversaries, train_step, agent_rewards,
                                  episode_rewards, 1, t_start)
                     t_start = time.time()
                     if n_episode >= arglist.num_episodes:
@@ -280,6 +308,7 @@ def train(arglist):
                 for a in agent_rewards:
                     a.append(0)
                 agent_info.append([[]])
+                n_episode += 1
 
             # increment global step counter
             train_step += 1
@@ -298,7 +327,7 @@ def train(arglist):
 
             # for displaying learned policies
             if arglist.display:
-                n_episode = len(episode_rewards)
+                # n_episode = len(episode_rewards)
                 dic_messages[n_episode].append(get_messages(env.agents))
                 time.sleep(arglist.display_sleep_second)
                 if arglist.video_record:
@@ -318,11 +347,11 @@ def train(arglist):
                 loss = agent.update(trainers, train_step)
 
             # save model, display training output
-            n_episode = len(episode_rewards)
+            # n_episode = len(episode_rewards)
             if terminal and (n_episode % arglist.save_rate == 0):
                 print(n_episode, max_episode_len)
                 # print statement depends on whether or not there are adversaries
-                print_reward(num_adversaries, train_step, agent_rewards,
+                print_reward(n_episode, num_adversaries, train_step, agent_rewards,
                              episode_rewards, arglist.save_rate, t_start)
                 t_start = time.time()
                 # Keep track of final episode reward
@@ -334,15 +363,18 @@ def train(arglist):
                 # thin out the saved models; 10 and 5 can be any int values.
                 if ((n_episode < arglist.save_rate * 10) or
                     (n_episode % (arglist.save_rate * 5) == 0)):
-                    save_model(saver, arglist, episode_rewards)
+                    save_model(saver, arglist, episode_rewards, n_episode)
                 last_saved_episode = n_episode
 
             # saves final episode reward for plotting training curve later
             if n_episode >= arglist.num_episodes:
                 if n_episode > last_saved_episode:
-                    save_model(saver, arglist, episode_rewards)
-                    save_curves(final_ep_rewards, final_ep_ag_rewards, arglist)
-                print('...Finished total of {} episodes.'.format(len(episode_rewards)))
+                    save_model(saver, arglist, episode_rewards, n_episode)
+                    save_curves(n_episode, train_step,
+                                final_ep_rewards[-1], final_ep_ag_rewards[-1], arglist)
+                print('...Finished!')
+                print('Trained episodes: %d -> %d' % (n_episode0, n_episode))
+                print('Total time: %.2f hr' % ((time.time() - t_start0) / 3600.))
                 break
 
 
