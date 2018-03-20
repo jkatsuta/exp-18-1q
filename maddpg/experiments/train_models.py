@@ -2,10 +2,11 @@
 import os
 import sys
 import re
+import time
 
 
 def _train_model(i_epi, scenario, num_episode, pars, dic_var_epi_len,
-                 test_mode=False):
+                 seed=None, test_mode=False):
     com = 'python train.py --scenario %s ' % scenario
     com += '--num-episodes %d ' % num_episode
     if len(dic_var_epi_len) > 0:
@@ -22,16 +23,31 @@ def _train_model(i_epi, scenario, num_episode, pars, dic_var_epi_len,
         seed = re.search('\_seed(\d+)/models/', pars['restored_model'])
         if seed and not pars.get('seed', False):
             com += '--seed %d ' % int(seed.group(1))
-    if pars.get('seed', False):
-        com += '--seed %d ' % pars['seed']
+    if seed is not None:
+        com += '--seed %d ' % seed
     if pars['is_parallel']:
         com += ' &'
     print(com)
     if not test_mode:
         os.system(com)
+        time.sleep(2)
 
 
-def train_models(pars, test_mode=False):
+def get_dics_pars(fn_param):
+    dics_pars = eval(open(fn_param).read())
+    if isinstance(dics_pars, dict):
+        dics_pars = [dics_pars]
+    return dics_pars
+
+
+def get_seeds(pars):
+    seeds = pars.get('seeds', [None])
+    if isinstance(seeds, int):
+        seeds = [seeds]
+    return seeds
+
+
+def train_models(pars, seed=None, test_mode=False):
     dic_var_epi_lens = [{}]
     if pars.get('is_variable_max_episode_len', False):
         dic_var_epi_lens = pars['par_variable_max_episode_lens']
@@ -39,7 +55,8 @@ def train_models(pars, test_mode=False):
     for scenario in pars['scenarios']:
         for dic_var_epi_len in dic_var_epi_lens:
             for i, num_episode in enumerate(pars['num_episodes']):
-                _train_model(i, scenario, num_episode, pars, dic_var_epi_len, test_mode)
+                _train_model(i, scenario, num_episode, pars,
+                             dic_var_epi_len, seed, test_mode)
 
 
 if __name__ == '__main__':
@@ -49,8 +66,8 @@ if __name__ == '__main__':
     except IndexError:
         test_mode = False
 
-    dics_pars = eval(open(fn_param).read())
-    if isinstance(dics_pars, dict):
-        dics_pars = [dics_pars]
+    dics_pars = get_dics_pars(fn_param)
     for dic_par in dics_pars:
-        train_models(dic_par, test_mode)
+        seeds = get_seeds(dic_par)
+        for seed in seeds:
+            train_models(dic_par, seed, test_mode)

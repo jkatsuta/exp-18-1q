@@ -126,6 +126,17 @@ def _set_new_dirs(arglist):
             os.makedirs(d, exist_ok=True)
 
 
+def set_max_episode_len(arglist):
+    dic_par_var_epi_len = eval(arglist.dic_variable_max_episode_len)
+    if len(dic_par_var_epi_len):
+        n_episode = 0
+        if arglist.restore:
+            n_episode, _, _ = restore_vars(arglist.load_model)
+        arglist.max_episode_len =\
+            get_variable_max_episode_len(dic_par_var_epi_len, n_episode)
+    return arglist.max_episode_len, dic_par_var_epi_len
+
+
 def restore_vars(load_model):
     basename = osp.basename(load_model)
     last_saved_episode = int(basename.split('-')[-1])
@@ -190,11 +201,7 @@ def save_messages(dic_messages, video_file_name):
     df_out.to_csv(outfile, index=False)
 
 
-def get_min_max_episode_len(dic):
-    return dic['min_max_episode_len']
-
-
-def get_variable_max_episode_len(dic, n_episode):
+def get_variable_max_episode_len(dic, n_episode=0):
     max_episode_len = dic['min_max_episode_len']\
         * np.power(2, n_episode / dic['twice_episodes'])
     return int(min(max_episode_len, dic['max_max_episode_len']))
@@ -232,16 +239,12 @@ def set_random_seed(env, seed):
 
 def train(arglist):
     set_dirs(arglist)
-    dic_par_var_epi_len = eval(arglist.dic_variable_max_episode_len)
-    if len(dic_par_var_epi_len):
-        arglist.max_episode_len = get_min_max_episode_len(dic_par_var_epi_len)
-    max_episode_len = arglist.max_episode_len
-
+    max_episode_len, dic_par_var_epi_len = set_max_episode_len(arglist)
     # Create environment
     env = make_env(arglist.scenario, arglist, arglist.benchmark)
     set_random_seed(env, arglist.seed)
-    with tf.Session():
     # with U.single_threaded_session():
+    with tf.Session():
         # env = make_env(arglist.scenario, arglist, arglist.benchmark)
         # Create agent trainers
         obs_shape_n = [env.observation_space[i].shape for i in range(env.n)]
@@ -311,7 +314,7 @@ def train(arglist):
                                  episode_rewards, 1, t_start)
                     t_start = time.time()
                     if n_episode >= arglist.num_episodes:
-                        if len(dic_messages) > 0:
+                        if arglist.video_record and len(dic_messages) > 0:
                             save_messages(dic_messages, arglist.video_file_name)
                         if arglist.video_record:
                             recorder.env.close()

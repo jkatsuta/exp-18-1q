@@ -1,0 +1,12 @@
+[
+{
+ 'p_dir': './exp_results',
+ 'exp_dir': 'simple__2018-03-20_14-07-11_seed20',
+ 'n_epis': [2000],
+ 'seeds': [11, 19],
+ 'num_episodes': 2,
+ 'max_episode_len': 20,
+ 'outfile_suffix': None,
+ 'display_speed': 'slow',
+},
+]

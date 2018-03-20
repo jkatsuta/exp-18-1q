@@ -1,0 +1,34 @@
+[
+{
+# exp4-2-1
+'scenarios': ['simple_tag'],
+'num_episodes': [80000],
+'is_parallel': True,
+'seeds': [10, 20, 30],
+'good_policy': 'ddpg',
+'is_variable_max_episode_len': True,
+'par_variable_max_episode_lens':
+[
+ {'min_max_episode_len': 25,
+  'max_max_episode_len': 200,
+  'twice_episodes': 10000,
+ }
+ ]
+},
+{
+# exp4-2-2
+'scenarios': ['simple_tag'],
+'num_episodes': [80000],
+'is_parallel': True,
+'seeds': [10, 20, 30],
+'adv_policy': 'ddpg',
+'is_variable_max_episode_len': True,
+'par_variable_max_episode_lens':
+[
+ {'min_max_episode_len': 25,
+  'max_max_episode_len': 200,
+  'twice_episodes': 10000,
+ }
+ ]
+}
+]
