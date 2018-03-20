@@ -1,9 +1,9 @@
 [
 {
 'scenarios': ['simple'],
-'num_episodes': [7000],
+'num_episodes': [2000],
 'is_parallel': False,
 'is_variable_max_episode_len': False,
-'restored_model': './exp_results/simple__2018-03-20_11-23-55/models/model-4000',
+'seed': 20,
 },
 ]

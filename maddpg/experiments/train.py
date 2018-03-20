@@ -43,12 +43,13 @@ def parse_args():
     parser.add_argument("--benchmark-iters", type=int, default=100000, help="number of iterations run for benchmarking")
     parser.add_argument("--benchmark-dir", type=str, default="./benchmark_files/", help="directory where benchmark data is saved")
     parser.add_argument("--plots-dir", type=str, default=None, help="directory where plot data is saved")
-    # JK
+    # added by JK
     parser.add_argument("--video-record", action="store_true", default=False, help='if ture, record a video')
     parser.add_argument("--video-file-name", type=str, default=None)
     parser.add_argument("--video-frames-per-second", type=int, default=20, help='only used on the video recording')
     parser.add_argument("--display-sleep-second", type=float, default=0.01, help='only used for display')
     parser.add_argument("--dic-variable-max-episode-len", type=str, default='{}')
+    parser.add_argument("--seed", type=int, default=None, help="random seed")
     return parser.parse_args()
 
 
@@ -111,6 +112,8 @@ def _set_new_dirs(arglist):
     exp_dir = './exp_results'
     if arglist.exp_name is None:
         arglist.exp_name = arglist.scenario + '__' + time.strftime("%Y-%m-%d_%H-%M-%S")
+        if arglist.seed is not None:
+            arglist.exp_name += '_seed%d' % arglist.seed
     exp_dir = osp.join(exp_dir, arglist.exp_name)
 
     if arglist.plots_dir is None:
@@ -217,6 +220,16 @@ def get_messages(agents):
         return dic_message_step
 
 
+def set_random_seed(env, seed):
+    import random
+    if seed is None:
+        return
+    random.seed(seed)
+    np.random.seed(seed)
+    tf.set_random_seed(seed)
+    env.seed(seed)
+
+
 def train(arglist):
     set_dirs(arglist)
     dic_par_var_epi_len = eval(arglist.dic_variable_max_episode_len)
@@ -224,10 +237,12 @@ def train(arglist):
         arglist.max_episode_len = get_min_max_episode_len(dic_par_var_epi_len)
     max_episode_len = arglist.max_episode_len
 
+    # Create environment
+    env = make_env(arglist.scenario, arglist, arglist.benchmark)
+    set_random_seed(env, arglist.seed)
     with tf.Session():
     # with U.single_threaded_session():
-        # Create environment
-        env = make_env(arglist.scenario, arglist, arglist.benchmark)
+        # env = make_env(arglist.scenario, arglist, arglist.benchmark)
         # Create agent trainers
         obs_shape_n = [env.observation_space[i].shape for i in range(env.n)]
         num_adversaries = min(env.n, arglist.num_adversaries)

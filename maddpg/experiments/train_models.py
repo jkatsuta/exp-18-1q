@@ -1,39 +1,45 @@
 #!/usr/bin/env python
 import os
 import sys
+import re
 
 
-def _train_model(i_epi, scenario, num_episode, params, dic_var_epi_len,
+def _train_model(i_epi, scenario, num_episode, pars, dic_var_epi_len,
                  test_mode=False):
     com = 'python train.py --scenario %s ' % scenario
     com += '--num-episodes %d ' % num_episode
     if len(dic_var_epi_len) > 0:
         com += '--dic-variable-max-episode-len "%s" ' % str(dic_var_epi_len)
     else:
-        if 'max_episode_lens' in params.keys():
-            com += '--max-episode-len %s ' % params['max_episode_lens'][i_epi]
-    if 'good_policy' in params.keys():
-        com += '--good-policy %s ' % params['good_policy']
-    if 'adv_policy' in params.keys():
-        com += '--adv-policy %s ' % params['adv_policy']
-    if params.get('restored_model', False):
-        com += '--restore --load-model %s ' % params['restored_model']
-    if params['is_parallel']:
+        if 'max_episode_lens' in pars.keys():
+            com += '--max-episode-len %s ' % pars['max_episode_lens'][i_epi]
+    if 'good_policy' in pars.keys():
+        com += '--good-policy %s ' % pars['good_policy']
+    if 'adv_policy' in pars.keys():
+        com += '--adv-policy %s ' % pars['adv_policy']
+    if pars.get('restored_model', False):
+        com += '--restore --load-model %s ' % pars['restored_model']
+        seed = re.search('\_seed(\d+)/models/', pars['restored_model'])
+        if seed and not pars.get('seed', False):
+            com += '--seed %d ' % int(seed.group(1))
+    if pars.get('seed', False):
+        com += '--seed %d ' % pars['seed']
+    if pars['is_parallel']:
         com += ' &'
     print(com)
     if not test_mode:
         os.system(com)
 
 
-def train_models(params, test_mode=False):
+def train_models(pars, test_mode=False):
     dic_var_epi_lens = [{}]
-    if params.get('is_variable_max_episode_len', False):
-        dic_var_epi_lens = params['par_variable_max_episode_lens']
+    if pars.get('is_variable_max_episode_len', False):
+        dic_var_epi_lens = pars['par_variable_max_episode_lens']
 
-    for scenario in params['scenarios']:
+    for scenario in pars['scenarios']:
         for dic_var_epi_len in dic_var_epi_lens:
-            for i, num_episode in enumerate(params['num_episodes']):
-                _train_model(i, scenario, num_episode, params, dic_var_epi_len, test_mode)
+            for i, num_episode in enumerate(pars['num_episodes']):
+                _train_model(i, scenario, num_episode, pars, dic_var_epi_len, test_mode)
 
 
 if __name__ == '__main__':

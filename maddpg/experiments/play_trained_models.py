@@ -78,6 +78,8 @@ def main(trained_model, pars, test_mode=False):
         frames_per_sec, sleep_time = get_display_speed(pars['display_speed'])
         com += '--video-frames-per-second %d ' % frames_per_sec
         com += '--display-sleep-second %f ' % sleep_time
+    if pars.get('seed', False):
+        com += '--seed %d ' % pars['seed']
     print(com)
     if not test_mode:
         os.system(com)
