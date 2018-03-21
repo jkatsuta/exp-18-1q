@@ -1,0 +1,67 @@
+[
+{
+# exp2-2-2
+'scenarios': ['simple_tag'],
+'num_episodes': [80000],
+'is_parallel': True,
+'restored_model': './exp_results/simple_tag__2018-03-18_05-29-24/models/model-40000',
+'is_variable_max_episode_len': True,
+'par_variable_max_episode_lens':
+[
+ {'min_max_episode_len': 25,
+  'max_max_episode_len': 200,
+  'twice_episodes': 10000,
+ }
+ ]
+},
+
+{
+# exp3-2-2
+'scenarios': ['simple_world_comm'],
+'num_episodes': [80000],
+'is_parallel': True,
+'restored_model': './exp_results/simple_world_comm__2018-03-18_21-12-56/models/model-40000',
+'is_variable_max_episode_len': True,
+'par_variable_max_episode_lens':
+[
+ {'min_max_episode_len': 25,
+  'max_max_episode_len': 200,
+  'twice_episodes': 10000,
+ }
+ ]
+},
+
+{
+# exp4-1-1
+'scenarios': ['simple_tag'],
+'num_episodes': [80000],
+'is_parallel': True,
+'restored_model': './exp_results/simple_tag__2018-03-19_20-21-21/models/model-50000',
+'good_policy': 'ddpg',
+'is_variable_max_episode_len': True,
+'par_variable_max_episode_lens':
+[
+ {'min_max_episode_len': 25,
+  'max_max_episode_len': 200,
+  'twice_episodes': 10000,
+ }
+ ]
+},
+
+{
+# exp4-1-2
+'scenarios': ['simple_tag'],
+'num_episodes': [80000],
+'is_parallel': True,
+'restored_model': './exp_results/simple_tag__2018-03-20_01-48-56/models/model-50000',
+'adv_policy': 'ddpg',
+'is_variable_max_episode_len': True,
+'par_variable_max_episode_lens':
+[
+ {'min_max_episode_len': 25,
+  'max_max_episode_len': 200,
+  'twice_episodes': 10000,
+ }
+ ]
+},
+]
