@@ -2,7 +2,7 @@
 {
 'scenarios': ['simple'],
 'num_episodes': [2000],
-'is_parallel': False,
+'is_parallel': True,
 'is_variable_max_episode_len': False,
 'seeds': [20, 30],
 },
