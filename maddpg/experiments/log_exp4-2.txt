@@ -1,6 +1,0 @@
-python train.py --scenario simple_tag --num-episodes 80000 --dic-variable-max-episode-len "{'min_max_episode_len': 25, 'twice_episodes': 10000, 'max_max_episode_len': 200}" --good-policy ddpg --seed 10  &
-python train.py --scenario simple_tag --num-episodes 80000 --dic-variable-max-episode-len "{'min_max_episode_len': 25, 'twice_episodes': 10000, 'max_max_episode_len': 200}" --good-policy ddpg --seed 20  &
-python train.py --scenario simple_tag --num-episodes 80000 --dic-variable-max-episode-len "{'min_max_episode_len': 25, 'twice_episodes': 10000, 'max_max_episode_len': 200}" --good-policy ddpg --seed 30  &
-python train.py --scenario simple_tag --num-episodes 80000 --dic-variable-max-episode-len "{'min_max_episode_len': 25, 'twice_episodes': 10000, 'max_max_episode_len': 200}" --adv-policy ddpg --seed 10  &
-python train.py --scenario simple_tag --num-episodes 80000 --dic-variable-max-episode-len "{'min_max_episode_len': 25, 'twice_episodes': 10000, 'max_max_episode_len': 200}" --adv-policy ddpg --seed 20  &
-python train.py --scenario simple_tag --num-episodes 80000 --dic-variable-max-episode-len "{'min_max_episode_len': 25, 'twice_episodes': 10000, 'max_max_episode_len': 200}" --adv-policy ddpg --seed 30  &
