@@ -1,0 +1,12 @@
+[
+{
+ 'p_dir': './exp_results/exp4_180319',
+ 'exp_dir': 'simple_tag__2018-03-20_14-44-50_seed10',
+ 'n_epis': [80000],
+ 'adv_policy': 'ddpg',
+ 'num_episodes': 4,
+ 'max_episode_len': 200,
+ 'outfile_suffix': None,
+ 'display_speed': 'high',
+},
+]

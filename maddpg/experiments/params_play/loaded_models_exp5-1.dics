@@ -1,0 +1,22 @@
+[
+{
+ 'p_dir': './exp_results/exp5_180320',
+ 'exp_dir': 'simple_world_comm__2018-03-20_09-44-07',
+ 'n_epis': [20000, 30000, 40000, 50000],
+ 'num_episodes': 2,
+ 'max_episode_len': 200,
+ 'good_policy': 'ddpg',
+ 'outfile_suffix': None,
+ 'display_speed': 'high',
+},
+{
+ 'p_dir': './exp_results/exp5_180320',
+ 'exp_dir': 'simple_world_comm__2018-03-20_22-26-53',
+ 'n_epis': [20000, 30000, 40000, 50000],
+ 'num_episodes': 2,
+ 'max_episode_len': 200,
+ 'adv_policy': 'ddpg',
+ 'outfile_suffix': None,
+ 'display_speed': 'high',
+},
+]
