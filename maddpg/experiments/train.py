@@ -189,16 +189,30 @@ def save_curves(n_episode, train_step,
                                                  *final_ep_ag_reward).rstrip(', ') + '\n')
 
 
+def save_actions(action_history, video_file_name):
+    for i, dic_each_agent_actions in enumerate(action_history):
+        outfile = video_file_name.replace('.mp4', '_actions_agent%d.csv' % i)
+        df_out = _dic_to_df(dic_each_agent_actions)
+        rename_map = dict([(i, 'act%d' % i) for i in range(len(df_out.columns) - 2)])
+        df_out.rename(columns=rename_map, inplace=True)
+        df_out.to_csv(outfile, index=False)
+
+
 def save_messages(dic_messages, video_file_name):
     outfile = video_file_name.replace('.mp4', '_messages.csv')
+    df_out = _dic_to_df(dic_messages)
+    df_out.to_csv(outfile, index=False)
+
+
+def _dic_to_df(dic):
     df_out = []
-    for n_epi, messages in dic_messages.items():
-        df_each_epi = pd.DataFrame(messages)
+    for n_epi, contents in dic.items():
+        df_each_epi = pd.DataFrame(contents)
         df_each_epi['episode'] = n_epi
         df_each_epi['step'] = np.arange(len(df_each_epi))
         df_out.append(df_each_epi)
     df_out = pd.concat(df_out, ignore_index=True)
-    df_out.to_csv(outfile, index=False)
+    return df_out
 
 
 def get_variable_max_episode_len(dic, n_episode=0):
@@ -273,6 +287,7 @@ def train(arglist):
         train_step = 0
         last_saved_episode = -1
         dic_messages = defaultdict(list)  # for evaluation
+        action_hisotry = [defaultdict(list) for _ in range(env.n)]  # for evaluation
         t_start = t_start0 = time.time()
 
         # restore some variables of the restored model
@@ -304,8 +319,11 @@ def train(arglist):
                 episode_rewards[-1] += rew
                 agent_rewards[i][-1] += rew
 
+            if arglist.display:
+                for i, act in enumerate(action_n):
+                    action_hisotry[i][n_episode].append(list(act))
+
             if done or terminal:
-                # n_episode = len(episode_rewards)
                 if len(dic_par_var_epi_len):
                     max_episode_len =\
                         get_variable_max_episode_len(dic_par_var_epi_len, n_episode)
@@ -314,6 +332,8 @@ def train(arglist):
                                  episode_rewards, 1, t_start)
                     t_start = time.time()
                     if n_episode >= arglist.num_episodes:
+                        if arglist.video_record:
+                            save_actions(action_hisotry, arglist.video_file_name)
                         if arglist.video_record and len(dic_messages) > 0:
                             save_messages(dic_messages, arglist.video_file_name)
                         if arglist.video_record:

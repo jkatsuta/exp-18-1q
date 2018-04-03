@@ -65,6 +65,9 @@ class MultiAgentEnv(gym.Env):
                 self.action_space.append(act_space)
             else:
                 self.action_space.append(total_action_space[0])
+            # add by JK
+            # print('#'* 10)
+            # self.world.action_trajectory = [np.zeros(space) for space in self.action_space]
             # observation space
             obs_dim = len(observation_callback(agent, self.world))
             self.observation_space.append(spaces.Box(low=-np.inf, high=+np.inf, shape=(obs_dim,), dtype=np.float32))
@@ -78,6 +81,7 @@ class MultiAgentEnv(gym.Env):
             self.viewers = [None] * self.n
         self._reset_render()
 
+
     def step(self, action_n):
         obs_n = []
         reward_n = []
@@ -89,6 +93,12 @@ class MultiAgentEnv(gym.Env):
             self._set_action(action_n[i], agent, self.action_space[i])
         # advance world state
         self.world.step()
+
+        # mod by JK
+        # print(action_n)
+        # for i, agent in enumerate(self.agents):
+            # self.world.action_trajectory[i].append(action_n[i])
+
         # record observation for each agent
         for agent in self.agents:
             obs_n.append(self._get_obs(agent))
@@ -101,7 +111,6 @@ class MultiAgentEnv(gym.Env):
         reward = np.sum(reward_n)
         if self.shared_reward:
             reward_n = [reward] * self.n
-
         return obs_n, reward_n, done_n, info_n
 
     def reset(self):

@@ -9,6 +9,7 @@ class Scenario(BaseScenario):
         # set any world properties first
         world.dim_c = 5
         num_landmarks = 1
+        self.len_memory = 2
         # add agents
         world.agents = [Agent() for i in range(2)]
         for i, agent in enumerate(world.agents):
@@ -51,6 +52,14 @@ class Scenario(BaseScenario):
             landmark.state.p_pos = np.random.uniform(-1, 1, world.dim_p)
             landmark.state.p_vel = np.zeros(world.dim_p)
 
+        self.state_cs = list(np.zeros((self.len_memory, world.dim_c)))
+        self.world = world
+
+    def add_c_history(self, agent, world, new_c):
+        self.state_cs.pop(0)
+        self.state_cs.append(new_c)
+        return self.state_cs
+
     def reward(self, agent, world):
         # squared distance from listener to landmark
         a = world.agents[0]
@@ -66,5 +75,9 @@ class Scenario(BaseScenario):
             return np.concatenate([agent.state.p_vel] + goal_pos)
         # watermellon splitter
         if agent.silent:
+            print(self.world.action_trajectory)
             # communication from speaker to splitter
+            # the past communication is used as observation
+            # state_cs = self.add_c_history(agent, world, world.agents[0].state.c)
             return np.concatenate([world.agents[0].state.c])
+            # return np.concatenate([world.agents[0].state.c, self.world.action_trajectory[1][-1]])

@@ -61,6 +61,8 @@ def get_display_speed(key):
         return 20, 0.03
     elif key == 'high':
         return 30, 0.01
+    elif key == 'very-slow':
+        return 3, 0.1  # applied to n_per_frame
     else:
         print('use slow/normal/high for display_speed.')
         exit(1)
