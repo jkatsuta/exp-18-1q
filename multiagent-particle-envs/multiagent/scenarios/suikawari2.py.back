@@ -51,7 +51,14 @@ class Scenario(BaseScenario):
         for i, landmark in enumerate(world.landmarks):
             landmark.state.p_pos = np.random.uniform(-1, 1, world.dim_p)
             landmark.state.p_vel = np.zeros(world.dim_p)
+
+        self.state_cs = list(np.zeros((self.len_memory, world.dim_c)))
         self.world = world
+
+    def add_c_history(self, agent, world, new_c):
+        self.state_cs.pop(0)
+        self.state_cs.append(new_c)
+        return self.state_cs
 
     def reward(self, agent, world):
         # squared distance from listener to landmark
@@ -68,9 +75,8 @@ class Scenario(BaseScenario):
             return np.concatenate([agent.state.p_vel] + goal_pos)
         # watermelon splitter
         if agent.silent:
-            obs = []
             # communication from speaker to splitter
-            obs.append(world.agents[0].state.c)
-            # the previous action of the movable agent is added
-            obs.append(self.world.action_trajectory[1][-1])
-            return np.concatenate(obs)
+            # the past communication is used as observation
+            # state_cs = self.add_c_history(agent, world, world.agents[0].state.c)
+            # return np.concatenate([world.agents[0].state.c])
+            return np.concatenate([world.agents[0].state.c, self.world.action_trajectory[1][-1]])
