@@ -9,7 +9,6 @@ class Scenario(BaseScenario):
         # set any world properties first
         world.dim_c = 5
         num_landmarks = 1
-        self.len_memory = 2
         # add agents
         world.agents = [Agent() for i in range(2)]
         for i, agent in enumerate(world.agents):
@@ -51,7 +50,7 @@ class Scenario(BaseScenario):
         for i, landmark in enumerate(world.landmarks):
             landmark.state.p_pos = np.random.uniform(-1, 1, world.dim_p)
             landmark.state.p_vel = np.zeros(world.dim_p)
-        self.world = world
+        # self.world = world
 
     def reward(self, agent, world):
         # squared distance from listener to landmark
@@ -60,6 +59,22 @@ class Scenario(BaseScenario):
         return -dist2
 
     def observation(self, agent, world):
+        # speaker
+        if not agent.movable:
+            # get the watermelon position of splitter's reference frame
+            a = world.agents[0]
+            goal_pos = [a.goal_b.state.p_pos - a.goal_a.state.p_pos]
+            return np.concatenate([agent.state.p_vel] + goal_pos)
+        # watermelon splitter
+        if agent.silent:
+            obs = []
+            # communication from speaker to splitter
+            obs.append(world.agents[0].state.c)
+            # add the velocity of the splitter
+            obs.append(agent.state.p_vel)
+            return np.concatenate(obs)
+
+    def _old_observation(self, agent, world):
         # speaker
         if not agent.movable:
             # get the watermelon position of splitter's reference frame
