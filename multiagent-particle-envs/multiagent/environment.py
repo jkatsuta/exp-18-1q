@@ -65,10 +65,11 @@ class MultiAgentEnv(gym.Env):
                 self.action_space.append(act_space)
             else:
                 self.action_space.append(total_action_space[0])
-            # add by JK
-            # print('#'* 10)
-            # self.world.action_trajectory = [np.zeros(space) for space in self.action_space]
-            # observation space
+        # add by JK
+        for space in self.action_space:
+            self.world.action_trajectory.append([np.zeros(space.n)])
+        # observation space
+        for agent in self.agents:
             obs_dim = len(observation_callback(agent, self.world))
             self.observation_space.append(spaces.Box(low=-np.inf, high=+np.inf, shape=(obs_dim,), dtype=np.float32))
             agent.action.c = np.zeros(self.world.dim_c)
@@ -95,9 +96,8 @@ class MultiAgentEnv(gym.Env):
         self.world.step()
 
         # mod by JK
-        # print(action_n)
-        # for i, agent in enumerate(self.agents):
-            # self.world.action_trajectory[i].append(action_n[i])
+        for i, agent in enumerate(self.agents):
+            self.world.action_trajectory[i].append(action_n[i])
 
         # record observation for each agent
         for agent in self.agents:
