@@ -17,9 +17,9 @@ class Scenario(BaseScenario):
             agent.size = 0.075
         # speaker
         world.agents[0].movable = False
-        # watermellon splitter
+        # watermelon splitter
         world.agents[1].silent = True
-        # add a watermellon
+        # add a watermelon
         world.landmarks = [Landmark() for i in range(num_landmarks)]
         for i, landmark in enumerate(world.landmarks):
             landmark.name = 'landmark %d' % i
@@ -37,7 +37,7 @@ class Scenario(BaseScenario):
             agent.goal_b = None
         # want listener to go to the goal landmark
         world.agents[0].goal_a = world.agents[1]  # splitter
-        world.agents[0].goal_b = world.landmarks[0]  # watermellon
+        world.agents[0].goal_b = world.landmarks[0]  # watermelon
         # coloring
         world.agents[0].color = np.array([0.25, 0.25, 0.25])
         world.agents[1].color = np.array([1.0, 0.5, 0.5])
@@ -60,11 +60,11 @@ class Scenario(BaseScenario):
     def observation(self, agent, world):
         # speaker
         if not agent.movable:
-            # get the watermellon position of splitter's reference frame
+            # get the watermelon position of splitter's reference frame
             a = world.agents[0]
             goal_pos = [a.goal_b.state.p_pos - a.goal_a.state.p_pos]
             return np.concatenate([agent.state.p_vel] + goal_pos)
-        # watermellon splitter
+        # watermelon splitter
         if agent.silent:
             # communication from speaker to splitter
             return np.concatenate([world.agents[0].state.c])
