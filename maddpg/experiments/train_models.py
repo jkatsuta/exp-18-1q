@@ -6,7 +6,7 @@ import time
 
 
 def _train_model(i_epi, scenario, num_episode, pars, dic_var_epi_len,
-                 seed=None, test_mode=False):
+                 seed=None, do_exec=True):
     com = 'python train.py --scenario %s ' % scenario
     com += '--num-episodes %d ' % num_episode
     if len(dic_var_epi_len) > 0:
@@ -28,7 +28,7 @@ def _train_model(i_epi, scenario, num_episode, pars, dic_var_epi_len,
     if pars['is_parallel']:
         com += ' &'
     print(com)
-    if not test_mode:
+    if do_exec:
         os.system(com)
         time.sleep(2)
 
@@ -47,7 +47,7 @@ def get_seeds(pars):
     return seeds
 
 
-def train_models(pars, seed=None, test_mode=False):
+def train_models(pars, seed=None, do_exec=True):
     dic_var_epi_lens = [{}]
     if pars.get('is_variable_max_episode_len', False):
         dic_var_epi_lens = pars['par_variable_max_episode_lens']
@@ -56,18 +56,19 @@ def train_models(pars, seed=None, test_mode=False):
         for dic_var_epi_len in dic_var_epi_lens:
             for i, num_episode in enumerate(pars['num_episodes']):
                 _train_model(i, scenario, num_episode, pars,
-                             dic_var_epi_len, seed, test_mode)
+                             dic_var_epi_len, seed, do_exec)
 
 
 if __name__ == '__main__':
     fn_param = sys.argv[1]
     try:
-        test_mode = eval(sys.argv[2])
+        do_exec = eval(sys.argv[2])
     except IndexError:
-        test_mode = False
+        do_exec = True
 
     dics_pars = get_dics_pars(fn_param)
     for dic_par in dics_pars:
+        do_exec = dic_par.get('exec', do_exec)
         seeds = get_seeds(dic_par)
         for seed in seeds:
-            train_models(dic_par, seed, test_mode)
+            train_models(dic_par, seed, do_exec)

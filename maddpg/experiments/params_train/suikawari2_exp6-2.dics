@@ -1,12 +1,24 @@
 [
 {
-# exp6-2
-'scenarios': ['suikawari2'],
-'num_episodes': [40000],
-'is_parallel': False,
-'good_policy': 'maddpg',
-'adv_policy': 'maddpg',
-'max_episode_lens': [50],
-'is_variable_max_episode_len': False,
+	# exp6-2
+	'scenarios': ['suikawari2'],
+	'num_episodes': [40000],
+	'is_parallel': False,
+	'good_policy': 'maddpg',
+	'adv_policy': 'maddpg',
+	'max_episode_lens': [50],
+	'is_variable_max_episode_len': False,
+	'exec': False,
+},
+{
+	# exp6-2
+	'scenarios': ['suikawari2'],
+	'num_episodes': [100000],
+	'is_parallel': False,
+	'good_policy': 'ddpg',
+	'adv_policy': 'ddpg',
+	'max_episode_lens': [50],
+	'is_variable_max_episode_len': False,
+	'exec': True,
 },
 ]
