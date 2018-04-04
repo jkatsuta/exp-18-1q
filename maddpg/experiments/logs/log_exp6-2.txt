@@ -105,3 +105,231 @@ steps: 1999950, episodes: 40000, mean episode reward: -19.09271218802119, time: 
 Trained episodes: 1 -> 40000
 Total time: 0.66 hr
 python train.py --scenario suikawari2 --num-episodes 40000 --max-episode-len 50 --good-policy maddpg --adv-policy maddpg 
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:910] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX 1070
+major: 6 minor: 1 memoryClockRate (GHz) 1.683
+pciBusID 0000:01:00.0
+Total memory: 7.92GiB
+Free memory: 7.83GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+Using good policy ddpg and adv policy ddpg
+Starting iterations of suikawari2__2018-04-04_11-58-01...
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -155.8770740659954, time: 45.624
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -224.77174813009302, time: 60.188
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -140.54068011814158, time: 60.199
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -104.04010226985804, time: 60.937
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -93.09074113730577, time: 60.454
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -95.7624928205222, time: 60.154
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -91.95608912324174, time: 60.011
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -88.26531374902586, time: 60.141
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -84.54604259324636, time: 60.917
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -85.03677125213459, time: 60.282
+11000 50
+steps: 549950, episodes: 11000, mean episode reward: -80.74993626091113, time: 60.443
+12000 50
+steps: 599950, episodes: 12000, mean episode reward: -82.16491063315553, time: 59.843
+13000 50
+steps: 649950, episodes: 13000, mean episode reward: -82.9137740779422, time: 59.805
+14000 50
+steps: 699950, episodes: 14000, mean episode reward: -78.29764223464782, time: 60.367
+15000 50
+steps: 749950, episodes: 15000, mean episode reward: -83.67607959780915, time: 59.775
+16000 50
+steps: 799950, episodes: 16000, mean episode reward: -79.5619205102578, time: 59.801
+17000 50
+steps: 849950, episodes: 17000, mean episode reward: -76.22906888038382, time: 59.892
+18000 50
+steps: 899950, episodes: 18000, mean episode reward: -80.01559118447129, time: 59.948
+19000 50
+steps: 949950, episodes: 19000, mean episode reward: -75.86750707083164, time: 59.699
+20000 50
+steps: 999950, episodes: 20000, mean episode reward: -76.24302211904741, time: 59.519
+21000 50
+steps: 1049950, episodes: 21000, mean episode reward: -73.25711089872574, time: 59.502
+22000 50
+steps: 1099950, episodes: 22000, mean episode reward: -75.25733057948804, time: 59.928
+23000 50
+steps: 1149950, episodes: 23000, mean episode reward: -73.86808695140802, time: 60.868
+24000 50
+steps: 1199950, episodes: 24000, mean episode reward: -80.46888896429955, time: 59.702
+25000 50
+steps: 1249950, episodes: 25000, mean episode reward: -76.01241107083068, time: 59.463
+26000 50
+steps: 1299950, episodes: 26000, mean episode reward: -69.91748803174147, time: 60.797
+27000 50
+steps: 1349950, episodes: 27000, mean episode reward: -75.51565311724879, time: 59.599
+28000 50
+steps: 1399950, episodes: 28000, mean episode reward: -76.57765578972118, time: 59.963
+29000 50
+steps: 1449950, episodes: 29000, mean episode reward: -79.9334619027264, time: 59.987
+30000 50
+steps: 1499950, episodes: 30000, mean episode reward: -74.35168833880627, time: 60.16
+31000 50
+steps: 1549950, episodes: 31000, mean episode reward: -77.11991635171589, time: 59.921
+32000 50
+steps: 1599950, episodes: 32000, mean episode reward: -81.00367105863266, time: 59.782
+33000 50
+steps: 1649950, episodes: 33000, mean episode reward: -73.21378243750785, time: 60.765
+34000 50
+steps: 1699950, episodes: 34000, mean episode reward: -80.28506838925547, time: 60.112
+35000 50
+steps: 1749950, episodes: 35000, mean episode reward: -76.79750993297986, time: 60.304
+36000 50
+steps: 1799950, episodes: 36000, mean episode reward: -72.07616057971306, time: 60.791
+37000 50
+steps: 1849950, episodes: 37000, mean episode reward: -72.60792583956373, time: 60.358
+38000 50
+steps: 1899950, episodes: 38000, mean episode reward: -75.6903298337066, time: 59.942
+39000 50
+steps: 1949950, episodes: 39000, mean episode reward: -75.34666211604474, time: 60.214
+40000 50
+steps: 1999950, episodes: 40000, mean episode reward: -74.81110803375346, time: 60.188
+41000 50
+steps: 2049950, episodes: 41000, mean episode reward: -102.13026361404971, time: 60.393
+42000 50
+steps: 2099950, episodes: 42000, mean episode reward: -81.11877573041062, time: 59.971
+43000 50
+steps: 2149950, episodes: 43000, mean episode reward: -87.95799055937023, time: 59.901
+44000 50
+steps: 2199950, episodes: 44000, mean episode reward: -81.72422860589698, time: 60.172
+45000 50
+steps: 2249950, episodes: 45000, mean episode reward: -72.50308958817742, time: 59.523
+46000 50
+steps: 2299950, episodes: 46000, mean episode reward: -162.77682094746856, time: 60.415
+47000 50
+steps: 2349950, episodes: 47000, mean episode reward: -87.66855418738533, time: 60.054
+48000 50
+steps: 2399950, episodes: 48000, mean episode reward: -119.33110288006579, time: 60.055
+49000 50
+steps: 2449950, episodes: 49000, mean episode reward: -97.4487702706095, time: 60.34
+50000 50
+steps: 2499950, episodes: 50000, mean episode reward: -112.95133334746802, time: 60.753
+51000 50
+steps: 2549950, episodes: 51000, mean episode reward: -126.07742134275391, time: 60.524
+52000 50
+steps: 2599950, episodes: 52000, mean episode reward: -89.62273027757729, time: 60.491
+53000 50
+steps: 2649950, episodes: 53000, mean episode reward: -82.9690950804204, time: 60.034
+54000 50
+steps: 2699950, episodes: 54000, mean episode reward: -88.45736848551127, time: 59.757
+55000 50
+steps: 2749950, episodes: 55000, mean episode reward: -90.76654509820469, time: 60.81
+56000 50
+steps: 2799950, episodes: 56000, mean episode reward: -86.7534287688577, time: 60.146
+57000 50
+steps: 2849950, episodes: 57000, mean episode reward: -92.39857432845011, time: 59.874
+58000 50
+steps: 2899950, episodes: 58000, mean episode reward: -77.08146759146885, time: 60.405
+59000 50
+steps: 2949950, episodes: 59000, mean episode reward: -88.10536484476306, time: 59.901
+60000 50
+steps: 2999950, episodes: 60000, mean episode reward: -89.31373388014696, time: 59.964
+61000 50
+steps: 3049950, episodes: 61000, mean episode reward: -77.01268599334965, time: 60.299
+62000 50
+steps: 3099950, episodes: 62000, mean episode reward: -77.89369235174956, time: 59.849
+63000 50
+steps: 3149950, episodes: 63000, mean episode reward: -75.96138973529123, time: 60.862
+64000 50
+steps: 3199950, episodes: 64000, mean episode reward: -80.8163506899472, time: 60.757
+65000 50
+steps: 3249950, episodes: 65000, mean episode reward: -80.40865920416702, time: 60.354
+66000 50
+steps: 3299950, episodes: 66000, mean episode reward: -74.34929413079115, time: 60.384
+67000 50
+steps: 3349950, episodes: 67000, mean episode reward: -65.41450213844556, time: 60.667
+68000 50
+steps: 3399950, episodes: 68000, mean episode reward: -73.45187020922779, time: 60.284
+69000 50
+steps: 3449950, episodes: 69000, mean episode reward: -63.820280329487815, time: 59.772
+70000 50
+steps: 3499950, episodes: 70000, mean episode reward: -64.20658118108037, time: 59.491
+71000 50
+steps: 3549950, episodes: 71000, mean episode reward: -75.77782573601712, time: 60.299
+72000 50
+steps: 3599950, episodes: 72000, mean episode reward: -73.12795091361339, time: 60.057
+73000 50
+steps: 3649950, episodes: 73000, mean episode reward: -67.27484797370252, time: 60.103
+74000 50
+steps: 3699950, episodes: 74000, mean episode reward: -75.34762687547887, time: 60.304
+75000 50
+steps: 3749950, episodes: 75000, mean episode reward: -67.17312806823541, time: 59.549
+76000 50
+steps: 3799950, episodes: 76000, mean episode reward: -57.0064873866587, time: 60.272
+77000 50
+steps: 3849950, episodes: 77000, mean episode reward: -72.10449643184339, time: 59.824
+78000 50
+steps: 3899950, episodes: 78000, mean episode reward: -58.63076618164006, time: 60.159
+79000 50
+steps: 3949950, episodes: 79000, mean episode reward: -58.15491671876571, time: 60.935
+80000 50
+steps: 3999950, episodes: 80000, mean episode reward: -50.92886128371005, time: 60.389
+81000 50
+steps: 4049950, episodes: 81000, mean episode reward: -47.78156356902343, time: 60.802
+82000 50
+steps: 4099950, episodes: 82000, mean episode reward: -47.431617305101504, time: 60.203
+83000 50
+steps: 4149950, episodes: 83000, mean episode reward: -46.112306423725705, time: 60.804
+84000 50
+steps: 4199950, episodes: 84000, mean episode reward: -44.80526726098136, time: 60.288
+85000 50
+steps: 4249950, episodes: 85000, mean episode reward: -49.37130539684866, time: 60.5
+86000 50
+steps: 4299950, episodes: 86000, mean episode reward: -60.50236219026515, time: 60.476
+87000 50
+steps: 4349950, episodes: 87000, mean episode reward: -74.77660058552061, time: 60.464
+88000 50
+steps: 4399950, episodes: 88000, mean episode reward: -40.76583025039643, time: 60.61
+89000 50
+steps: 4449950, episodes: 89000, mean episode reward: -43.552951287037146, time: 60.163
+90000 50
+steps: 4499950, episodes: 90000, mean episode reward: -42.021140292701645, time: 60.661
+91000 50
+steps: 4549950, episodes: 91000, mean episode reward: -49.85207789581502, time: 60.319
+92000 50
+steps: 4599950, episodes: 92000, mean episode reward: -52.68546547153568, time: 60.053
+93000 50
+steps: 4649950, episodes: 93000, mean episode reward: -54.38816229215528, time: 60.3
+94000 50
+steps: 4699950, episodes: 94000, mean episode reward: -57.19135029790633, time: 59.834
+95000 50
+steps: 4749950, episodes: 95000, mean episode reward: -70.15797375624297, time: 59.737
+96000 50
+steps: 4799950, episodes: 96000, mean episode reward: -55.88927457278854, time: 60.064
+97000 50
+steps: 4849950, episodes: 97000, mean episode reward: -49.21396777342798, time: 59.536
+98000 50
+steps: 4899950, episodes: 98000, mean episode reward: -45.82382534966699, time: 59.769
+99000 50
+steps: 4949950, episodes: 99000, mean episode reward: -46.70054063826045, time: 60.061
+100000 50
+steps: 4999950, episodes: 100000, mean episode reward: -47.99968716111155, time: 60.071
+...Finished!
+Trained episodes: 1 -> 100000
+Total time: 1.67 hr
+python train.py --scenario suikawari2 --num-episodes 40000 --max-episode-len 50 --good-policy maddpg --adv-policy maddpg 
+python train.py --scenario suikawari2 --num-episodes 100000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg 
