@@ -75,7 +75,7 @@ def get_seeds(pars):
     return seeds
 
 
-def main(trained_model, pars, seed=None, test_mode=False):
+def main(trained_model, pars, seed=None, do_exec=False):
     scenario = get_scenario_name(trained_model)
     video_file_name =\
         get_video_file_name(trained_model, pars.get('outfile_suffix', None), seed)
@@ -96,22 +96,23 @@ def main(trained_model, pars, seed=None, test_mode=False):
     if seed is not None:
         com += '--seed %d ' % seed
     print(com)
-    if not test_mode:
+    if do_exec:
         os.system(com)
 
 
 if __name__ == '__main__':
     fn_par = sys.argv[1]
     try:
-        test_mode = eval(sys.argv[2])
+        do_exec = eval(sys.argv[2])
     except IndexError:
-        test_mode = False
+        do_exec = True
 
     dics_pars = eval(open(fn_par).read())
     for dic_par in dics_pars:
+        do_exec = dic_par.get('exec', do_exec)
         seeds = get_seeds(dic_par)
         for seed in seeds:
             for n_epi in dic_par['n_epis']:
                 model = osp.join(dic_par['p_dir'], dic_par['exp_dir'],
                                  'models/model-%d' % n_epi)
-                main(model, dic_par, seed, test_mode)
+                main(model, dic_par, seed, do_exec)
