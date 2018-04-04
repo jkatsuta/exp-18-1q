@@ -64,7 +64,7 @@ class Scenario(BaseScenario):
             # get the watermelon position of splitter's reference frame
             a = world.agents[0]
             goal_pos = [a.goal_b.state.p_pos - a.goal_a.state.p_pos]
-            return np.concatenate([agent.state.p_vel] + goal_pos)
+            return np.concatenate([world.agents[1].state.p_vel] + goal_pos)
         # watermelon splitter
         if agent.silent:
             obs = []
@@ -80,7 +80,7 @@ class Scenario(BaseScenario):
             # get the watermelon position of splitter's reference frame
             a = world.agents[0]
             goal_pos = [a.goal_b.state.p_pos - a.goal_a.state.p_pos]
-            return np.concatenate([agent.state.p_vel] + goal_pos)
+            return np.concatenate([world.agents[1].state.p_vel] + goal_pos)
         # watermelon splitter
         if agent.silent:
             obs = []
