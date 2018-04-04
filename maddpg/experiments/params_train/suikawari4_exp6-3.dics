@@ -1,0 +1,12 @@
+[
+{
+# exp6-3-2
+'scenarios': ['suikawari4'],
+'num_episodes': [50000],
+'is_parallel': False,
+'good_policy': 'maddpg',
+'adv_policy': 'maddpg',
+'max_episode_lens': [25],
+'is_variable_max_episode_len': False,
+},
+]
