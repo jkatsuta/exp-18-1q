@@ -7,9 +7,9 @@ class Scenario(BaseScenario):
     def make_world(self):
         world = World()
         # set any world properties first
-        world.dim_c = 5
+        world.dim_c = 3
         num_landmarks = 1
-        self.len_memory = 2
+        self.len_memory = 3
         # add agents
         world.agents = [Agent() for i in range(2)]
         for i, agent in enumerate(world.agents):
@@ -52,13 +52,7 @@ class Scenario(BaseScenario):
             landmark.state.p_pos = np.random.uniform(-1, 1, world.dim_p)
             landmark.state.p_vel = np.zeros(world.dim_p)
 
-        self.state_cs = list(np.zeros((self.len_memory, world.dim_c)))
         self.world = world
-
-    def add_c_history(self, agent, world, new_c):
-        self.state_cs.pop(0)
-        self.state_cs.append(new_c)
-        return self.state_cs
 
     def reward(self, agent, world):
         # squared distance from listener to landmark
@@ -66,17 +60,31 @@ class Scenario(BaseScenario):
         dist2 = np.sum(np.square(a.goal_a.state.p_pos - a.goal_b.state.p_pos))
         return -dist2
 
+    @staticmethod
+    def onehot(comms):
+        if not isinstance(comms[0], np.ndarray):
+            comms = [comms]
+        one_hot_comms = []
+        for c in comms:
+            c_onehot = np.zeros_like(c)
+            c_onehot[np.argmax(c)] = 1
+            one_hot_comms.append(c_onehot)
+        return one_hot_comms
+
     def observation(self, agent, world):
+        # speaker's action (= communication) log
+        comm_log = self.world.action_trajectory[0][-self.len_memory:]
+        if len(comm_log) < self.len_memory:
+            for i in range(self.len_memory - len(comm_log)):
+                comm_log.insert(i, np.zeros_like(comm_log[0]))
+        comm_log_onehot = self.onehot(comm_log)
         # speaker
         if not agent.movable:
             # get the watermelon position of splitter's reference frame
             a = world.agents[0]
             goal_pos = [a.goal_b.state.p_pos - a.goal_a.state.p_pos]
-            return np.concatenate([agent.state.p_vel] + goal_pos)
+            return np.concatenate([world.agents[1].state.p_vel] + goal_pos + comm_log_onehot)
         # watermelon splitter
         if agent.silent:
             # communication from speaker to splitter
-            # the past communication is used as observation
-            # state_cs = self.add_c_history(agent, world, world.agents[0].state.c)
-            # return np.concatenate([world.agents[0].state.c])
-            return np.concatenate([world.agents[0].state.c, self.world.action_trajectory[1][-1]])
+            return np.concatenate(comm_log_onehot)
