@@ -1,0 +1,13 @@
+[
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari__2018-04-03_17-01-17',
+ 'n_epis': [20000, 50000, 100000],
+ 'good_policy': 'ddpg',
+ 'adv_policy': 'ddpg',
+ 'num_episodes': 3,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
+},
+]
