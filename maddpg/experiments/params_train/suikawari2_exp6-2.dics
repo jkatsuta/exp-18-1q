@@ -2,7 +2,7 @@
 {
 # exp6-2
 'scenarios': ['suikawari2'],
-'num_episodes': [20000],
+'num_episodes': [40000],
 'is_parallel': False,
 'good_policy': 'maddpg',
 'adv_policy': 'maddpg',
