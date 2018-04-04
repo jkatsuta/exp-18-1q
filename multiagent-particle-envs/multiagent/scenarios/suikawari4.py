@@ -93,7 +93,7 @@ class Scenario(BaseScenario):
         if agent.silent:
             # communication from speaker to splitter
             chars = world.agents[0].state.c
-            # convert analog to digital
+            # convert analog to digital (one-hot)
             chars_digital = np.zeros_like(chars)
             chars_digital[np.argmax(chars)] = 1
             return np.concatenate([chars_digital])
