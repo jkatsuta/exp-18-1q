@@ -2,7 +2,7 @@
 {
 # exp6-4-1
 'scenarios': ['suikawari5'],
-'num_episodes': [100000],
+'num_episodes': [10000],
 'is_parallel': False,
 'good_policy': 'maddpg',
 'adv_policy': 'maddpg',
@@ -12,7 +12,7 @@
 {
 # exp6-4-2
 'scenarios': ['suikawari6'],
-'num_episodes': [100000],
+'num_episodes': [10000],
 'is_parallel': False,
 'good_policy': 'maddpg',
 'adv_policy': 'maddpg',
