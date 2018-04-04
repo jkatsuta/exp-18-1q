@@ -1,0 +1,11 @@
+[
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari2__2018-04-04_09-22-50',
+ 'n_epis': [10000, 40000],
+ 'num_episodes': 3,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
+},
+]
