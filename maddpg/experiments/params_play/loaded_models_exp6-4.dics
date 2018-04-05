@@ -1,0 +1,22 @@
+[
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari5__2018-04-04_21-55-02',
+ 'n_epis': [10000],
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
+ 'exec': False,
+},
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari6__2018-04-04_22-05-07',
+ 'n_epis': [10000],
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
+ 'exec': True,
+},
+]

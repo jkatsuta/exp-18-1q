@@ -7,7 +7,7 @@ class Scenario(BaseScenario):
     def make_world(self):
         world = World()
         # set any world properties first
-        world.dim_c = 3
+        world.dim_c = 2
         num_landmarks = 1
         self.len_memory = 3
         # add agents

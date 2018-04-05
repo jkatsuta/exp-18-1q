@@ -8,6 +8,7 @@
  'max_episode_len': 50,
  'outfile_suffix': None,
  'display_speed': 'very-slow',
+ 'exec': False,
 },
 # exp 6-1-2
 {
@@ -22,13 +23,24 @@
  'display_speed': 'very-slow',
  'exec': False,
 },
-# exp 6-1-2
+# exp 6-1-2 rerun
 {
  'p_dir': './exp_results/exp6_180331',
  'exp_dir': 'suikawari1__2018-04-04_18-08-26',
  'n_epis': [30000, 90000, 100000],
  'good_policy': 'ddpg',
  'adv_policy': 'ddpg',
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
+ 'exec': False,
+},
+# exp 6-1-1 rerun
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari1__2018-04-04_21-06-12',
+ 'n_epis': [10000, 30000],
  'num_episodes': 5,
  'max_episode_len': 50,
  'outfile_suffix': None,

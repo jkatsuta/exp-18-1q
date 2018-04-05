@@ -9,7 +9,7 @@ class Scenario(BaseScenario):
         # set any world properties first
         world.dim_c = 3
         num_landmarks = 1
-        self.len_memory = 2
+        self.len_memory = 3
         # add agents
         world.agents = [Agent() for i in range(2)]
         for i, agent in enumerate(world.agents):
@@ -83,7 +83,7 @@ class Scenario(BaseScenario):
             # get the watermelon position of splitter's reference frame
             a = world.agents[0]
             goal_pos = [a.goal_b.state.p_pos - a.goal_a.state.p_pos]
-            return np.concatenate([world.agents[1].state.p_vel] + goal_pos + comm_log_onehot)
+            return np.concatenate(goal_pos + comm_log_onehot)
         # watermelon splitter
         if agent.silent:
             # communication from speaker to splitter
