@@ -58,6 +58,17 @@ class Scenario(BaseScenario):
         dist2 = np.sum(np.square(a.goal_a.state.p_pos - a.goal_b.state.p_pos))
         return -dist2
 
+    @staticmethod
+    def onehot(comms):
+        if not isinstance(comms[0], np.ndarray):
+            comms = [comms]
+        one_hot_comms = []
+        for c in comms:
+            c_onehot = np.zeros_like(c)
+            c_onehot[np.argmax(c)] = 1
+            one_hot_comms.append(c_onehot)
+        return one_hot_comms
+
     def observation(self, agent, world):
         # speaker
         if not agent.movable:
@@ -69,7 +80,8 @@ class Scenario(BaseScenario):
         if agent.silent:
             obs = []
             # communication from speaker to splitter
-            obs.append(world.agents[0].state.c)
+            speaker_voice = world.agents[0].state.c
+            obs.append(self.onehot(speaker_voice))
             # add the velocity of the splitter
             obs.append(agent.state.p_vel)
             return np.concatenate(obs)
