@@ -7,11 +7,12 @@ class Scenario(BaseScenario):
     def make_world(self):
         world = World()
         # set any world properties first
-        world.dim_c = 2
-        num_landmarks = 1
-        self.len_memory = 3
+        world.dim_c = 6
+        num_watermelon = 1
+        num_speaker = 1
+        num_splitter = 2
         # add agents
-        world.agents = [Agent() for i in range(2)]
+        world.agents = [Agent() for i in range(num_speaker + num_splitter)]
         for i, agent in enumerate(world.agents):
             agent.name = 'agent %d' % i
             agent.collide = False
@@ -20,8 +21,9 @@ class Scenario(BaseScenario):
         world.agents[0].movable = False
         # watermelon splitter
         world.agents[1].silent = True
+        world.agents[2].silent = True
         # add a watermelon
-        world.landmarks = [Landmark() for i in range(num_landmarks)]
+        world.landmarks = [Landmark() for i in range(num_watermelon)]
         for i, landmark in enumerate(world.landmarks):
             landmark.name = 'landmark %d' % i
             landmark.collide = False
@@ -33,15 +35,16 @@ class Scenario(BaseScenario):
 
     def reset_world(self, world):
         # assign goals to agents
-        for agent in world.agents:
-            agent.goal_a = None
-            agent.goal_b = None
+        # for agent in world.agents:
+            # agent.goal_a = None
+            # agent.goal_b = None
         # want listener to go to the goal landmark
-        world.agents[0].goal_a = world.agents[1]  # splitter
-        world.agents[0].goal_b = world.landmarks[0]  # watermelon
+        # world.agents[0].goal_a = world.agents[1]  # splitter
+        # world.agents[0].goal_b = world.landmarks[0]  # watermelon
         # coloring
         world.agents[0].color = np.array([0.25, 0.25, 0.25])
         world.agents[1].color = np.array([1.0, 0.5, 0.5])
+        world.agents[2].color = np.array([0.5, 0.5, 1.0])
         world.landmarks[0].color = np.array([0.15, 0.65, 0.15])
         # set random initial states
         for agent in world.agents:
@@ -52,39 +55,45 @@ class Scenario(BaseScenario):
             landmark.state.p_pos = np.random.uniform(-1, 1, world.dim_p)
             landmark.state.p_vel = np.zeros(world.dim_p)
 
-        self.world = world
-
     def reward(self, agent, world):
-        # squared distance from listener to landmark
-        a = world.agents[0]
-        dist2 = np.sum(np.square(a.goal_a.state.p_pos - a.goal_b.state.p_pos))
+        if agent.movable:
+            return self.splitter_reward(agent, world)
+        else:
+            return self.speaker_reward(agent, world)
+
+    def splitter_reward(self, agent, world):
+        # squared distance from splitter to watermelon
+        watermelon = world.landmarks[0]
+        v_diff = watermelon.state.p_pos - agent.state.p_pos
+        dist2 = np.sum(np.square(v_diff))
         return -dist2
 
-    @staticmethod
-    def onehot(comms):
-        if not isinstance(comms[0], np.ndarray):
-            comms = [comms]
-        one_hot_comms = []
-        for c in comms:
-            c_onehot = np.zeros_like(c)
-            c_onehot[np.argmax(c)] = 1
-            one_hot_comms.append(c_onehot)
-        return one_hot_comms
+    def speaker_reward(self, agent, world):
+        rew = 0.
+        for other in world.agents:
+            if other is agent:
+                continue
+            rew += self.splitter_reward(other, world)
+        return rew
 
     def observation(self, agent, world):
-        # speaker's action (= communication) log
-        comm_log = self.world.action_trajectory[0][-self.len_memory:]
-        if len(comm_log) < self.len_memory:
-            for i in range(self.len_memory - len(comm_log)):
-                comm_log.insert(i, np.zeros_like(comm_log[0]))
-        comm_log_onehot = self.onehot(comm_log)
         # speaker
         if not agent.movable:
             # get the watermelon position of splitter's reference frame
-            a = world.agents[0]
-            goal_pos = [a.goal_b.state.p_pos - a.goal_a.state.p_pos]
-            return np.concatenate([world.agents[1].state.p_vel] + goal_pos + comm_log_onehot)
+            watermelon = world.landmarks[0]
+            goals = []
+            for other in world.agents:
+                if other is agent:
+                    continue
+                ref_goal_pos = watermelon.state.p_pos - other.state.p_pos
+                goals.append(ref_goal_pos)
+                goals.append(other.state.p_vel)
+            return np.concatenate(goals)
         # watermelon splitter
         if agent.silent:
             # communication from speaker to splitter
-            return np.concatenate([agent.state.p_vel] + comm_log_onehot)
+            chars = world.agents[0].state.c
+            # convert analog to digital (one-hot)
+            chars_digital = np.zeros_like(chars)
+            chars_digital[np.argmax(chars)] = 1
+            return np.concatenate([chars_digital])
