@@ -19,7 +19,7 @@
 'adv_policy': 'ddpg',
 'max_episode_lens': [50],
 'is_variable_max_episode_len': False,
-'exec': False,
+'exec': True,
 },
 {
 # exp6-2-1
@@ -41,6 +41,6 @@
 'adv_policy': 'ddpg',
 'max_episode_lens': [50],
 'is_variable_max_episode_len': False,
-'exec': False,
+'exec': True,
 },
 ]
