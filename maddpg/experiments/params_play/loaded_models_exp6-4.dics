@@ -1,22 +1,35 @@
 [
+# exp6-4-1
 {
  'p_dir': './exp_results/exp6_180331',
- 'exp_dir': 'suikawari5__2018-04-04_21-55-02',
- 'n_epis': [10000],
+ 'exp_dir': 'suikawari5__2018-04-05_12-07-13',
+ 'n_epis': [10000, 50000],
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
+ 'exec': True,
+},
+# exp6-4-2
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari6__2018-04-05_12-58-25',
+ 'n_epis': [10000, 50000],
  'num_episodes': 5,
  'max_episode_len': 50,
  'outfile_suffix': None,
  'display_speed': 'very-slow',
  'exec': False,
 },
+# exp6-4-3
 {
  'p_dir': './exp_results/exp6_180331',
- 'exp_dir': 'suikawari6__2018-04-04_22-05-07',
- 'n_epis': [10000],
+ 'exp_dir': 'suikawari7__2018-04-05_13-50-01',
+ 'n_epis': [10000, 50000],
  'num_episodes': 5,
  'max_episode_len': 50,
  'outfile_suffix': None,
  'display_speed': 'very-slow',
- 'exec': True,
+ 'exec': False,
 },
 ]
