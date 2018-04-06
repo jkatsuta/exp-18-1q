@@ -78,10 +78,9 @@ class Scenario(BaseScenario):
             return np.concatenate([world.agents[1].state.p_vel] + goal_pos)
         # watermelon splitter
         if agent.silent:
-            obs = []
             # communication from speaker to splitter
             speaker_voice = world.agents[0].state.c
-            obs.append(self.onehot(speaker_voice))
+            obs = self.onehot(speaker_voice)
             # add the velocity of the splitter
             obs.append(agent.state.p_vel)
             return np.concatenate(obs)
