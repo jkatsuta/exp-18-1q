@@ -35,9 +35,9 @@ def _get_video_dir(model):
     return osp.join(video_dir, 'videos')
 
 
-def get_video_file_name(model, suffix, seed):
+def get_video_file_name(model, suffix, seed, do_exec):
     video_dir = _get_video_dir(model)
-    if not osp.exists(video_dir):
+    if do_exec and not osp.exists(video_dir):
         os.makedirs(video_dir)
     n_iter = model.split('-')[-1]
 
@@ -78,7 +78,7 @@ def get_seeds(pars):
 def main(trained_model, pars, seed=None, do_exec=False):
     scenario = get_scenario_name(trained_model)
     video_file_name =\
-        get_video_file_name(trained_model, pars.get('outfile_suffix', None), seed)
+        get_video_file_name(trained_model, pars.get('outfile_suffix', None), seed, do_exec)
 
     com = 'python train.py --display --num-episodes %d ' % pars['num_episodes']
     com += '--scenario %s --load-model %s ' % (scenario, trained_model)

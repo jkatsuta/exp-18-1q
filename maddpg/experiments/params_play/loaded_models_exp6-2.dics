@@ -71,6 +71,30 @@
  'max_episode_len': 50,
  'outfile_suffix': None,
  'display_speed': 'very-slow',
+ 'exec': False,
+},
+# exp 6-2-1 rerun2
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari2__2018-04-06_18-32-53',
+ 'n_epis': [30000],
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
  'exec': True,
+},
+# exp 6-2-2 rerun2
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari2__2018-04-06_18-32-56',
+ 'n_epis': [30000, 50000, 100000],
+ 'good_policy': 'ddpg',
+ 'adv_policy': 'ddpg',
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
+ 'exec': False,
 },
 ]
