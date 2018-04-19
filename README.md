@@ -4,5 +4,5 @@ I made an experiment uing a libary of [MAPE](https://github.com/openai/multiagen
 
 The codes were slightly changed to adjust to my experiment.  
 In addition, I made new scenarios (suikawari) and checked their behavior.  
-The experiment resutls are described in ipython notebooks in  
+The experiment resutls are described in ipython notebooks under  
 **'maddpg/experiments/my_notes/'**.
