@@ -82,7 +82,7 @@
  'max_episode_len': 50,
  'outfile_suffix': None,
  'display_speed': 'very-slow',
- 'exec': True,
+ 'exec': False,
 },
 # exp 6-2-2 rerun2
 {
@@ -96,5 +96,16 @@
  'outfile_suffix': None,
  'display_speed': 'very-slow',
  'exec': False,
+},
+# exp 6-2-1 rerun3
+{
+ 'p_dir': './exp_results/exp6_180331',
+ 'exp_dir': 'suikawari2__2018-04-06_18-32-53',
+ 'n_epis': [1000, 2000, 3000],
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'outfile_suffix': None,
+ 'display_speed': 'very-slow',
+ 'exec': True,
 },
 ]
