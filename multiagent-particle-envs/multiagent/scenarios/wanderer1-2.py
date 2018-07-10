@@ -4,10 +4,10 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import wanderer
 
 
-PENALTY_RATIO = 0.01
-VISIBLE_RATIO = 0.1
-L_PROB = 1.0
-
-
 class Scenario(wanderer.Scenario):
-	pass
+	def set_params(self):
+	    self.dim_c = 2  # 0: borrow money, 1: do nothing
+	    self.n_agents = 1
+	    self.PENALTY_RATIO = 0.01
+	    self.VISIBLE_RATIO = 0.1
+	    self.L_PROB = 1.0

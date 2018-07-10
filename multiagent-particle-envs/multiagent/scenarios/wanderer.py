@@ -3,20 +3,22 @@ from multiagent.core import World, Agent, Landmark
 from multiagent.scenario import BaseScenario
 
 
-PENALTY_RATIO = 0.0
-VISIBLE_RATIO = 0.1
-L_PROB = 1.0
-
-
 class Scenario(BaseScenario):
+    def set_params(self):
+        self.dim_c = 2  # 0: borrow money, 1: do nothing
+        self.n_agents = 1
+        self.PENALTY_RATIO = 0.0
+        self.VISIBLE_RATIO = 0.1
+        self.L_PROB = 1.0
+
     def make_world(self):
         world = World2()
-        world.dim_c = 2
-        n_agents = 1
+        self.set_params()
+        world.dim_c = self.dim_c
         n_landmark = 1  # should be 1
 
         # add agents
-        world.agents = [Agent() for i in range(n_agents)]
+        world.agents = [Agent() for i in range(self.n_agents)]
         for i, agent in enumerate(world.agents):
             agent.name = 'agent %d' % i
             agent.collide = False
@@ -56,15 +58,15 @@ class Scenario(BaseScenario):
 
     def reward(self, agent, world):
         dist2 = self.dist2(agent.state.p_pos, world.landmarks[0].state.p_pos)
-        return -dist2 + PENALTY_RATIO * agent.state.money
+        return -dist2 + self.PENALTY_RATIO * agent.state.money
 
     @staticmethod
-    def mask_vector(dv, visible_radius):
+    def mask_vector(dv, visible_radius, l_prob):
         def calc_prob(dl, visible_radius):
             eps = 1e-8  # avoid zero divistion
             dl_in_vrad = dl / (visible_radius + eps)
             # return 0.5 * (1. + 0.5 ** ((dl_in_vrad - 1) / L_PROB))
-            return 0.5 ** ((dl_in_vrad - 1) / L_PROB)
+            return 0.5 ** ((dl_in_vrad - 1) / l_prob)
 
         assert len(dv.shape) == 1
         ndim = dv.shape[0]
@@ -80,14 +82,14 @@ class Scenario(BaseScenario):
         return dv * mask
 
     def observation(self, agent, world):
-        visible_area = abs(VISIBLE_RATIO * agent.state.money)
+        visible_area = abs(self.VISIBLE_RATIO * agent.state.money)
         visible_radius =\
             -1 * np.sign(agent.state.money) * np.sqrt(visible_area / np.pi)
 
         entity_pos = []
         for entity in world.landmarks:
             dv = agent.state.p_pos - entity.state.p_pos
-            proc_dv = self.mask_vector(dv, visible_radius)
+            proc_dv = self.mask_vector(dv, visible_radius, self.L_PROB)
             entity_pos.append(proc_dv)
 
         # multi-agent case

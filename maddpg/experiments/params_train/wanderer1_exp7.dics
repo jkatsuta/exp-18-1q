@@ -1,7 +1,7 @@
 [
 # exp7
 {
-'scenarios': ['wanderer1-%d' % (i+1) for i in range(6)],
+'scenarios': ['wanderer1-%d' % (i+1) for i in range(4)],
 'num_episodes': [10000],
 'is_parallel': True,
 'good_policy': 'ddpg',
