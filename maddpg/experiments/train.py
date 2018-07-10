@@ -34,7 +34,7 @@ def parse_args():
     # Checkpointing
     parser.add_argument("--exp-name", type=str, default=None, help="name of the experiment")
     parser.add_argument("--save-dir", type=str, default=None, help="directory in which training state and model should be saved")
-    parser.add_argument("--save-rate", type=int, default=1000, help="save model once every time this many episodes are completed")
+    parser.add_argument("--save-rate", type=int, default=100, help="save model once every time this many episodes are completed")
     parser.add_argument("--load-model", type=str, default=None, help="loaded model")
     # Evaluation
     parser.add_argument("--restore", action="store_true", default=False)
@@ -189,6 +189,25 @@ def save_curves(n_episode, train_step,
                                                  *final_ep_ag_reward).rstrip(', ') + '\n')
 
 
+def save_money(n_episode, train_step, final_ep_ag_money, arglist):
+    ag_money_file_name = osp.join(arglist.plots_dir, 'agents_money.csv')
+    is_first_save = False
+    if not osp.exists(ag_money_file_name):
+        is_first_save = True
+
+    with open(ag_money_file_name, 'a') as g:
+        n_agents = len(final_ep_ag_money)
+        if is_first_save:
+            agent_names = ['agent%d_money' % i for i in range(n_agents)]
+            header = ('{},' * (n_agents + 2))\
+                .format('episode', 'step', *(agent_names)).rstrip(',')
+            g.write(header + '\n')
+        g.write(('{}, ' * (n_agents + 2)).format(n_episode, train_step,
+                                                 *final_ep_ag_money).rstrip(', ') + '\n')
+        for i in range(n_agents):
+            print(" agent%d's money: %.1f" % (i, final_ep_ag_money[i]))
+
+
 def save_actions(action_history, video_file_name):
     for i, dic_each_agent_actions in enumerate(action_history):
         outfile = video_file_name.replace('.mp4', '_actions_agent%d.csv' % i)
@@ -251,6 +270,10 @@ def set_random_seed(env, seed):
     env.seed(seed)
 
 
+def is_trade(env):
+    return np.any([agent.trade for agent in env.agents])
+
+
 def train(arglist):
     set_dirs(arglist)
     max_episode_len, dic_par_var_epi_len = set_max_episode_len(arglist)
@@ -289,6 +312,8 @@ def train(arglist):
         dic_messages = defaultdict(list)  # for evaluation
         action_hisotry = [defaultdict(list) for _ in range(env.n)]  # for evaluation
         t_start = t_start0 = time.time()
+        money_history = [[] for _ in range(env.n)]
+        final_ep_ag_money = []
 
         # restore some variables of the restored model
         if arglist.restore:
@@ -339,6 +364,9 @@ def train(arglist):
                         if arglist.video_record:
                             recorder.env.close()
                         break
+                if is_trade(env):
+                    for i, agent in enumerate(env.agents):
+                        money_history[i].append(agent.state.money)
 
                 obs_n = env.reset()
                 episode_step = 0
@@ -391,6 +419,7 @@ def train(arglist):
                 # print statement depends on whether or not there are adversaries
                 print_reward(n_episode, num_adversaries, train_step, agent_rewards,
                              episode_rewards, arglist.save_rate, t_start)
+
                 t_start = time.time()
                 # Keep track of final episode reward
                 final_ep_rewards.append(np.mean(episode_rewards[-arglist.save_rate:]))
@@ -398,6 +427,11 @@ def train(arglist):
                                             for rew in agent_rewards])
                 save_curves(n_episode, train_step,
                             final_ep_rewards[-1], final_ep_ag_rewards[-1], arglist)
+
+                if is_trade(env):
+                    final_ep_ag_money.append([np.mean(each_mh[-arglist.save_rate:])
+                                              for each_mh in money_history])
+                    save_money(n_episode, train_step, final_ep_ag_money[-1], arglist)
                 # thin out the saved models; 10 and 5 can be any int values.
                 if ((n_episode < arglist.save_rate * 10) or
                     (n_episode % (arglist.save_rate * 5) == 0)):
@@ -410,6 +444,8 @@ def train(arglist):
                     save_model(saver, arglist, episode_rewards, n_episode)
                     save_curves(n_episode, train_step,
                                 final_ep_rewards[-1], final_ep_ag_rewards[-1], arglist)
+                    if is_trade(env):
+                        save_money(n_episode, train_step, final_ep_ag_money[-1], arglist)
                 print('...Finished!')
                 print('Trained episodes: %d -> %d' % (n_episode0, n_episode))
                 print('Total time: %.2f hr' % ((time.time() - t_start0) / 3600.))

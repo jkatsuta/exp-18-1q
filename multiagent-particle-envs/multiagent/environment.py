@@ -67,7 +67,11 @@ class MultiAgentEnv(gym.Env):
                 self.action_space.append(total_action_space[0])
         # add by JK
         for space in self.action_space:
-            self.world.action_trajectory.append([np.zeros(space.n)])
+            if isinstance(space, gym.spaces.multi_discrete.MultiDiscrete):
+                n = sum(space.nvec)
+            else:
+                n = space.n
+            self.world.action_trajectory.append([np.zeros(n)])
         # observation space
         for agent in self.agents:
             obs_dim = len(observation_callback(agent, self.world))
