@@ -1,0 +1,2030 @@
+python train.py --scenario wanderer2-1 --num-episodes 10000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+python train.py --scenario wanderer2-2 --num-episodes 10000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+python train.py --scenario wanderer2-2 --num-episodes 10000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+python train.py --scenario wanderer2-2 --num-episodes 10000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+python train.py --scenario wanderer2-2 --num-episodes 10000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+Using good policy ddpg and adv policy ddpg
+Starting iterations of wanderer2-1__2018-07-10_19-20-23...
+100 50
+steps: 4950, episodes: 100, mean episode reward: -160.0942907434445, time: 10.91
+ agent0's money: -24.6
+ agent1's money: -25.1
+200 50
+steps: 9950, episodes: 200, mean episode reward: -151.70955058003076, time: 11.791
+ agent0's money: -24.1
+ agent1's money: -25.1
+300 50
+steps: 14950, episodes: 300, mean episode reward: -173.94309966110416, time: 11.674
+ agent0's money: -23.4
+ agent1's money: -25.6
+400 50
+steps: 19950, episodes: 400, mean episode reward: -154.35726738386757, time: 11.777
+ agent0's money: -24.6
+ agent1's money: -25.1
+500 50
+steps: 24950, episodes: 500, mean episode reward: -150.73522347192633, time: 12.031
+ agent0's money: -24.1
+ agent1's money: -25.3
+600 50
+steps: 29950, episodes: 600, mean episode reward: -144.77499082499958, time: 11.973
+ agent0's money: -25.3
+ agent1's money: -25.6
+700 50
+steps: 34950, episodes: 700, mean episode reward: -148.13553371931678, time: 11.979
+ agent0's money: -24.2
+ agent1's money: -26.0
+800 50
+steps: 39950, episodes: 800, mean episode reward: -170.02872650366268, time: 11.951
+ agent0's money: -24.0
+ agent1's money: -24.7
+900 50
+steps: 44950, episodes: 900, mean episode reward: -158.45836179006312, time: 11.978
+ agent0's money: -24.1
+ agent1's money: -25.6
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -169.59887029859834, time: 11.844
+ agent0's money: -24.6
+ agent1's money: -25.4
+1100 50
+steps: 54950, episodes: 1100, mean episode reward: -492.35766322422535, time: 16.154
+ agent0's money: -15.4
+ agent1's money: -21.1
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -209.32808376559956, time: 16.799
+ agent0's money: -15.7
+ agent1's money: -25.1
+1300 50
+steps: 64950, episodes: 1300, mean episode reward: -174.6074392551721, time: 16.584
+ agent0's money: -37.1
+ agent1's money: -39.2
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -174.29575096238645, time: 16.508
+ agent0's money: -28.2
+ agent1's money: -27.4
+1500 50
+steps: 74950, episodes: 1500, mean episode reward: -135.8352952818569, time: 16.502
+ agent0's money: -19.0
+ agent1's money: -20.1
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -128.854355767145, time: 16.7
+ agent0's money: -15.9
+ agent1's money: -32.7
+1700 50
+steps: 84950, episodes: 1700, mean episode reward: -109.9649747091835, time: 16.267
+ agent0's money: -11.4
+ agent1's money: -35.6
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -117.32280495422913, time: 16.166
+ agent0's money: -2.1
+ agent1's money: -38.3
+1900 50
+steps: 94950, episodes: 1900, mean episode reward: -125.55019349902345, time: 16.391
+ agent0's money: -1.7
+ agent1's money: -40.2
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -117.83154405548562, time: 16.77
+ agent0's money: -3.0
+ agent1's money: -36.8
+2100 50
+steps: 104950, episodes: 2100, mean episode reward: -96.2475253187192, time: 16.713
+ agent0's money: -8.6
+ agent1's money: -42.8
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -74.78267050942763, time: 16.533
+ agent0's money: -12.2
+ agent1's money: -35.2
+2300 50
+steps: 114950, episodes: 2300, mean episode reward: -95.19526600169961, time: 16.137
+ agent0's money: -6.8
+ agent1's money: -42.9
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -71.96385325103792, time: 16.228
+ agent0's money: -13.6
+ agent1's money: -43.9
+2500 50
+steps: 124950, episodes: 2500, mean episode reward: -69.95814445336863, time: 16.41
+ agent0's money: -14.3
+ agent1's money: -42.7
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -64.6753498660011, time: 16.466
+ agent0's money: -9.4
+ agent1's money: -44.2
+2700 50
+steps: 134950, episodes: 2700, mean episode reward: -65.31904606006958, time: 16.343
+ agent0's money: -6.3
+ agent1's money: -48.5
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -76.4160000120963, time: 16.669
+ agent0's money: -4.0
+ agent1's money: -46.2
+2900 50
+steps: 144950, episodes: 2900, mean episode reward: -68.97087515923096, time: 16.142
+ agent0's money: -9.6
+ agent1's money: -45.5
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -71.73911195419156, time: 16.411
+ agent0's money: -7.2
+ agent1's money: -45.3
+3100 50
+steps: 154950, episodes: 3100, mean episode reward: -69.96360554725544, time: 16.742
+ agent0's money: -5.5
+ agent1's money: -46.6
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -79.31413487336101, time: 16.254
+ agent0's money: -8.7
+ agent1's money: -47.7
+3300 50
+steps: 164950, episodes: 3300, mean episode reward: -61.99582597886237, time: 17.315
+ agent0's money: -6.7
+ agent1's money: -48.8
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -66.25930151569108, time: 16.498
+ agent0's money: -5.6
+ agent1's money: -47.8
+3500 50
+steps: 174950, episodes: 3500, mean episode reward: -66.67258546192667, time: 16.369
+ agent0's money: -7.4
+ agent1's money: -49.2
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -80.13168509227967, time: 17.052
+ agent0's money: -11.5
+ agent1's money: -47.2
+3700 50
+steps: 184950, episodes: 3700, mean episode reward: -74.16878241757128, time: 16.236
+ agent0's money: -13.5
+ agent1's money: -48.7
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -60.5596475943759, time: 16.233
+ agent0's money: -13.0
+ agent1's money: -46.6
+3900 50
+steps: 194950, episodes: 3900, mean episode reward: -64.14665819973635, time: 16.375
+ agent0's money: -10.0
+ agent1's money: -45.7
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -62.533717195688034, time: 16.435
+ agent0's money: -10.5
+ agent1's money: -48.3
+4100 50
+steps: 204950, episodes: 4100, mean episode reward: -44.74317792537601, time: 16.951
+ agent0's money: -11.8
+ agent1's money: -49.5
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -51.86175136075885, time: 16.207
+ agent0's money: -12.4
+ agent1's money: -47.5
+4300 50
+steps: 214950, episodes: 4300, mean episode reward: -62.68920740140729, time: 16.571
+ agent0's money: -17.9
+ agent1's money: -47.5
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -69.23034809167414, time: 16.524
+ agent0's money: -12.7
+ agent1's money: -46.7
+4500 50
+steps: 224950, episodes: 4500, mean episode reward: -63.81008299872624, time: 16.018
+ agent0's money: -20.1
+ agent1's money: -46.0
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -52.13203035878992, time: 16.874
+ agent0's money: -30.2
+ agent1's money: -46.4
+4700 50
+steps: 234950, episodes: 4700, mean episode reward: -51.496723471592574, time: 16.005
+ agent0's money: -29.6
+ agent1's money: -47.4
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -46.112258809477815, time: 16.477
+ agent0's money: -21.8
+ agent1's money: -48.5
+4900 50
+steps: 244950, episodes: 4900, mean episode reward: -57.08543277833156, time: 16.228
+ agent0's money: -24.4
+ agent1's money: -47.7
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -42.30644927836221, time: 16.276
+ agent0's money: -25.2
+ agent1's money: -48.7
+5100 50
+steps: 254950, episodes: 5100, mean episode reward: -37.24402499782222, time: 16.55
+ agent0's money: -30.6
+ agent1's money: -49.0
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -52.04782569528857, time: 16.186
+ agent0's money: -22.5
+ agent1's money: -48.0
+5300 50
+steps: 264950, episodes: 5300, mean episode reward: -36.619881104766925, time: 16.362
+ agent0's money: -22.1
+ agent1's money: -48.0
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -36.7417201477323, time: 16.214
+ agent0's money: -38.0
+ agent1's money: -48.4
+5500 50
+steps: 274950, episodes: 5500, mean episode reward: -41.44978865417686, time: 16.43
+ agent0's money: -31.3
+ agent1's money: -49.1
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -43.343893540032944, time: 17.083
+ agent0's money: -42.8
+ agent1's money: -48.9
+5700 50
+steps: 284950, episodes: 5700, mean episode reward: -42.67387807915007, time: 16.615
+ agent0's money: -42.7
+ agent1's money: -48.1
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -45.845545799483205, time: 16.194
+ agent0's money: -45.6
+ agent1's money: -47.9
+5900 50
+steps: 294950, episodes: 5900, mean episode reward: -48.88949092611785, time: 16.429Using good policy ddpg and adv policy ddpg
+Starting iterations of wanderer2-2__2018-07-10_19-20-25...
+100 50
+steps: 4950, episodes: 100, mean episode reward: -157.5052416440968, time: 11.18
+ agent0's money: -23.2
+ agent1's money: -20.8
+200 50
+steps: 9950, episodes: 200, mean episode reward: -146.13894114061355, time: 11.893
+ agent0's money: -23.8
+ agent1's money: -21.4
+300 50
+steps: 14950, episodes: 300, mean episode reward: -149.3407550053177, time: 11.795
+ agent0's money: -23.5
+ agent1's money: -22.4
+400 50
+steps: 19950, episodes: 400, mean episode reward: -180.91877403208812, time: 11.992
+ agent0's money: -23.3
+ agent1's money: -21.9
+500 50
+steps: 24950, episodes: 500, mean episode reward: -158.13651233099787, time: 11.977
+ agent0's money: -23.6
+ agent1's money: -21.9
+600 50
+steps: 29950, episodes: 600, mean episode reward: -149.3335359633292, time: 11.923
+ agent0's money: -23.8
+ agent1's money: -22.2
+700 50
+steps: 34950, episodes: 700, mean episode reward: -157.95075272643433, time: 11.992
+ agent0's money: -23.9
+ agent1's money: -22.6
+800 50
+steps: 39950, episodes: 800, mean episode reward: -148.3586612779325, time: 11.798
+ agent0's money: -23.9
+ agent1's money: -21.8
+900 50
+steps: 44950, episodes: 900, mean episode reward: -167.1544805918424, time: 11.635
+ agent0's money: -23.7
+ agent1's money: -22.0
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -153.0193156933283, time: 12.14
+ agent0's money: -23.5
+ agent1's money: -21.5
+1100 50
+steps: 54950, episodes: 1100, mean episode reward: -839.4537277835242, time: 16.243
+ agent0's money: -23.6
+ agent1's money: -9.2
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -345.405377327978, time: 16.822
+ agent0's money: -5.3
+ agent1's money: -14.3
+1300 50
+steps: 64950, episodes: 1300, mean episode reward: -293.12539121329905, time: 17.233
+ agent0's money: -8.0
+ agent1's money: -22.0
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -389.3925849531117, time: 17.214
+ agent0's money: -35.1
+ agent1's money: -8.2
+1500 50
+steps: 74950, episodes: 1500, mean episode reward: -394.12773330742937, time: 17.025
+ agent0's money: -15.0
+ agent1's money: -42.1
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -168.37885921434702, time: 18.406
+ agent0's money: -4.4
+ agent1's money: -27.9
+1700 50
+steps: 84950, episodes: 1700, mean episode reward: -154.11584171714168, time: 16.927
+ agent0's money: -6.4
+ agent1's money: -25.5
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -135.54956086017162, time: 17.047
+ agent0's money: -3.2
+ agent1's money: -17.4
+1900 50
+steps: 94950, episodes: 1900, mean episode reward: -113.54603471237658, time: 17.333
+ agent0's money: -11.9
+ agent1's money: -7.8
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -122.7244452094562, time: 16.905
+ agent0's money: -8.3
+ agent1's money: -5.1
+2100 50
+steps: 104950, episodes: 2100, mean episode reward: -165.40222356284644, time: 17.239
+ agent0's money: -8.4
+ agent1's money: -11.6
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -140.53921036535593, time: 17.048
+ agent0's money: -13.0
+ agent1's money: -10.6
+2300 50
+steps: 114950, episodes: 2300, mean episode reward: -130.74234772169464, time: 17.287
+ agent0's money: -15.7
+ agent1's money: -10.8
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -112.76219828255975, time: 17.259
+ agent0's money: -26.7
+ agent1's money: -4.6
+2500 50
+steps: 124950, episodes: 2500, mean episode reward: -108.50879289842362, time: 17.245
+ agent0's money: -38.5
+ agent1's money: -2.4
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -107.6886334556034, time: 17.181
+ agent0's money: -33.0
+ agent1's money: -4.0
+2700 50
+steps: 134950, episodes: 2700, mean episode reward: -119.69896616355999, time: 17.189
+ agent0's money: -40.1
+ agent1's money: -0.8
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -106.68791912551573, time: 16.815
+ agent0's money: -41.5
+ agent1's money: -1.6
+2900 50
+steps: 144950, episodes: 2900, mean episode reward: -98.23298186062286, time: 16.817
+ agent0's money: -27.3
+ agent1's money: -2.1
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -102.08807626867278, time: 17.128
+ agent0's money: -44.5
+ agent1's money: -1.2
+3100 50
+steps: 154950, episodes: 3100, mean episode reward: -125.55548152603664, time: 17.137
+ agent0's money: -35.6
+ agent1's money: -1.5
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -109.24620571756469, time: 16.525
+ agent0's money: -35.1
+ agent1's money: -3.0
+3300 50
+steps: 164950, episodes: 3300, mean episode reward: -97.5701340705182, time: 16.725
+ agent0's money: -39.1
+ agent1's money: -1.0
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -116.70063187049793, time: 16.843
+ agent0's money: -39.1
+ agent1's money: -4.5
+3500 50
+steps: 174950, episodes: 3500, mean episode reward: -108.17154933244123, time: 16.155
+ agent0's money: -42.0
+ agent1's money: -2.2
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -105.94784971419278, time: 16.621
+ agent0's money: -37.8
+ agent1's money: -5.2
+3700 50
+steps: 184950, episodes: 3700, mean episode reward: -128.55562220572992, time: 16.476
+ agent0's money: -26.6
+ agent1's money: -4.4
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -96.20475378584753, time: 16.499
+ agent0's money: -33.3
+ agent1's money: -6.3
+3900 50
+steps: 194950, episodes: 3900, mean episode reward: -93.29952554826525, time: 16.189
+ agent0's money: -46.0
+ agent1's money: -8.7
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -88.34992276683757, time: 16.563
+ agent0's money: -45.0
+ agent1's money: -4.4
+4100 50
+steps: 204950, episodes: 4100, mean episode reward: -84.788176323443, time: 17.064
+ agent0's money: -37.1
+ agent1's money: -6.7
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -97.39673384132433, time: 16.401
+ agent0's money: -40.2
+ agent1's money: -9.4
+4300 50
+steps: 214950, episodes: 4300, mean episode reward: -86.68464086607149, time: 16.115
+ agent0's money: -40.8
+ agent1's money: -13.7
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -91.44057925939941, time: 16.232
+ agent0's money: -37.7
+ agent1's money: -4.9
+4500 50
+steps: 224950, episodes: 4500, mean episode reward: -87.9674587281916, time: 16.218
+ agent0's money: -41.7
+ agent1's money: -11.9
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -78.79161856287521, time: 16.61
+ agent0's money: -41.3
+ agent1's money: -6.1
+4700 50
+steps: 234950, episodes: 4700, mean episode reward: -85.14665502744299, time: 16.07
+ agent0's money: -40.0
+ agent1's money: -11.0
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -90.22889781486559, time: 16.35
+ agent0's money: -42.0
+ agent1's money: -17.8
+4900 50
+steps: 244950, episodes: 4900, mean episode reward: -68.11401538704243, time: 16.179
+ agent0's money: -43.1
+ agent1's money: -7.6
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -71.9843150760949, time: 16.283
+ agent0's money: -44.2
+ agent1's money: -13.3
+5100 50
+steps: 254950, episodes: 5100, mean episode reward: -69.40574766755545, time: 16.643
+ agent0's money: -44.5
+ agent1's money: -18.9
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -77.812476109575, time: 16.298
+ agent0's money: -45.9
+ agent1's money: -19.0
+5300 50
+steps: 264950, episodes: 5300, mean episode reward: -79.93176160787785, time: 16.495
+ agent0's money: -43.3
+ agent1's money: -22.1
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -72.63127197728919, time: 16.16
+ agent0's money: -43.5
+ agent1's money: -16.1
+5500 50
+steps: 274950, episodes: 5500, mean episode reward: -77.44819412116908, time: 16.543
+ agent0's money: -44.3
+ agent1's money: -19.8
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -76.87785765742962, time: 16.768
+ agent0's money: -45.9
+ agent1's money: -17.6
+5700 50
+steps: 284950, episodes: 5700, mean episode reward: -83.71304493293091, time: 16.246
+ agent0's money: -46.2
+ agent1's money: -22.7
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -71.57651004326337, time: 16.583
+ agent0's money: -46.5
+ agent1's money: -26.8
+5900 50
+steps: 294950, episodes: 5900, mean episode reward: -68.66123495131694, time: 16.176Using good policy ddpg and adv policy ddpg
+Starting iterations of wanderer2-2__2018-07-10_19-20-28...
+100 50
+steps: 4950, episodes: 100, mean episode reward: -171.41497350294122, time: 11.497
+ agent0's money: -30.2
+ agent1's money: -22.8
+200 50
+steps: 9950, episodes: 200, mean episode reward: -162.71501845148947, time: 12.335
+ agent0's money: -29.7
+ agent1's money: -22.6
+300 50
+steps: 14950, episodes: 300, mean episode reward: -197.84271501704347, time: 11.913
+ agent0's money: -30.1
+ agent1's money: -23.4
+400 50
+steps: 19950, episodes: 400, mean episode reward: -152.4699897838961, time: 12.011
+ agent0's money: -30.6
+ agent1's money: -23.1
+500 50
+steps: 24950, episodes: 500, mean episode reward: -172.5140663136952, time: 11.975
+ agent0's money: -29.8
+ agent1's money: -22.9
+600 50
+steps: 29950, episodes: 600, mean episode reward: -184.39609281315774, time: 12.048
+ agent0's money: -31.2
+ agent1's money: -23.0
+700 50
+steps: 34950, episodes: 700, mean episode reward: -181.6324571240172, time: 11.72
+ agent0's money: -29.9
+ agent1's money: -23.4
+800 50
+steps: 39950, episodes: 800, mean episode reward: -183.19776571815638, time: 11.96
+ agent0's money: -30.4
+ agent1's money: -23.7
+900 50
+steps: 44950, episodes: 900, mean episode reward: -157.75601888794847, time: 11.691
+ agent0's money: -30.7
+ agent1's money: -23.1
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -175.72065564323498, time: 11.903
+ agent0's money: -30.3
+ agent1's money: -23.7
+1100 50
+steps: 54950, episodes: 1100, mean episode reward: -720.6658828567665, time: 16.658
+ agent0's money: -32.9
+ agent1's money: -24.3
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -286.997275416219, time: 17.453
+ agent0's money: -35.4
+ agent1's money: -13.5
+1300 50
+steps: 64950, episodes: 1300, mean episode reward: -169.11313946570266, time: 17.135
+ agent0's money: -24.0
+ agent1's money: -22.0
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -205.89364939255432, time: 17.029
+ agent0's money: -32.4
+ agent1's money: -32.8
+1500 50
+steps: 74950, episodes: 1500, mean episode reward: -175.72608931874436, time: 17.464
+ agent0's money: -36.5
+ agent1's money: -34.9
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -121.98007113172521, time: 18.317
+ agent0's money: -32.4
+ agent1's money: -28.2
+1700 50
+steps: 84950, episodes: 1700, mean episode reward: -109.56151030271853, time: 17.191
+ agent0's money: -33.9
+ agent1's money: -31.2
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -132.87900845302912, time: 17.291
+ agent0's money: -18.0
+ agent1's money: -31.6
+1900 50
+steps: 94950, episodes: 1900, mean episode reward: -122.10236411602786, time: 16.749
+ agent0's money: -31.2
+ agent1's money: -28.8
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -92.60168258476415, time: 17.007
+ agent0's money: -36.0
+ agent1's money: -39.0
+2100 50
+steps: 104950, episodes: 2100, mean episode reward: -91.77485132613772, time: 17.385
+ agent0's money: -36.9
+ agent1's money: -39.7
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -87.31619044366631, time: 17.131
+ agent0's money: -29.9
+ agent1's money: -40.1
+2300 50
+steps: 114950, episodes: 2300, mean episode reward: -100.2276422073395, time: 17.151
+ agent0's money: -39.9
+ agent1's money: -41.0
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -79.79189809688948, time: 16.967
+ agent0's money: -22.5
+ agent1's money: -45.3
+2500 50
+steps: 124950, episodes: 2500, mean episode reward: -91.48396727994094, time: 16.953
+ agent0's money: -29.3
+ agent1's money: -46.3
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -92.42499796057014, time: 17.829
+ agent0's money: -26.8
+ agent1's money: -48.0
+2700 50
+steps: 134950, episodes: 2700, mean episode reward: -91.6421090821676, time: 17.481
+ agent0's money: -28.3
+ agent1's money: -47.4
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -69.82618938958137, time: 17.153
+ agent0's money: -26.3
+ agent1's money: -48.0
+2900 50
+steps: 144950, episodes: 2900, mean episode reward: -87.40952845007855, time: 17.478
+ agent0's money: -22.5
+ agent1's money: -46.6
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -80.04419357155558, time: 17.059
+ agent0's money: -28.0
+ agent1's money: -48.7
+3100 50
+steps: 154950, episodes: 3100, mean episode reward: -80.61771599405245, time: 17.709
+ agent0's money: -28.1
+ agent1's money: -48.7
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -65.7799111113652, time: 18.174
+ agent0's money: -27.1
+ agent1's money: -46.2
+3300 50
+steps: 164950, episodes: 3300, mean episode reward: -77.48580309443834, time: 16.939
+ agent0's money: -24.6
+ agent1's money: -47.4
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -73.81763670529338, time: 17.153
+ agent0's money: -27.4
+ agent1's money: -46.2
+3500 50
+steps: 174950, episodes: 3500, mean episode reward: -69.78385312372639, time: 16.973
+ agent0's money: -16.7
+ agent1's money: -47.0
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -67.72972266127536, time: 17.186
+ agent0's money: -20.4
+ agent1's money: -47.8
+3700 50
+steps: 184950, episodes: 3700, mean episode reward: -67.94847420373597, time: 17.107
+ agent0's money: -25.6
+ agent1's money: -48.7
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -60.7878066436896, time: 17.437
+ agent0's money: -15.1
+ agent1's money: -48.1
+3900 50
+steps: 194950, episodes: 3900, mean episode reward: -67.23108245754024, time: 16.917
+ agent0's money: -10.2
+ agent1's money: -48.3
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -79.17041831166068, time: 17.173
+ agent0's money: -16.5
+ agent1's money: -48.4
+4100 50
+steps: 204950, episodes: 4100, mean episode reward: -72.12212399472519, time: 17.364
+ agent0's money: -15.1
+ agent1's money: -49.0
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -67.43506737028245, time: 16.88
+ agent0's money: -22.8
+ agent1's money: -49.2
+4300 50
+steps: 214950, episodes: 4300, mean episode reward: -58.577275327361505, time: 17.001
+ agent0's money: -19.5
+ agent1's money: -49.4
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -78.45717263313378, time: 17.348
+ agent0's money: -18.4
+ agent1's money: -48.7
+4500 50
+steps: 224950, episodes: 4500, mean episode reward: -69.22605690642173, time: 17.119
+ agent0's money: -16.5
+ agent1's money: -49.6
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -70.53494341854491, time: 17.713
+ agent0's money: -17.0
+ agent1's money: -49.2
+4700 50
+steps: 234950, episodes: 4700, mean episode reward: -69.4542295014925, time: 17.301
+ agent0's money: -12.4
+ agent1's money: -49.2
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -69.46364497683288, time: 17.07
+ agent0's money: -12.4
+ agent1's money: -49.7
+4900 50
+steps: 244950, episodes: 4900, mean episode reward: -74.9281972391679, time: 17.125
+ agent0's money: -11.5
+ agent1's money: -49.5
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -74.02087607438348, time: 16.788
+ agent0's money: -11.9
+ agent1's money: -49.5
+5100 50
+steps: 254950, episodes: 5100, mean episode reward: -62.828449312065786, time: 17.326
+ agent0's money: -13.1
+ agent1's money: -49.6
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -70.38843910345835, time: 16.948
+ agent0's money: -12.1
+ agent1's money: -47.9
+5300 50
+steps: 264950, episodes: 5300, mean episode reward: -87.58997207926308, time: 16.898
+ agent0's money: -10.6
+ agent1's money: -47.6
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -64.99161761880306, time: 17.028
+ agent0's money: -13.5
+ agent1's money: -49.4
+5500 50
+steps: 274950, episodes: 5500, mean episode reward: -70.01686880586455, time: 16.766
+ agent0's money: -18.4
+ agent1's money: -48.9
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -73.59570691663166, time: 17.044
+ agent0's money: -17.4
+ agent1's money: -48.8
+5700 50
+steps: 284950, episodes: 5700, mean episode reward: -70.57157684196059, time: 16.68
+ agent0's money: -14.7
+ agent1's money: -49.7
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -72.41518789367976, time: 16.636
+ agent0's money: -23.7
+ agent1's money: -49.8
+5900 50
+steps: 294950, episodes: 5900, mean episode reward: -74.38465297692105, time: 16.562Using good policy ddpg and adv policy ddpg
+Starting iterations of wanderer2-2__2018-07-10_19-20-30...
+100 50
+steps: 4950, episodes: 100, mean episode reward: -188.78063344041541, time: 11.325
+ agent0's money: -24.6
+ agent1's money: -24.2
+200 50
+steps: 9950, episodes: 200, mean episode reward: -176.63076490142555, time: 11.966
+ agent0's money: -25.0
+ agent1's money: -23.8
+300 50
+steps: 14950, episodes: 300, mean episode reward: -163.95067831241784, time: 11.791
+ agent0's money: -25.1
+ agent1's money: -23.6
+400 50
+steps: 19950, episodes: 400, mean episode reward: -194.09855239136428, time: 11.721
+ agent0's money: -24.9
+ agent1's money: -24.5
+500 50
+steps: 24950, episodes: 500, mean episode reward: -170.7287769041659, time: 12.008
+ agent0's money: -24.6
+ agent1's money: -24.5
+600 50
+steps: 29950, episodes: 600, mean episode reward: -195.56367293289722, time: 12.042
+ agent0's money: -25.0
+ agent1's money: -24.4
+700 50
+steps: 34950, episodes: 700, mean episode reward: -177.3063494231644, time: 11.766
+ agent0's money: -24.8
+ agent1's money: -24.3
+800 50
+steps: 39950, episodes: 800, mean episode reward: -162.4477947798941, time: 12.019
+ agent0's money: -25.0
+ agent1's money: -23.9
+900 50
+steps: 44950, episodes: 900, mean episode reward: -179.04066214907155, time: 11.83
+ agent0's money: -25.0
+ agent1's money: -24.2
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -171.4257372625493, time: 11.819
+ agent0's money: -24.6
+ agent1's money: -23.4
+1100 50
+steps: 54950, episodes: 1100, mean episode reward: -726.5590073737111, time: 16.635
+ agent0's money: -26.1
+ agent1's money: -30.1
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -799.9763984487804, time: 17.128
+ agent0's money: -6.5
+ agent1's money: -42.2
+1300 50
+steps: 64950, episodes: 1300, mean episode reward: -375.40389722417154, time: 17.15
+ agent0's money: -25.0
+ agent1's money: -22.2
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -437.6508998337148, time: 17.163
+ agent0's money: -32.5
+ agent1's money: -33.5
+1500 50
+steps: 74950, episodes: 1500, mean episode reward: -256.540304605374, time: 17.541
+ agent0's money: -36.7
+ agent1's money: -31.0
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -270.87644339805865, time: 17.833
+ agent0's money: -34.5
+ agent1's money: -11.9
+1700 50
+steps: 84950, episodes: 1700, mean episode reward: -146.84219368719866, time: 16.96
+ agent0's money: -30.0
+ agent1's money: -8.3
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -131.33079859298294, time: 17.093
+ agent0's money: -37.6
+ agent1's money: -5.6
+1900 50
+steps: 94950, episodes: 1900, mean episode reward: -119.91589138254422, time: 17.46
+ agent0's money: -36.0
+ agent1's money: -6.2
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -131.24589859683502, time: 17.033
+ agent0's money: -32.4
+ agent1's money: -5.8
+2100 50
+steps: 104950, episodes: 2100, mean episode reward: -161.85722531405617, time: 17.494
+ agent0's money: -33.5
+ agent1's money: -6.3
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -119.08805158887877, time: 16.709
+ agent0's money: -28.1
+ agent1's money: -6.8
+2300 50
+steps: 114950, episodes: 2300, mean episode reward: -145.94764779888166, time: 17.149
+ agent0's money: -21.7
+ agent1's money: -16.3
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -135.05889156204847, time: 17.271
+ agent0's money: -27.2
+ agent1's money: -11.7
+2500 50
+steps: 124950, episodes: 2500, mean episode reward: -125.10928350865697, time: 16.809
+ agent0's money: -24.4
+ agent1's money: -14.7
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -140.9295284052135, time: 17.309
+ agent0's money: -24.4
+ agent1's money: -15.7
+2700 50
+steps: 134950, episodes: 2700, mean episode reward: -123.28220876863746, time: 17.417
+ agent0's money: -22.9
+ agent1's money: -13.0
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -116.55397890819204, time: 17.185
+ agent0's money: -27.7
+ agent1's money: -21.0
+2900 50
+steps: 144950, episodes: 2900, mean episode reward: -136.4971898723698, time: 17.745
+ agent0's money: -29.7
+ agent1's money: -17.4
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -123.05137431869962, time: 17.078
+ agent0's money: -25.3
+ agent1's money: -16.6
+3100 50
+steps: 154950, episodes: 3100, mean episode reward: -131.4308859644437, time: 17.525
+ agent0's money: -27.1
+ agent1's money: -23.2
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -120.0558862779411, time: 18.273
+ agent0's money: -29.7
+ agent1's money: -36.6
+3300 50
+steps: 164950, episodes: 3300, mean episode reward: -134.96270467095212, time: 16.738
+ agent0's money: -21.4
+ agent1's money: -30.2
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -125.49978372548088, time: 17.117
+ agent0's money: -35.3
+ agent1's money: -28.2
+3500 50
+steps: 174950, episodes: 3500, mean episode reward: -138.7886304422568, time: 17.405
+ agent0's money: -24.2
+ agent1's money: -25.5
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -121.05814067001536, time: 17.448
+ agent0's money: -25.1
+ agent1's money: -26.0
+3700 50
+steps: 184950, episodes: 3700, mean episode reward: -116.5422798187757, time: 17.183
+ agent0's money: -29.1
+ agent1's money: -16.8
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -117.67261461811248, time: 17.531
+ agent0's money: -30.4
+ agent1's money: -22.6
+3900 50
+steps: 194950, episodes: 3900, mean episode reward: -124.34283604501584, time: 17.055
+ agent0's money: -30.6
+ agent1's money: -14.9
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -113.47558536697943, time: 16.808
+ agent0's money: -36.7
+ agent1's money: -22.1
+4100 50
+steps: 204950, episodes: 4100, mean episode reward: -109.28598372509876, time: 17.363
+ agent0's money: -26.6
+ agent1's money: -17.7
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -107.63427284367305, time: 17.153
+ agent0's money: -25.7
+ agent1's money: -22.0
+4300 50
+steps: 214950, episodes: 4300, mean episode reward: -116.65651960268075, time: 16.897
+ agent0's money: -26.3
+ agent1's money: -16.9
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -105.49339513359331, time: 17.124
+ agent0's money: -45.5
+ agent1's money: -16.0
+4500 50
+steps: 224950, episodes: 4500, mean episode reward: -115.75501292957338, time: 17.192
+ agent0's money: -42.5
+ agent1's money: -17.9
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -127.06687491156507, time: 17.304
+ agent0's money: -46.2
+ agent1's money: -18.1
+4700 50
+steps: 234950, episodes: 4700, mean episode reward: -103.43178084362198, time: 16.999
+ agent0's money: -47.2
+ agent1's money: -16.8
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -85.76926607134303, time: 17.18
+ agent0's money: -45.5
+ agent1's money: -20.1
+4900 50
+steps: 244950, episodes: 4900, mean episode reward: -108.86766392562564, time: 17.036
+ agent0's money: -41.1
+ agent1's money: -19.5
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -117.17255382381285, time: 17.348
+ agent0's money: -43.5
+ agent1's money: -21.3
+5100 50
+steps: 254950, episodes: 5100, mean episode reward: -92.66675941520401, time: 17.207
+ agent0's money: -40.7
+ agent1's money: -23.1
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -88.6599151885316, time: 17.123
+ agent0's money: -48.3
+ agent1's money: -34.3
+5300 50
+steps: 264950, episodes: 5300, mean episode reward: -96.69173821533748, time: 17.027
+ agent0's money: -47.1
+ agent1's money: -31.3
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -98.97784830790435, time: 17.048
+ agent0's money: -48.8
+ agent1's money: -26.7
+5500 50
+steps: 274950, episodes: 5500, mean episode reward: -103.5338878242402, time: 17.067
+ agent0's money: -48.8
+ agent1's money: -32.2
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -123.43549365269037, time: 17.763
+ agent0's money: -48.6
+ agent1's money: -35.3
+5700 50
+steps: 284950, episodes: 5700, mean episode reward: -83.97830062294551, time: 17.12
+ agent0's money: -47.9
+ agent1's money: -32.7
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -88.7620653365642, time: 16.785
+ agent0's money: -48.9
+ agent1's money: -29.0
+5900 50
+steps: 294950, episodes: 5900, mean episode reward: -93.09412412261541, time: 17.184Using good policy ddpg and adv policy ddpg
+Starting iterations of wanderer2-2__2018-07-10_19-20-31...
+100 50
+steps: 4950, episodes: 100, mean episode reward: -162.041156323392, time: 11.47
+ agent0's money: -24.2
+ agent1's money: -26.7
+200 50
+steps: 9950, episodes: 200, mean episode reward: -173.9935396599786, time: 12.147
+ agent0's money: -25.1
+ agent1's money: -26.4
+300 50
+steps: 14950, episodes: 300, mean episode reward: -153.34610351063762, time: 11.912
+ agent0's money: -24.5
+ agent1's money: -27.0
+400 50
+steps: 19950, episodes: 400, mean episode reward: -175.8832235006497, time: 12.021
+ agent0's money: -24.1
+ agent1's money: -27.1
+500 50
+steps: 24950, episodes: 500, mean episode reward: -164.93883980901475, time: 12.111
+ agent0's money: -24.0
+ agent1's money: -27.4
+600 50
+steps: 29950, episodes: 600, mean episode reward: -148.16091002405543, time: 11.94
+ agent0's money: -24.5
+ agent1's money: -27.2
+700 50
+steps: 34950, episodes: 700, mean episode reward: -171.44397532357473, time: 11.878
+ agent0's money: -24.5
+ agent1's money: -27.5
+800 50
+steps: 39950, episodes: 800, mean episode reward: -172.14646758043418, time: 11.929
+ agent0's money: -24.7
+ agent1's money: -26.9
+900 50
+steps: 44950, episodes: 900, mean episode reward: -160.1696502044622, time: 11.996
+ agent0's money: -24.4
+ agent1's money: -27.2
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -147.34888788730674, time: 12.043
+ agent0's money: -24.9
+ agent1's money: -27.3
+1100 50
+steps: 54950, episodes: 1100, mean episode reward: -774.1878078517525, time: 16.715
+ agent0's money: -28.6
+ agent1's money: -19.2
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -313.3701365565224, time: 17.334
+ agent0's money: -19.5
+ agent1's money: -28.3
+1300 50
+steps: 64950, episodes: 1300, mean episode reward: -158.5368177548679, time: 17.32
+ agent0's money: -30.0
+ agent1's money: -10.8
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -201.39057761797037, time: 17.222
+ agent0's money: -28.3
+ agent1's money: -10.7
+1500 50
+steps: 74950, episodes: 1500, mean episode reward: -177.61888146848239, time: 17.705
+ agent0's money: -25.9
+ agent1's money: -25.5
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -198.17834658299992, time: 17.613
+ agent0's money: -24.9
+ agent1's money: -31.0
+1700 50
+steps: 84950, episodes: 1700, mean episode reward: -142.81980175099554, time: 17.234
+ agent0's money: -23.5
+ agent1's money: -10.1
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -153.74047364422555, time: 17.078
+ agent0's money: -26.4
+ agent1's money: -4.0
+1900 50
+steps: 94950, episodes: 1900, mean episode reward: -131.6864380675124, time: 17.273
+ agent0's money: -29.5
+ agent1's money: -10.3
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -112.45910060408279, time: 17.603
+ agent0's money: -21.9
+ agent1's money: -3.3
+2100 50
+steps: 104950, episodes: 2100, mean episode reward: -135.0592301770083, time: 17.491
+ agent0's money: -25.8
+ agent1's money: -1.9
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -111.99784256224814, time: 17.364
+ agent0's money: -33.1
+ agent1's money: -1.2
+2300 50
+steps: 114950, episodes: 2300, mean episode reward: -149.8286627832695, time: 17.57
+ agent0's money: -36.9
+ agent1's money: -1.9
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -138.77363282854253, time: 17.505
+ agent0's money: -34.6
+ agent1's money: -3.3
+2500 50
+steps: 124950, episodes: 2500, mean episode reward: -115.07749081980938, time: 19.475
+ agent0's money: -32.7
+ agent1's money: -4.1
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -95.20997337103194, time: 17.797
+ agent0's money: -21.8
+ agent1's money: -2.1
+2700 50
+steps: 134950, episodes: 2700, mean episode reward: -104.64647124577483, time: 17.401
+ agent0's money: -19.2
+ agent1's money: -1.0
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -103.3667926816303, time: 17.367
+ agent0's money: -14.6
+ agent1's money: -1.6
+2900 50
+steps: 144950, episodes: 2900, mean episode reward: -91.57185614111737, time: 17.335
+ agent0's money: -19.7
+ agent1's money: -1.7
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -113.03038273830217, time: 17.022
+ agent0's money: -18.9
+ agent1's money: -2.6
+3100 50
+steps: 154950, episodes: 3100, mean episode reward: -129.25556728607978, time: 17.419
+ agent0's money: -12.6
+ agent1's money: -3.9
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -164.51394032478728, time: 16.885
+ agent0's money: -14.3
+ agent1's money: -13.2
+3300 50
+steps: 164950, episodes: 3300, mean episode reward: -153.1503008706305, time: 17.643
+ agent0's money: -24.6
+ agent1's money: -19.9
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -152.68570969228057, time: 17.354
+ agent0's money: -15.1
+ agent1's money: -11.9
+3500 50
+steps: 174950, episodes: 3500, mean episode reward: -96.0314497837872, time: 17.044
+ agent0's money: -29.5
+ agent1's money: -17.6
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -97.47161221350746, time: 17.263
+ agent0's money: -41.5
+ agent1's money: -15.9
+3700 50
+steps: 184950, episodes: 3700, mean episode reward: -92.79102411927015, time: 17.351
+ agent0's money: -42.8
+ agent1's money: -19.4
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -120.6117067979963, time: 17.536
+ agent0's money: -40.5
+ agent1's money: -15.5
+3900 50
+steps: 194950, episodes: 3900, mean episode reward: -106.75874933055847, time: 17.546
+ agent0's money: -41.1
+ agent1's money: -22.8
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -97.14243927124318, time: 17.403
+ agent0's money: -39.0
+ agent1's money: -4.1
+4100 50
+steps: 204950, episodes: 4100, mean episode reward: -90.57058074687212, time: 17.702
+ agent0's money: -36.4
+ agent1's money: -11.1
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -96.22576047540451, time: 17.213
+ agent0's money: -41.1
+ agent1's money: -25.8
+4300 50
+steps: 214950, episodes: 4300, mean episode reward: -89.6726209196967, time: 17.208
+ agent0's money: -44.0
+ agent1's money: -23.0
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -97.35606706482434, time: 17.174
+ agent0's money: -37.6
+ agent1's money: -24.8
+4500 50
+steps: 224950, episodes: 4500, mean episode reward: -100.17733312748052, time: 17.218
+ agent0's money: -35.1
+ agent1's money: -34.7
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -113.44538153391511, time: 17.637
+ agent0's money: -37.8
+ agent1's money: -20.5
+4700 50
+steps: 234950, episodes: 4700, mean episode reward: -88.11225175359758, time: 17.251
+ agent0's money: -39.4
+ agent1's money: -25.2
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -88.49542072374567, time: 17.055
+ agent0's money: -42.4
+ agent1's money: -35.8
+4900 50
+steps: 244950, episodes: 4900, mean episode reward: -80.18021810448886, time: 17.089
+ agent0's money: -44.9
+ agent1's money: -34.2
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -102.26460854414012, time: 17.317
+ agent0's money: -45.0
+ agent1's money: -39.2
+5100 50
+steps: 254950, episodes: 5100, mean episode reward: -85.66326950720283, time: 17.65
+ agent0's money: -45.4
+ agent1's money: -37.7
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -97.37374373729675, time: 17.093
+ agent0's money: -45.6
+ agent1's money: -42.2
+5300 50
+steps: 264950, episodes: 5300, mean episode reward: -85.97915321826851, time: 17.17
+ agent0's money: -45.6
+ agent1's money: -34.7
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -93.10217968608086, time: 17.149
+ agent0's money: -46.5
+ agent1's money: -36.7
+5500 50
+steps: 274950, episodes: 5500, mean episode reward: -88.83575709159169, time: 17.046
+ agent0's money: -47.6
+ agent1's money: -43.2
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -81.89761589838245, time: 17.339
+ agent0's money: -44.7
+ agent1's money: -34.4
+5700 50
+steps: 284950, episodes: 5700, mean episode reward: -91.47575210318732, time: 17.068
+ agent0's money: -46.6
+ agent1's money: -36.6
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -85.45353562016886, time: 17.094
+ agent0's money: -46.4
+ agent1's money: -38.8
+5900 50
+steps: 294950, episodes: 5900, mean episode reward: -90.87397983550474, time: 16.891
+ agent0's money: -30.8
+ agent1's money: -48.6
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -35.04844315802588, time: 16.36
+ agent0's money: -35.0
+ agent1's money: -49.0
+6100 50
+steps: 304950, episodes: 6100, mean episode reward: -38.26275326332436, time: 16.49
+ agent0's money: -36.9
+ agent1's money: -49.4
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -36.41355599308899, time: 16.09
+ agent0's money: -44.2
+ agent1's money: -48.1
+6300 50
+steps: 314950, episodes: 6300, mean episode reward: -45.52658148601736, time: 16.228
+ agent0's money: -44.9
+ agent1's money: -49.0
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -47.10812793138254, time: 16.245
+ agent0's money: -42.5
+ agent1's money: -49.3
+6500 50
+steps: 324950, episodes: 6500, mean episode reward: -37.70710432130192, time: 16.286
+ agent0's money: -45.9
+ agent1's money: -48.6
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -43.522099898907044, time: 16.528
+ agent0's money: -44.3
+ agent1's money: -49.0
+6700 50
+steps: 334950, episodes: 6700, mean episode reward: -42.37783058836294, time: 16.396
+ agent0's money: -45.0
+ agent1's money: -49.5
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -31.390950144120822, time: 16.729
+ agent0's money: -39.5
+ agent1's money: -49.7
+6900 50
+steps: 344950, episodes: 6900, mean episode reward: -54.12167514572862, time: 16.216
+ agent0's money: -40.5
+ agent1's money: -48.8
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -35.650816100553904, time: 16.293
+ agent0's money: -40.5
+ agent1's money: -49.4
+7100 50
+steps: 354950, episodes: 7100, mean episode reward: -44.78866063294368, time: 16.895
+ agent0's money: -44.6
+ agent1's money: -49.4
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -68.59801007803839, time: 16.556
+ agent0's money: -42.2
+ agent1's money: -49.2
+7300 50
+steps: 364950, episodes: 7300, mean episode reward: -58.742139573266634, time: 16.388
+ agent0's money: -39.1
+ agent1's money: -49.4
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -50.103997884807406, time: 15.795
+ agent0's money: -40.6
+ agent1's money: -48.9
+7500 50
+steps: 374950, episodes: 7500, mean episode reward: -38.429819562265656, time: 16.588
+ agent0's money: -44.5
+ agent1's money: -48.9
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -44.98804453224378, time: 16.648
+ agent0's money: -45.2
+ agent1's money: -49.0
+7700 50
+steps: 384950, episodes: 7700, mean episode reward: -41.837444694111326, time: 16.602
+ agent0's money: -44.2
+ agent1's money: -48.9
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -38.977515645723976, time: 17.707
+ agent0's money: -46.5
+ agent1's money: -49.1
+7900 50
+steps: 394950, episodes: 7900, mean episode reward: -42.27634776892865, time: 16.4
+ agent0's money: -48.6
+ agent1's money: -49.5
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -43.66865792984854, time: 16.475
+ agent0's money: -41.3
+ agent1's money: -49.1
+8100 50
+steps: 404950, episodes: 8100, mean episode reward: -44.70155558708364, time: 16.67
+ agent0's money: -39.9
+ agent1's money: -48.8
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -45.97153487991143, time: 16.712
+ agent0's money: -47.7
+ agent1's money: -48.9
+8300 50
+steps: 414950, episodes: 8300, mean episode reward: -37.29843286592868, time: 16.355
+ agent0's money: -48.8
+ agent1's money: -49.3
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -58.717264059925085, time: 16.332
+ agent0's money: -49.2
+ agent1's money: -48.7
+8500 50
+steps: 424950, episodes: 8500, mean episode reward: -39.958498661320704, time: 16.414
+ agent0's money: -48.6
+ agent1's money: -49.0
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -39.18667791275145, time: 16.681
+ agent0's money: -47.7
+ agent1's money: -49.1
+8700 50
+steps: 434950, episodes: 8700, mean episode reward: -32.29153509196235, time: 16.106
+ agent0's money: -49.5
+ agent1's money: -49.3
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -32.02078257578538, time: 16.464
+ agent0's money: -49.0
+ agent1's money: -49.3
+8900 50
+steps: 444950, episodes: 8900, mean episode reward: -41.04357946644368, time: 16.543
+ agent0's money: -49.3
+ agent1's money: -48.0
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -36.45290356317141, time: 16.158
+ agent0's money: -49.3
+ agent1's money: -48.5
+9100 50
+steps: 454950, episodes: 9100, mean episode reward: -37.31545679180981, time: 16.674
+ agent0's money: -49.2
+ agent1's money: -49.5
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -34.071902126064145, time: 16.449
+ agent0's money: -49.0
+ agent1's money: -48.8
+9300 50
+steps: 464950, episodes: 9300, mean episode reward: -31.526322762044238, time: 16.305
+ agent0's money: -49.1
+ agent1's money: -48.9
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -41.982615391532825, time: 16.28
+ agent0's money: -48.7
+ agent1's money: -48.5
+9500 50
+steps: 474950, episodes: 9500, mean episode reward: -28.823463191851165, time: 16.351
+ agent0's money: -49.5
+ agent1's money: -49.6
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -37.51568026139581, time: 17.28
+ agent0's money: -49.7
+ agent1's money: -48.7
+9700 50
+steps: 484950, episodes: 9700, mean episode reward: -35.55019037017318, time: 16.624
+ agent0's money: -49.3
+ agent1's money: -49.4
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -38.195047197396995, time: 16.423
+ agent0's money: -48.3
+ agent1's money: -49.7
+9900 50
+steps: 494950, episodes: 9900, mean episode reward: -37.91611848333957, time: 16.545
+ agent0's money: -48.3
+ agent1's money: -49.5
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -34.435633811969495, time: 16.436
+ agent0's money: -48.7
+ agent1's money: -49.5
+...Finished!
+Trained episodes: 1 -> 10000
+Total time: 0.44 hr
+
+ agent0's money: -47.1
+ agent1's money: -31.5
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -64.43384318120495, time: 16.329
+ agent0's money: -47.6
+ agent1's money: -21.4
+6100 50
+steps: 304950, episodes: 6100, mean episode reward: -68.30909647086467, time: 16.7
+ agent0's money: -47.5
+ agent1's money: -23.1
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -68.70513692975284, time: 16.374
+ agent0's money: -45.9
+ agent1's money: -16.4
+6300 50
+steps: 314950, episodes: 6300, mean episode reward: -74.05270954458426, time: 16.561
+ agent0's money: -47.9
+ agent1's money: -15.8
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -75.97592361706079, time: 16.056
+ agent0's money: -48.1
+ agent1's money: -26.1
+6500 50
+steps: 324950, episodes: 6500, mean episode reward: -60.29553262240757, time: 16.314
+ agent0's money: -46.6
+ agent1's money: -21.2
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -61.9822660205697, time: 16.825
+ agent0's money: -48.3
+ agent1's money: -20.9
+6700 50
+steps: 334950, episodes: 6700, mean episode reward: -69.0171961403701, time: 16.352
+ agent0's money: -47.3
+ agent1's money: -21.5
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -68.63081148188402, time: 16.569
+ agent0's money: -48.4
+ agent1's money: -34.2
+6900 50
+steps: 344950, episodes: 6900, mean episode reward: -60.89851229787353, time: 16.565
+ agent0's money: -48.8
+ agent1's money: -31.5
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -65.40844594590016, time: 16.093
+ agent0's money: -48.1
+ agent1's money: -35.3
+7100 50
+steps: 354950, episodes: 7100, mean episode reward: -83.85138501703035, time: 16.438
+ agent0's money: -48.4
+ agent1's money: -31.6
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -71.70875372228681, time: 16.558
+ agent0's money: -47.6
+ agent1's money: -34.5
+7300 50
+steps: 364950, episodes: 7300, mean episode reward: -67.30588971851617, time: 16.267
+ agent0's money: -48.0
+ agent1's money: -26.5
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -75.99180381861271, time: 16.416
+ agent0's money: -49.0
+ agent1's money: -28.2
+7500 50
+steps: 374950, episodes: 7500, mean episode reward: -65.67343188528666, time: 16.477
+ agent0's money: -47.9
+ agent1's money: -28.4
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -63.224527885869, time: 17.045
+ agent0's money: -48.2
+ agent1's money: -20.9
+7700 50
+steps: 384950, episodes: 7700, mean episode reward: -58.10262828429781, time: 16.493
+ agent0's money: -47.9
+ agent1's money: -29.5
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -67.19659806389204, time: 16.726
+ agent0's money: -48.3
+ agent1's money: -30.8
+7900 50
+steps: 394950, episodes: 7900, mean episode reward: -84.21308431130424, time: 16.224
+ agent0's money: -47.2
+ agent1's money: -27.8
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -116.44473987570595, time: 16.33
+ agent0's money: -47.9
+ agent1's money: -32.4
+8100 50
+steps: 404950, episodes: 8100, mean episode reward: -61.79567996378535, time: 16.999
+ agent0's money: -48.1
+ agent1's money: -23.9
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -68.4863700693164, time: 16.507
+ agent0's money: -47.6
+ agent1's money: -28.2
+8300 50
+steps: 414950, episodes: 8300, mean episode reward: -67.93855957724452, time: 16.253
+ agent0's money: -47.2
+ agent1's money: -30.9
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -67.88703759551072, time: 16.256
+ agent0's money: -47.8
+ agent1's money: -31.7
+8500 50
+steps: 424950, episodes: 8500, mean episode reward: -69.82266381922828, time: 16.559
+ agent0's money: -47.3
+ agent1's money: -34.0
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -71.26640836687454, time: 16.664
+ agent0's money: -44.3
+ agent1's money: -33.1
+8700 50
+steps: 434950, episodes: 8700, mean episode reward: -77.42038078765367, time: 16.094
+ agent0's money: -45.9
+ agent1's money: -32.0
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -59.5339806386777, time: 16.504
+ agent0's money: -44.5
+ agent1's money: -30.9
+8900 50
+steps: 444950, episodes: 8900, mean episode reward: -65.6172603612475, time: 16.423
+ agent0's money: -44.8
+ agent1's money: -25.2
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -60.193207032385544, time: 16.613
+ agent0's money: -46.3
+ agent1's money: -38.5
+9100 50
+steps: 454950, episodes: 9100, mean episode reward: -62.29066086585069, time: 16.585
+ agent0's money: -38.0
+ agent1's money: -37.5
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -66.2444218187229, time: 16.509
+ agent0's money: -40.1
+ agent1's money: -39.0
+9300 50
+steps: 464950, episodes: 9300, mean episode reward: -66.0830154067236, time: 16.318
+ agent0's money: -41.7
+ agent1's money: -33.2
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -59.01802818510588, time: 16.629
+ agent0's money: -44.5
+ agent1's money: -32.1
+9500 50
+steps: 474950, episodes: 9500, mean episode reward: -65.72862213802004, time: 16.385
+ agent0's money: -38.6
+ agent1's money: -33.2
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -66.87728030702635, time: 16.973
+ agent0's money: -38.3
+ agent1's money: -31.5
+9700 50
+steps: 484950, episodes: 9700, mean episode reward: -60.54493700308778, time: 16.365
+ agent0's money: -43.1
+ agent1's money: -30.1
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -56.70431334901192, time: 16.531
+ agent0's money: -38.1
+ agent1's money: -33.7
+9900 50
+steps: 494950, episodes: 9900, mean episode reward: -60.48651750922044, time: 16.335
+ agent0's money: -35.8
+ agent1's money: -32.7
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -61.92020419601646, time: 15.691
+ agent0's money: -33.7
+ agent1's money: -32.3
+...Finished!
+Trained episodes: 1 -> 10000
+Total time: 0.45 hr
+
+ agent0's money: -28.0
+ agent1's money: -49.4
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -66.7571519433592, time: 16.547
+ agent0's money: -19.4
+ agent1's money: -46.1
+6100 50
+steps: 304950, episodes: 6100, mean episode reward: -60.748013359337456, time: 16.945
+ agent0's money: -21.4
+ agent1's money: -49.3
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -69.35459715154559, time: 16.444
+ agent0's money: -17.6
+ agent1's money: -47.5
+6300 50
+steps: 314950, episodes: 6300, mean episode reward: -61.288766369629265, time: 16.124
+ agent0's money: -34.1
+ agent1's money: -42.3
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -64.25354541776585, time: 16.313
+ agent0's money: -12.3
+ agent1's money: -49.5
+6500 50
+steps: 324950, episodes: 6500, mean episode reward: -71.98630541089398, time: 16.44
+ agent0's money: -17.5
+ agent1's money: -49.5
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -59.08495714926732, time: 16.825
+ agent0's money: -14.0
+ agent1's money: -48.1
+6700 50
+steps: 334950, episodes: 6700, mean episode reward: -69.79562049933183, time: 16.372
+ agent0's money: -16.3
+ agent1's money: -49.8
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -90.01940485494234, time: 16.6
+ agent0's money: -8.1
+ agent1's money: -49.1
+6900 50
+steps: 344950, episodes: 6900, mean episode reward: -66.85379885274865, time: 16.189
+ agent0's money: -17.7
+ agent1's money: -42.5
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -54.93254356411964, time: 15.933
+ agent0's money: -20.9
+ agent1's money: -34.5
+7100 50
+steps: 354950, episodes: 7100, mean episode reward: -64.08509540602087, time: 16.515
+ agent0's money: -28.1
+ agent1's money: -36.1
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -61.59179836777834, time: 16.38
+ agent0's money: -16.7
+ agent1's money: -37.8
+7300 50
+steps: 364950, episodes: 7300, mean episode reward: -82.62361614031992, time: 16.544
+ agent0's money: -20.7
+ agent1's money: -40.7
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -62.71611173924845, time: 16.511
+ agent0's money: -17.8
+ agent1's money: -34.8
+7500 50
+steps: 374950, episodes: 7500, mean episode reward: -71.46652180135226, time: 16.289
+ agent0's money: -22.6
+ agent1's money: -43.5
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -64.24197423021523, time: 16.792
+ agent0's money: -19.7
+ agent1's money: -41.0
+7700 50
+steps: 384950, episodes: 7700, mean episode reward: -58.5025816332889, time: 16.409
+ agent0's money: -18.8
+ agent1's money: -38.6
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -66.83425517594155, time: 16.466
+ agent0's money: -19.1
+ agent1's money: -37.7
+7900 50
+steps: 394950, episodes: 7900, mean episode reward: -57.125127987609666, time: 16.162
+ agent0's money: -17.6
+ agent1's money: -40.4
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -76.46647739909471, time: 16.443
+ agent0's money: -22.9
+ agent1's money: -36.2
+8100 50
+steps: 404950, episodes: 8100, mean episode reward: -85.27991898610931, time: 16.766
+ agent0's money: -21.3
+ agent1's money: -38.1
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -68.49525965410226, time: 16.194
+ agent0's money: -19.2
+ agent1's money: -37.6
+8300 50
+steps: 414950, episodes: 8300, mean episode reward: -72.46827562436653, time: 16.27
+ agent0's money: -17.3
+ agent1's money: -37.4
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -67.04615778514149, time: 16.245
+ agent0's money: -23.2
+ agent1's money: -37.1
+8500 50
+steps: 424950, episodes: 8500, mean episode reward: -70.49439755330096, time: 15.922
+ agent0's money: -20.6
+ agent1's money: -41.6
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -67.1875202624512, time: 16.579
+ agent0's money: -24.2
+ agent1's money: -38.1
+8700 50
+steps: 434950, episodes: 8700, mean episode reward: -55.72264643482543, time: 16.39
+ agent0's money: -21.6
+ agent1's money: -37.3
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -73.70961352801616, time: 16.419
+ agent0's money: -16.8
+ agent1's money: -38.8
+8900 50
+steps: 444950, episodes: 8900, mean episode reward: -76.31680264822911, time: 16.217
+ agent0's money: -25.7
+ agent1's money: -38.0
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -73.58310021200904, time: 17.256
+ agent0's money: -26.4
+ agent1's money: -37.4
+9100 50
+steps: 454950, episodes: 9100, mean episode reward: -67.85379732444734, time: 16.822
+ agent0's money: -22.8
+ agent1's money: -34.0
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -70.68422083123325, time: 16.327
+ agent0's money: -27.8
+ agent1's money: -32.5
+9300 50
+steps: 464950, episodes: 9300, mean episode reward: -64.30861567352221, time: 16.378
+ agent0's money: -21.4
+ agent1's money: -36.0
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -69.6216986085016, time: 16.322
+ agent0's money: -23.1
+ agent1's money: -38.4
+9500 50
+steps: 474950, episodes: 9500, mean episode reward: -57.25667544484906, time: 16.522
+ agent0's money: -17.0
+ agent1's money: -37.9
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -58.13472815865558, time: 16.476
+ agent0's money: -18.7
+ agent1's money: -36.7
+9700 50
+steps: 484950, episodes: 9700, mean episode reward: -70.69944253838885, time: 16.422
+ agent0's money: -24.9
+ agent1's money: -39.2
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -88.62473325171922, time: 15.923
+ agent0's money: -14.5
+ agent1's money: -37.7
+9900 50
+steps: 494950, episodes: 9900, mean episode reward: -69.07878093068165, time: 15.262
+ agent0's money: -19.0
+ agent1's money: -39.5
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -59.84695602457924, time: 14.602
+ agent0's money: -20.1
+ agent1's money: -38.2
+...Finished!
+Trained episodes: 1 -> 10000
+Total time: 0.45 hr
+
+ agent0's money: -48.7
+ agent1's money: -33.6
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -92.47392677987554, time: 17.345
+ agent0's money: -48.7
+ agent1's money: -33.4
+6100 50
+steps: 304950, episodes: 6100, mean episode reward: -102.47622201396528, time: 17.589
+ agent0's money: -49.0
+ agent1's money: -35.6
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -84.00912121961787, time: 16.848
+ agent0's money: -48.8
+ agent1's money: -32.3
+6300 50
+steps: 314950, episodes: 6300, mean episode reward: -86.64744796132801, time: 16.907
+ agent0's money: -48.0
+ agent1's money: -35.0
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -85.60872687592413, time: 17.261
+ agent0's money: -48.5
+ agent1's money: -36.6
+6500 50
+steps: 324950, episodes: 6500, mean episode reward: -77.64954821252569, time: 17.081
+ agent0's money: -47.6
+ agent1's money: -35.8
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -81.76442707868792, time: 17.512
+ agent0's money: -48.6
+ agent1's money: -35.7
+6700 50
+steps: 334950, episodes: 6700, mean episode reward: -76.5623240766974, time: 16.856
+ agent0's money: -48.5
+ agent1's money: -37.7
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -87.93347112106292, time: 17.271
+ agent0's money: -48.4
+ agent1's money: -39.0
+6900 50
+steps: 344950, episodes: 6900, mean episode reward: -90.97033495175882, time: 17.237
+ agent0's money: -49.5
+ agent1's money: -36.2
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -82.45766674155999, time: 16.879
+ agent0's money: -48.8
+ agent1's money: -40.1
+7100 50
+steps: 354950, episodes: 7100, mean episode reward: -93.35347732084172, time: 17.411
+ agent0's money: -48.4
+ agent1's money: -45.2
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -85.74959014366719, time: 17.066
+ agent0's money: -48.8
+ agent1's money: -39.8
+7300 50
+steps: 364950, episodes: 7300, mean episode reward: -84.47149462363956, time: 16.946
+ agent0's money: -48.7
+ agent1's money: -41.1
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -64.15525637188472, time: 17.109
+ agent0's money: -48.7
+ agent1's money: -38.6
+7500 50
+steps: 374950, episodes: 7500, mean episode reward: -68.10745289851285, time: 17.161
+ agent0's money: -48.3
+ agent1's money: -41.8
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -70.38770218702143, time: 17.618
+ agent0's money: -49.0
+ agent1's money: -40.3
+7700 50
+steps: 384950, episodes: 7700, mean episode reward: -79.83744914411693, time: 17.213
+ agent0's money: -48.0
+ agent1's money: -42.7
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -71.56178018836118, time: 16.919
+ agent0's money: -49.1
+ agent1's money: -46.2
+7900 50
+steps: 394950, episodes: 7900, mean episode reward: -86.42921832254102, time: 16.951
+ agent0's money: -47.8
+ agent1's money: -42.0
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -72.07246477932814, time: 16.898
+ agent0's money: -47.7
+ agent1's money: -44.5
+8100 50
+steps: 404950, episodes: 8100, mean episode reward: -93.50867002464904, time: 17.272
+ agent0's money: -49.1
+ agent1's money: -42.0
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -71.57516729178992, time: 16.7
+ agent0's money: -49.2
+ agent1's money: -43.2
+8300 50
+steps: 414950, episodes: 8300, mean episode reward: -76.10698154412609, time: 16.679
+ agent0's money: -48.9
+ agent1's money: -43.8
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -83.863550273787, time: 16.643
+ agent0's money: -48.3
+ agent1's money: -45.5
+8500 50
+steps: 424950, episodes: 8500, mean episode reward: -68.78749869481543, time: 16.704
+ agent0's money: -48.1
+ agent1's money: -44.5
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -66.21582510258494, time: 17.248
+ agent0's money: -48.0
+ agent1's money: -46.7
+8700 50
+steps: 434950, episodes: 8700, mean episode reward: -66.03661360447542, time: 16.735
+ agent0's money: -47.5
+ agent1's money: -42.2
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -71.50361742299201, time: 16.492
+ agent0's money: -47.9
+ agent1's money: -44.6
+8900 50
+steps: 444950, episodes: 8900, mean episode reward: -61.01276964514182, time: 16.895
+ agent0's money: -48.1
+ agent1's money: -46.4
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -83.25843557359953, time: 16.804
+ agent0's money: -44.0
+ agent1's money: -44.2
+9100 50
+steps: 454950, episodes: 9100, mean episode reward: -64.73125050739942, time: 16.917
+ agent0's money: -46.9
+ agent1's money: -46.2
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -59.21112403934919, time: 16.748
+ agent0's money: -47.9
+ agent1's money: -47.1
+9300 50
+steps: 464950, episodes: 9300, mean episode reward: -59.85158176411397, time: 16.562
+ agent0's money: -47.2
+ agent1's money: -46.9
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -75.98777279828586, time: 16.503
+ agent0's money: -46.5
+ agent1's money: -42.3
+9500 50
+steps: 474950, episodes: 9500, mean episode reward: -65.27392170474327, time: 16.572
+ agent0's money: -45.3
+ agent1's money: -47.0
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -66.68275101641152, time: 16.532
+ agent0's money: -46.8
+ agent1's money: -45.1
+9700 50
+steps: 484950, episodes: 9700, mean episode reward: -57.59027983071689, time: 16.143
+ agent0's money: -47.6
+ agent1's money: -46.6
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -68.167200547621, time: 14.991
+ agent0's money: -41.9
+ agent1's money: -44.9
+9900 50
+steps: 494950, episodes: 9900, mean episode reward: -60.782139269845864, time: 14.551
+ agent0's money: -42.5
+ agent1's money: -47.5
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -69.46375085091961, time: 13.747
+ agent0's money: -48.0
+ agent1's money: -46.5
+...Finished!
+Trained episodes: 1 -> 10000
+Total time: 0.46 hr
+
+ agent0's money: -48.6
+ agent1's money: -37.8
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -87.3781962793703, time: 17.023
+ agent0's money: -48.1
+ agent1's money: -36.7
+6100 50
+steps: 304950, episodes: 6100, mean episode reward: -80.14079900684239, time: 17.635
+ agent0's money: -47.7
+ agent1's money: -34.9
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -77.99378099021436, time: 16.894
+ agent0's money: -48.8
+ agent1's money: -37.7
+6300 50
+steps: 314950, episodes: 6300, mean episode reward: -78.91079300401711, time: 17.217
+ agent0's money: -48.8
+ agent1's money: -39.4
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -70.98819376422256, time: 16.97
+ agent0's money: -48.2
+ agent1's money: -37.4
+6500 50
+steps: 324950, episodes: 6500, mean episode reward: -85.48048235601418, time: 17.3
+ agent0's money: -48.3
+ agent1's money: -39.1
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -70.13992467248234, time: 17.723
+ agent0's money: -48.4
+ agent1's money: -41.2
+6700 50
+steps: 334950, episodes: 6700, mean episode reward: -74.72989166102656, time: 17.024
+ agent0's money: -48.9
+ agent1's money: -42.9
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -77.91594991825613, time: 17.414
+ agent0's money: -48.4
+ agent1's money: -43.5
+6900 50
+steps: 344950, episodes: 6900, mean episode reward: -83.40784832378375, time: 17.268
+ agent0's money: -47.6
+ agent1's money: -36.5
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -79.67426400139726, time: 19.054
+ agent0's money: -47.7
+ agent1's money: -33.5
+7100 50
+steps: 354950, episodes: 7100, mean episode reward: -75.22326352349641, time: 17.387
+ agent0's money: -47.2
+ agent1's money: -40.4
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -63.92821165524888, time: 17.091
+ agent0's money: -49.1
+ agent1's money: -34.8
+7300 50
+steps: 364950, episodes: 7300, mean episode reward: -80.32608639896375, time: 17.087
+ agent0's money: -48.2
+ agent1's money: -42.1
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -75.4876846594867, time: 17.14
+ agent0's money: -47.8
+ agent1's money: -41.1
+7500 50
+steps: 374950, episodes: 7500, mean episode reward: -66.98681656826159, time: 17.08
+ agent0's money: -48.5
+ agent1's money: -40.1
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -68.42644384897977, time: 17.469
+ agent0's money: -48.8
+ agent1's money: -37.8
+7700 50
+steps: 384950, episodes: 7700, mean episode reward: -82.45393363051042, time: 17.338
+ agent0's money: -48.4
+ agent1's money: -34.7
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -79.59417044647806, time: 17.089
+ agent0's money: -48.1
+ agent1's money: -33.0
+7900 50
+steps: 394950, episodes: 7900, mean episode reward: -82.5893537105466, time: 16.786
+ agent0's money: -47.6
+ agent1's money: -31.8
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -73.16324589443651, time: 17.011
+ agent0's money: -48.8
+ agent1's money: -41.8
+8100 50
+steps: 404950, episodes: 8100, mean episode reward: -68.34159366274162, time: 17.448
+ agent0's money: -49.3
+ agent1's money: -35.4
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -72.3841138115551, time: 17.148
+ agent0's money: -48.4
+ agent1's money: -39.2
+8300 50
+steps: 414950, episodes: 8300, mean episode reward: -64.38856595529077, time: 16.793
+ agent0's money: -49.2
+ agent1's money: -36.4
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -67.70223328569037, time: 17.161
+ agent0's money: -49.2
+ agent1's money: -44.8
+8500 50
+steps: 424950, episodes: 8500, mean episode reward: -67.01510875200728, time: 17.082
+ agent0's money: -49.3
+ agent1's money: -41.2
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -74.27032829126658, time: 17.89
+ agent0's money: -48.1
+ agent1's money: -38.9
+8700 50
+steps: 434950, episodes: 8700, mean episode reward: -81.67243758219828, time: 16.998
+ agent0's money: -47.4
+ agent1's money: -38.7
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -68.53977781517887, time: 17.66
+ agent0's money: -48.3
+ agent1's money: -36.5
+8900 50
+steps: 444950, episodes: 8900, mean episode reward: -65.95619126121939, time: 17.238
+ agent0's money: -49.2
+ agent1's money: -33.2
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -73.93257107885692, time: 16.882
+ agent0's money: -48.0
+ agent1's money: -40.2
+9100 50
+steps: 454950, episodes: 9100, mean episode reward: -73.10368713167688, time: 17.485
+ agent0's money: -49.3
+ agent1's money: -40.0
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -76.07116201757496, time: 17.082
+ agent0's money: -49.4
+ agent1's money: -39.5
+9300 50
+steps: 464950, episodes: 9300, mean episode reward: -65.7102687683524, time: 16.841
+ agent0's money: -48.8
+ agent1's money: -39.4
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -71.30811871547809, time: 17.273
+ agent0's money: -48.4
+ agent1's money: -43.1
+9500 50
+steps: 474950, episodes: 9500, mean episode reward: -74.38728838379507, time: 17.046
+ agent0's money: -49.2
+ agent1's money: -42.9
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -75.75151298564822, time: 17.032
+ agent0's money: -49.0
+ agent1's money: -42.0
+9700 50
+steps: 484950, episodes: 9700, mean episode reward: -68.55092012174433, time: 15.483
+ agent0's money: -49.0
+ agent1's money: -40.0
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -64.87650532570301, time: 14.889
+ agent0's money: -49.5
+ agent1's money: -41.9
+9900 50
+steps: 494950, episodes: 9900, mean episode reward: -62.3417812260781, time: 14.036
+ agent0's money: -48.7
+ agent1's money: -43.0
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -68.8214478860381, time: 13.529
+ agent0's money: -48.9
+ agent1's money: -41.7
+...Finished!
+Trained episodes: 1 -> 10000
+Total time: 0.46 hr
