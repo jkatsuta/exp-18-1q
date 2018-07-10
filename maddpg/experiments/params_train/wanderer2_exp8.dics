@@ -1,7 +1,7 @@
 [
 {
 'scenarios': ['wanderer2-1'],
-'num_episodes': [10000],
+'num_episodes': [20000],
 'is_parallel': True,
 'good_policy': 'ddpg',
 'adv_policy': 'ddpg',
@@ -11,7 +11,17 @@
 {
 'scenarios': ['wanderer2-2'],
 # the same params (but different seed)
-'num_episodes': [10000, 10000, 10000, 10000],
+'num_episodes': [20000, 20000, 20000, 20000],
+'is_parallel': True,
+'good_policy': 'ddpg',
+'adv_policy': 'ddpg',
+'max_episode_lens': [50, 50, 50, 50],
+'is_variable_max_episode_len': False,
+},
+{
+'scenarios': ['wanderer2-3'],
+# the same params (but different seed)
+'num_episodes': [20000, 20000, 20000, 20000],
 'is_parallel': True,
 'good_policy': 'ddpg',
 'adv_policy': 'ddpg',
