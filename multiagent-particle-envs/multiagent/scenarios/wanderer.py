@@ -5,14 +5,17 @@ from multiagent.scenario import BaseScenario
 
 class Scenario(BaseScenario):
     def set_params(self):
-        self.dim_c = 2  # 0: borrow money, 1: do nothing
+        self.dim_c = 2  # 0: borrow energy, 1: do nothing
         self.n_agents = 1
-        self.PENALTY_RATIO = 0.0
-        self.VISIBLE_RATIO = 0.1
+        self.PENALTY_WEIGHT = 0.0
+        self.VISIBLE_WEIGHT = 0.1
         self.L_PROB = 1.0
 
+    def get_world(self):
+        pass
+
     def make_world(self):
-        world = World2()
+        world = self.get_world()
         self.set_params()
         world.dim_c = self.dim_c
         n_landmark = 1  # should be 1
@@ -21,15 +24,17 @@ class Scenario(BaseScenario):
         world.agents = [Agent() for i in range(self.n_agents)]
         for i, agent in enumerate(world.agents):
             agent.name = 'agent %d' % i
-            agent.collide = False
+            agent.collide = True
             agent.silent = False
             agent.trade = True
+            agent.size = 0.1
         # add landmarks
         world.landmarks = [Landmark() for i in range(n_landmark)]
         for i, landmark in enumerate(world.landmarks):
             landmark.name = 'landmark %d' % i
-            landmark.collide = False
+            landmark.collide = True
             landmark.movable = False
+            landmark.size = 0.025
         # make initial conditions
         self.reset_world(world)
         return world
@@ -38,11 +43,12 @@ class Scenario(BaseScenario):
         # random properties for agents
         for i, agent in enumerate(world.agents):
             agent.color = np.array([0.25, 0.25, 0.25])
-            agent.state.money = 0.0
+            agent.color[i % 3] += 0.5 * (i + 1)
+            agent.state.energy = 0.0
         # random properties for landmarks
         for i, landmark in enumerate(world.landmarks):
             landmark.color = np.array([0.75, 0.75, 0.75])
-        world.landmarks[0].color = np.array([0.75, 0.25, 0.25])
+        world.landmarks[0].color = np.array([0.25, 0.25, 0.25])
         # set random initial states
         for agent in world.agents:
             agent.state.p_pos = np.random.uniform(-1, +1, world.dim_p)
@@ -58,7 +64,7 @@ class Scenario(BaseScenario):
 
     def reward(self, agent, world):
         dist2 = self.dist2(agent.state.p_pos, world.landmarks[0].state.p_pos)
-        return -dist2 + self.PENALTY_RATIO * agent.state.money
+        return -dist2 + self.PENALTY_WEIGHT * agent.state.energy
 
     @staticmethod
     def mask_vector(dv, visible_radius, l_prob):
@@ -82,9 +88,9 @@ class Scenario(BaseScenario):
         return dv * mask
 
     def observation(self, agent, world):
-        visible_area = abs(self.VISIBLE_RATIO * agent.state.money)
+        visible_area = abs(self.VISIBLE_WEIGHT * agent.state.energy)
         visible_radius =\
-            -1 * np.sign(agent.state.money) * np.sqrt(visible_area / np.pi)
+            -1 * np.sign(agent.state.energy) * np.sqrt(visible_area / np.pi)
 
         entity_pos = []
         for entity in world.landmarks:
@@ -110,5 +116,24 @@ class World2(World):
             noise = np.random.randn(*agent.action.c.shape) * agent.c_noise if agent.c_noise else 0.0
             agent.state.c = agent.action.c + noise
             # added by JK
-            if agent.trade and np.argmax(agent.state.c) == 0:
-                agent.state.money -= 1.0
+            if agent.trade:
+                assert self.dim_c == 2  # A:-1, B:0
+                if np.argmax(agent.state.c) == 0:
+                    agent.state.energy -= 1.0
+
+
+class World3(World):
+    def update_agent_state(self, agent):
+        # set communication state (directly for now)
+        if agent.silent:
+            agent.state.c = np.zeros(self.dim_c)
+        else:
+            noise = np.random.randn(*agent.action.c.shape) * agent.c_noise if agent.c_noise else 0.0
+            agent.state.c = agent.action.c + noise
+            # added by JK
+            if agent.trade:
+                assert self.dim_c == 3  # A:-1, B:+1, C:0
+                if np.argmax(agent.state.c) == 0:
+                    agent.state.energy -= 1.0
+                elif np.argmax(agent.state.c) == 1:
+                    agent.state.energy += 1.0

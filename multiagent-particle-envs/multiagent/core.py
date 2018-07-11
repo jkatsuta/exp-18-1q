@@ -15,7 +15,7 @@ class AgentState(EntityState):
         # communication utterance
         self.c = None
         # added by JK
-        self.money = 0.0
+        self.energy = 0.0
 
 # action of the agent
 class Action(object):

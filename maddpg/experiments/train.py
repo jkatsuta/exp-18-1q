@@ -189,23 +189,42 @@ def save_curves(n_episode, train_step,
                                                  *final_ep_ag_reward).rstrip(', ') + '\n')
 
 
-def save_money(n_episode, train_step, final_ep_ag_money, arglist):
-    ag_money_file_name = osp.join(arglist.plots_dir, 'agents_money.csv')
+def save_states(n_episode, train_step, energy_history, arglist):
+    def calc_states(energy_history):
+        state_names =\
+            ['agent{i}_energy_min', 'agent{i}_energy_max', 'agent{i}_energy_avg']
+        rt_states = []
+        for each_agent_energies in energy_history:
+            val_history = []
+            for epi_ene in each_agent_energies[-arglist.save_rate:]:
+                vals = [min(epi_ene), max(epi_ene), np.mean(epi_ene)]
+                val_history.append(vals)
+            recent_val_avg = np.array(val_history).mean(axis=0)
+            rt_states.append(recent_val_avg)
+        return rt_states, state_names
+
+    ag_energy_file_name = osp.join(arglist.plots_dir, 'agents_energy.csv')
     is_first_save = False
-    if not osp.exists(ag_money_file_name):
+    if not osp.exists(ag_energy_file_name):
         is_first_save = True
 
-    with open(ag_money_file_name, 'a') as g:
-        n_agents = len(final_ep_ag_money)
+    state_vals, state_names = calc_states(energy_history)
+    with open(ag_energy_file_name, 'a') as g:
         if is_first_save:
-            agent_names = ['agent%d_money' % i for i in range(n_agents)]
-            header = ('{},' * (n_agents + 2))\
-                .format('episode', 'step', *(agent_names)).rstrip(',')
-            g.write(header + '\n')
-        g.write(('{}, ' * (n_agents + 2)).format(n_episode, train_step,
-                                                 *final_ep_ag_money).rstrip(', ') + '\n')
-        for i in range(n_agents):
-            print(" agent%d's money: %.1f" % (i, final_ep_ag_money[i]))
+            g.write('episode,step')
+            for i in range(len(state_vals)):
+                g.write(',')
+                g.write(','.join(state_names).format(i=i))
+            g.write('\n')
+
+        g.write('%d, %d' % (n_episode, train_step))
+        for each_agent_state in state_vals:
+            g.write((', {}' * len(state_names)).format(*each_agent_state))
+        g.write('\n')
+
+        for i, each_agent_state in enumerate(state_vals):
+            print(', '.join(state_names).format(i=i))
+            print(each_agent_state)
 
 
 def save_actions(action_history, video_file_name):
@@ -312,8 +331,8 @@ def train(arglist):
         dic_messages = defaultdict(list)  # for evaluation
         action_hisotry = [defaultdict(list) for _ in range(env.n)]  # for evaluation
         t_start = t_start0 = time.time()
-        money_history = [[] for _ in range(env.n)]
-        final_ep_ag_money = []
+        energy_episode = [[] for _ in range(env.n)]
+        energy_history = [[] for _ in range(env.n)]
 
         # restore some variables of the restored model
         if arglist.restore:
@@ -344,6 +363,10 @@ def train(arglist):
                 episode_rewards[-1] += rew
                 agent_rewards[i][-1] += rew
 
+            if is_trade(env):
+                for i, agent in enumerate(env.agents):
+                    energy_episode[i].append(agent.state.energy)
+
             if arglist.display:
                 for i, act in enumerate(action_n):
                     action_hisotry[i][n_episode].append(list(act))
@@ -365,8 +388,9 @@ def train(arglist):
                             recorder.env.close()
                         break
                 if is_trade(env):
-                    for i, agent in enumerate(env.agents):
-                        money_history[i].append(agent.state.money)
+                    for i in range(env.n):
+                        energy_history[i].append(energy_episode[i])
+                        energy_episode[i] = []
 
                 obs_n = env.reset()
                 episode_step = 0
@@ -429,9 +453,7 @@ def train(arglist):
                             final_ep_rewards[-1], final_ep_ag_rewards[-1], arglist)
 
                 if is_trade(env):
-                    final_ep_ag_money.append([np.mean(each_mh[-arglist.save_rate:])
-                                              for each_mh in money_history])
-                    save_money(n_episode, train_step, final_ep_ag_money[-1], arglist)
+                    save_states(n_episode, train_step, energy_history, arglist)
                 # thin out the saved models; 10 and 5 can be any int values.
                 if ((n_episode < arglist.save_rate * 10) or
                     (n_episode % (arglist.save_rate * 5) == 0)):
@@ -445,7 +467,7 @@ def train(arglist):
                     save_curves(n_episode, train_step,
                                 final_ep_rewards[-1], final_ep_ag_rewards[-1], arglist)
                     if is_trade(env):
-                        save_money(n_episode, train_step, final_ep_ag_money[-1], arglist)
+                        save_states(n_episode, train_step, energy_history, arglist)
                 print('...Finished!')
                 print('Trained episodes: %d -> %d' % (n_episode0, n_episode))
                 print('Total time: %.2f hr' % ((time.time() - t_start0) / 3600.))

@@ -1,11 +1,14 @@
 [
 {
  'p_dir': './exp_results',
- 'exp_dir': 'suikawari3__2018-04-03_19-22-04',
- 'n_epis': [2000],
- 'num_episodes': 2,
- 'max_episode_len': 25,
+ 'exp_dir': 'wanderer2-1__2018-07-10_20-12-44',
+ 'n_epis': [20000],
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'good_policy': 'ddpg',
+ 'adv_policy': 'ddpg',
  'outfile_suffix': None,
  'display_speed': 'very-slow',
+ 'exec': True,
 },
 ]
