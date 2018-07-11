@@ -3,7 +3,7 @@
 {
 'scenarios': ['wanderer1_1agent-%d' % (i+1) for i in range(4)],
 'num_episodes': [10000],
-'is_parallel': False,
+'is_parallel': True,
 'good_policy': 'ddpg',
 'adv_policy': 'ddpg',
 'max_episode_lens': [50],

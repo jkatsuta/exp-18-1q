@@ -1,8 +1,8 @@
 [
-# exp6-4-1
+# exp7
 {
-'scenarios': ['suikawari1'],
-'num_episodes': [2000],
+'scenarios': ['wanderer1_1agent-3'],
+'num_episodes': [10000],
 'is_parallel': False,
 'good_policy': 'ddpg',
 'adv_policy': 'ddpg',
