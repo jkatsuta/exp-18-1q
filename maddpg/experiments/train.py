@@ -236,6 +236,15 @@ def save_actions(action_history, video_file_name):
         df_out.to_csv(outfile, index=False)
 
 
+def save_energies(energy_history_display, video_file_name):
+    for i, dic_each_agent_energy in enumerate(energy_history_display):
+        outfile = video_file_name.replace('.mp4', '_energy_agent%d.csv' % i)
+        df_out = _dic_to_df(dic_each_agent_energy)
+        rename_map = dict([(i, 'energy%d' % i) for i in range(len(df_out.columns) - 2)])
+        df_out.rename(columns=rename_map, inplace=True)
+        df_out.to_csv(outfile, index=False)
+
+
 def save_messages(dic_messages, video_file_name):
     outfile = video_file_name.replace('.mp4', '_messages.csv')
     df_out = _dic_to_df(dic_messages)
@@ -329,10 +338,12 @@ def train(arglist):
         train_step = 0
         last_saved_episode = -1
         dic_messages = defaultdict(list)  # for evaluation
-        action_hisotry = [defaultdict(list) for _ in range(env.n)]  # for evaluation
+        action_history = [defaultdict(list) for _ in range(env.n)]  # for evaluation
         t_start = t_start0 = time.time()
         energy_episode = [[] for _ in range(env.n)]
         energy_history = [[] for _ in range(env.n)]
+        energy_history_display =\
+            [defaultdict(list) for _ in range(env.n)]  # for evaluation
 
         # restore some variables of the restored model
         if arglist.restore:
@@ -369,7 +380,10 @@ def train(arglist):
 
             if arglist.display:
                 for i, act in enumerate(action_n):
-                    action_hisotry[i][n_episode].append(list(act))
+                    action_history[i][n_episode].append(list(act))
+                    if is_trade(env):
+                        energy = [env.agents[i].state.energy]
+                        energy_history_display[i][n_episode].append(energy)
 
             if done or terminal:
                 if len(dic_par_var_epi_len):
@@ -381,7 +395,10 @@ def train(arglist):
                     t_start = time.time()
                     if n_episode >= arglist.num_episodes:
                         if arglist.video_record:
-                            save_actions(action_hisotry, arglist.video_file_name)
+                            save_actions(action_history, arglist.video_file_name)
+                            if is_trade(env):
+                                save_energies(energy_history_display,
+                                              arglist.video_file_name)
                         if arglist.video_record and len(dic_messages) > 0:
                             save_messages(dic_messages, arglist.video_file_name)
                         if arglist.video_record:

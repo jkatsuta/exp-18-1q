@@ -5,7 +5,7 @@ from multiagent.scenario import BaseScenario
 
 class Scenario(BaseScenario):
     def set_params(self):
-        self.dim_c = 2  # 0: borrow energy, 1: do nothing
+        self.dim_c = 2
         self.n_agents = 1
         self.PENALTY_WEIGHT = 0.0
         self.VISIBLE_WEIGHT = 0.1
