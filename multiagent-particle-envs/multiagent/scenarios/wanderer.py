@@ -5,7 +5,6 @@ from multiagent.scenario import BaseScenario
 
 class Scenario(BaseScenario):
     def set_params(self):
-        self.dim_c = 2
         self.n_agents = 1
         self.PENALTY_WEIGHT = 0.0
         self.VISIBLE_WEIGHT = 0.1
@@ -17,7 +16,6 @@ class Scenario(BaseScenario):
     def make_world(self):
         world = self.get_world()
         self.set_params()
-        world.dim_c = self.dim_c
         n_landmark = 1  # should be 1
 
         # add agents

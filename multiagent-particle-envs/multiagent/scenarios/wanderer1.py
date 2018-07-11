@@ -6,4 +6,6 @@ import wanderer
 
 class Scenario(wanderer.Scenario):
 	def get_world(self):
-		return wanderer.World2()
+		world = wanderer.World2()
+		world.dim_c = 2
+		return world

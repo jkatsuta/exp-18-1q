@@ -6,7 +6,6 @@ import wanderer1
 
 class Scenario(wanderer1.Scenario):
 	def set_params(self):
-	    self.dim_c = 2
 	    self.n_agents = 2
 	    self.PENALTY_WEIGHT = 0.005
 	    self.VISIBLE_WEIGHT = 0.1
