@@ -1,6 +1,46 @@
 import os
+import sys
+import glob
 import os.path as osp
 from IPython.display import HTML
+
+
+def get_all_scenarios(exp_dir):
+    exp_dirs =\
+        [osp.basename(d) for d in glob.glob(osp.join(exp_dir, '*'))]
+    return exp_dirs
+
+
+def print_load_pars(exp_dir, par_template):
+    all_scenarios = get_all_scenarios(exp_dir)
+    for scenario in all_scenarios:
+        print(par_template % (exp_dir, scenario))
+
+
+def print_load_pars2():
+    loaded_par_file = './params_play/loaded_models_exp8.dics'
+    exp_dir = './exp_results/exp8_180712/'
+
+    par_template =\
+"""{
+'p_dir': '%s',
+'exp_dir': '%s',
+'n_epis': [40000],
+'num_episodes': 5,
+'max_episode_len': 50,
+'good_policy': 'ddpg',
+'adv_policy': 'ddpg',
+'outfile_suffix': None,
+'display_speed': 'slow',
+'exec': True,
+},"""
+    os.chdir('../')
+    with open(loaded_par_file, 'w') as g:
+        g.write('[\n')
+        sys.stdout = g
+        print_load_pars(exp_dir, par_template)
+        sys.stdout = sys.__stdout__
+        g.write(']')
 
 
 def play_linked_video(each_exp_dir, fn_video, width=500, height=300):

@@ -41,7 +41,9 @@ class Scenario(BaseScenario):
         # random properties for agents
         for i, agent in enumerate(world.agents):
             agent.color = np.array([0.25, 0.25, 0.25])
-            agent.color[i % 3] += 0.5 * (i + 1)
+            agent.color[i % 3] += 1.0
+            if i >= 3:
+                agent.color[(i+2) % 3] = 0.0
             agent.state.energy = 0.0
         # random properties for landmarks
         for i, landmark in enumerate(world.landmarks):
