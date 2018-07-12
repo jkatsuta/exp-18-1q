@@ -34,7 +34,7 @@ def parse_args():
     # Checkpointing
     parser.add_argument("--exp-name", type=str, default=None, help="name of the experiment")
     parser.add_argument("--save-dir", type=str, default=None, help="directory in which training state and model should be saved")
-    parser.add_argument("--save-rate", type=int, default=200, help="save model once every time this many episodes are completed")
+    parser.add_argument("--save-rate", type=int, default=1000, help="save model once every time this many episodes are completed")
     parser.add_argument("--load-model", type=str, default=None, help="loaded model")
     # Evaluation
     parser.add_argument("--restore", action="store_true", default=False)

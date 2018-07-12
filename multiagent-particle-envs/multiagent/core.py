@@ -16,6 +16,7 @@ class AgentState(EntityState):
         self.c = None
         # added by JK
         self.energy = 0.0
+        self.attention = 0.0
 
 # action of the agent
 class Action(object):

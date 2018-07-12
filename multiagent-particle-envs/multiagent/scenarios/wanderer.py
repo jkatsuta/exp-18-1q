@@ -132,8 +132,8 @@ class World3(World):
             agent.state.c = agent.action.c + noise
             # added by JK
             if agent.trade:
-                assert self.dim_c == 3  # A:-1, B:+1, C:0
+                assert self.dim_c == 3  # A:energy -= 1, B:attention -= 1, C: do nothing
                 if np.argmax(agent.state.c) == 0:
                     agent.state.energy -= 1.0
                 elif np.argmax(agent.state.c) == 1:
-                    agent.state.energy += 1.0
+                    agent.state.attention -= 1.0
