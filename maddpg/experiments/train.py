@@ -34,7 +34,7 @@ def parse_args():
     # Checkpointing
     parser.add_argument("--exp-name", type=str, default=None, help="name of the experiment")
     parser.add_argument("--save-dir", type=str, default=None, help="directory in which training state and model should be saved")
-    parser.add_argument("--save-rate", type=int, default=1000, help="save model once every time this many episodes are completed")
+    parser.add_argument("--save-rate", type=int, default=100, help="save model once every time this many episodes are completed")
     parser.add_argument("--load-model", type=str, default=None, help="loaded model")
     # Evaluation
     parser.add_argument("--restore", action="store_true", default=False)
@@ -189,27 +189,29 @@ def save_curves(n_episode, train_step,
                                                  *final_ep_ag_reward).rstrip(', ') + '\n')
 
 
-def save_states(n_episode, train_step, energy_history, arglist):
-    def calc_states(energy_history):
+def save_states(n_episode, train_step, states_history, arglist):
+    def calc_states(states_history):
         state_names =\
-            ['agent{i}_energy_min', 'agent{i}_energy_max', 'agent{i}_energy_avg']
+            ['agent{i}_energy_min', 'agent{i}_attention_min']
         rt_states = []
-        for each_agent_energies in energy_history:
+        for each_agent_states in states_history:
             val_history = []
-            for epi_ene in each_agent_energies[-arglist.save_rate:]:
-                vals = [min(epi_ene), max(epi_ene), np.mean(epi_ene)]
+            for epi_states in each_agent_states[-arglist.save_rate:]:
+                epi_states = np.array(epi_states)
+                # vals = [min(epi_ene), max(epi_ene), np.mean(epi_ene)]
+                vals = [min(epi_states[:, 0]), min(epi_states[:, 1])]
                 val_history.append(vals)
             recent_val_avg = np.array(val_history).mean(axis=0)
             rt_states.append(recent_val_avg)
         return rt_states, state_names
 
-    ag_energy_file_name = osp.join(arglist.plots_dir, 'agents_energy.csv')
+    ag_states_file_name = osp.join(arglist.plots_dir, 'agents_states.csv')
     is_first_save = False
-    if not osp.exists(ag_energy_file_name):
+    if not osp.exists(ag_states_file_name):
         is_first_save = True
 
-    state_vals, state_names = calc_states(energy_history)
-    with open(ag_energy_file_name, 'a') as g:
+    state_vals, state_names = calc_states(states_history)
+    with open(ag_states_file_name, 'a') as g:
         if is_first_save:
             g.write('episode,step')
             for i in range(len(state_vals)):
@@ -236,11 +238,12 @@ def save_actions(action_history, video_file_name):
         df_out.to_csv(outfile, index=False)
 
 
-def save_energies(energy_history_display, video_file_name):
-    for i, dic_each_agent_energy in enumerate(energy_history_display):
-        outfile = video_file_name.replace('.mp4', '_energy_agent%d.csv' % i)
+def save_every_state(states_history_display, video_file_name):
+    state_keys = {0: 'energy', 1: 'attention'}
+    for i, dic_each_agent_energy in enumerate(states_history_display):
+        outfile = video_file_name.replace('.mp4', '_states_agent%d.csv' % i)
         df_out = _dic_to_df(dic_each_agent_energy)
-        rename_map = dict([(i, 'energy%d' % i) for i in range(len(df_out.columns) - 2)])
+        rename_map = state_keys
         df_out.rename(columns=rename_map, inplace=True)
         df_out.to_csv(outfile, index=False)
 
@@ -340,9 +343,9 @@ def train(arglist):
         dic_messages = defaultdict(list)  # for evaluation
         action_history = [defaultdict(list) for _ in range(env.n)]  # for evaluation
         t_start = t_start0 = time.time()
-        energy_episode = [[] for _ in range(env.n)]
-        energy_history = [[] for _ in range(env.n)]
-        energy_history_display =\
+        states_episode = [[] for _ in range(env.n)]
+        states_history = [[] for _ in range(env.n)]
+        states_history_display =\
             [defaultdict(list) for _ in range(env.n)]  # for evaluation
 
         # restore some variables of the restored model
@@ -376,14 +379,16 @@ def train(arglist):
 
             if is_trade(env):
                 for i, agent in enumerate(env.agents):
-                    energy_episode[i].append(agent.state.energy)
+                    states = (agent.state.energy, agent.state.attention)
+                    states_episode[i].append(states)
 
             if arglist.display:
                 for i, act in enumerate(action_n):
                     action_history[i][n_episode].append(list(act))
                     if is_trade(env):
-                        energy = [env.agents[i].state.energy]
-                        energy_history_display[i][n_episode].append(energy)
+                        states = [env.agents[i].state.energy,
+                                  env.agents[i].state.attention]
+                        states_history_display[i][n_episode].append(states)
 
             if done or terminal:
                 if len(dic_par_var_epi_len):
@@ -397,8 +402,8 @@ def train(arglist):
                         if arglist.video_record:
                             save_actions(action_history, arglist.video_file_name)
                             if is_trade(env):
-                                save_energies(energy_history_display,
-                                              arglist.video_file_name)
+                                save_every_state(states_history_display,
+                                                 arglist.video_file_name)
                         if arglist.video_record and len(dic_messages) > 0:
                             save_messages(dic_messages, arglist.video_file_name)
                         if arglist.video_record:
@@ -406,8 +411,8 @@ def train(arglist):
                         break
                 if is_trade(env):
                     for i in range(env.n):
-                        energy_history[i].append(energy_episode[i])
-                        energy_episode[i] = []
+                        states_history[i].append(states_episode[i])
+                        states_episode[i] = []
 
                 obs_n = env.reset()
                 episode_step = 0
@@ -470,7 +475,7 @@ def train(arglist):
                             final_ep_rewards[-1], final_ep_ag_rewards[-1], arglist)
 
                 if is_trade(env):
-                    save_states(n_episode, train_step, energy_history, arglist)
+                    save_states(n_episode, train_step, states_history, arglist)
                 # thin out the saved models; 10 and 5 can be any int values.
                 if ((n_episode < arglist.save_rate * 10) or
                     (n_episode % (arglist.save_rate * 5) == 0)):
@@ -484,7 +489,7 @@ def train(arglist):
                     save_curves(n_episode, train_step,
                                 final_ep_rewards[-1], final_ep_ag_rewards[-1], arglist)
                     if is_trade(env):
-                        save_states(n_episode, train_step, energy_history, arglist)
+                        save_states(n_episode, train_step, states_history, arglist)
                 print('...Finished!')
                 print('Trained episodes: %d -> %d' % (n_episode0, n_episode))
                 print('Total time: %.2f hr' % ((time.time() - t_start0) / 3600.))

@@ -1,8 +1,7 @@
 [
-# exp7
 {
-'scenarios': ['wanderer1_1agent-3'],
-'num_episodes': [10000],
+'scenarios': ['wanderer2_2agents-1'],
+'num_episodes': [200],
 'is_parallel': False,
 'good_policy': 'ddpg',
 'adv_policy': 'ddpg',
