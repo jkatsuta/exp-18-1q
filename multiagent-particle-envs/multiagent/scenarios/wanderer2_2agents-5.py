@@ -8,6 +8,6 @@ class Scenario(wanderer2.Scenario):
 	def set_params(self):
 	    self.n_agents = 2
 	    self.PENALTY_WEIGHT = 0.01  # energy
-	    self.PENALTY_WEIGHT2 = 0.001  # attention
+	    self.PENALTY_WEIGHT2 = 0.01  # attention
 	    self.VISIBLE_WEIGHT = 0.1
 	    self.L_PROB = 1.0

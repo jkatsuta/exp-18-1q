@@ -1,6 +1,6 @@
 [
 {
-'scenarios': ['wanderer2_2agents-%d' % (i + 1) for i in range(3)],
+'scenarios': ['wanderer2_2agents-%d' % i for i in [3, 4, 5]],
 'num_episodes': [40000, 40000, 40000],
 'is_parallel': True,
 'good_policy': 'ddpg',
