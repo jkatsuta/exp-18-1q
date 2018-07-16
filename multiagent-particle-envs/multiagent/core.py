@@ -17,6 +17,7 @@ class AgentState(EntityState):
         # added by JK
         self.energy = 0.0
         self.attention = 0.0
+        self.visible_radius = 0.0
 
 # action of the agent
 class Action(object):
@@ -25,6 +26,7 @@ class Action(object):
         self.u = None
         # communication action
         self.c = None
+        self.visible_radius_color = None
 
 # properties and state of physical world entity
 class Entity(object):

@@ -26,14 +26,12 @@ class Scenario(wanderer.Scenario):
         return rew
 
     def observation(self, agent, world):
-        visible_area = abs(self.VISIBLE_WEIGHT * agent.state.energy)
-        visible_radius =\
-            -1 * np.sign(agent.state.energy) * np.sqrt(visible_area / np.pi)
+        agent.state.visible_radius = self.calc_visible_radius(agent)
 
         entity_pos = []
         for entity in world.landmarks:
             dv = agent.state.p_pos - entity.state.p_pos
-            proc_dv = self.mask_vector(dv, visible_radius, self.L_PROB)
+            proc_dv = self.mask_vector(dv, agent.state.visible_radius, self.L_PROB)
             entity_pos.append(proc_dv)
 
         # multi-agent case

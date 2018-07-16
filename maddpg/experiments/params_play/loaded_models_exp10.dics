@@ -1,0 +1,14 @@
+[
+{
+ 'p_dir': './exp_results/exp10_180715',
+ 'exp_dir': 'wanderer2_2agents-4__2018-07-15_11-12-34',
+ 'n_epis': [40000],
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'good_policy': 'ddpg',
+ 'adv_policy': 'ddpg',
+ 'outfile_suffix': None,
+ 'display_speed': 'slow',
+ 'exec': True,
+},
+]
