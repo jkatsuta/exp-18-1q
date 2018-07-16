@@ -11,7 +11,7 @@ class Scenario(BaseScenario):
         self.L_PROB = 1.0
 
     def get_world(self):
-        pass
+        raise NotImplementedError()
 
     def make_world(self):
         world = self.get_world()
