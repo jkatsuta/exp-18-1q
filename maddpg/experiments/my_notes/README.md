@@ -23,3 +23,23 @@
 ## ana_exp6.ipynb
 - I made new scenarios of 'suikawari' (five patterns).
 - The training results are shown and discussed.
+
+## ana_exp7.ipynb
+- A new scenario of 'wanderer1_1agent'
+- I made experiments with different parameter set.
+
+## ana_exp8.ipynb
+- A new scenario of 'wanderer1_2agents'
+- I made experiments with different parameter set.
+
+## ana_exp9.ipynb
+- A new scenario of 'wanderer1_4agents'
+- I made experiments with different parameter set.
+
+## ana_exp10.ipynb
+- A new scenario of 'wanderer2_2agents'
+- I made experiments with different parameter set.
+
+## ana_exp11.ipynb
+- A new scenario of 'wanderer2_4agents'
+- I made experiments with different parameter set.

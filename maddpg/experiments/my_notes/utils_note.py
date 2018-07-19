@@ -18,8 +18,8 @@ def print_load_pars(exp_dir, par_template):
 
 
 def print_load_pars2():
-    loaded_par_file = './params_play/loaded_models_exp8.dics'
-    exp_dir = './exp_results/exp8_180712/'
+    loaded_par_file = './params_play/loaded_models_exp11.dics'
+    exp_dir = './exp_results/exp11_180716/'
 
     par_template =\
 """{
