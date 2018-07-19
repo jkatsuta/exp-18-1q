@@ -1,0 +1,2424 @@
+python train.py --scenario wanderer1_2agents-4 --num-episodes 20000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+python train.py --scenario wanderer1_2agents-4 --num-episodes 20000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+python train.py --scenario wanderer1_2agents-4 --num-episodes 20000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+python train.py --scenario wanderer1_2agents-4 --num-episodes 20000 --max-episode-len 50 --good-policy ddpg --adv-policy ddpg  &
+Using good policy ddpg and adv policy ddpg
+Starting iterations of wanderer1_2agents-4__2018-07-11_22-51-36...
+200 50
+steps: 9950, episodes: 200, mean episode reward: -167.01406836421992, time: 24.731
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.61809045  -0.45226131 -12.65638191]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-23.63819095  -0.51256281 -12.12      ]
+400 50
+steps: 19950, episodes: 400, mean episode reward: -172.04029515037845, time: 25.25
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.625   -0.465  -12.5635]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-24.36    -0.43   -12.5362]
+600 50
+steps: 29950, episodes: 600, mean episode reward: -165.28990736078975, time: 25.911
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.09    -0.445  -12.7774]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-24.16    -0.425  -12.2755]
+800 50
+steps: 39950, episodes: 800, mean episode reward: -188.83464510223638, time: 25.59
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.41    -0.47   -12.4932]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-24.235   -0.47   -12.4635]
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -168.11884232434352, time: 25.248
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.36    -0.53   -12.4917]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-24.285   -0.435  -12.3912]
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -617.1932804930266, time: 34.623
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-14.545   -0.32    -7.8429]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-29.915   -0.605  -15.0439]
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -158.5741309876542, time: 34.845
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-1.785  -0.06   -0.8879]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-23.76    -0.55   -13.1329]
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -174.034492235809, time: 34.35
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-11.13    -0.285   -5.8446]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-29.65    -0.455  -15.4387]
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -148.77788798675994, time: 33.78
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-2.545  -0.08   -1.5697]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-21.605   -0.295  -10.8606]
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -154.37525234975422, time: 34.007
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-5.24   -0.12   -2.7341]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-13.845   -0.185   -7.0526]
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -118.66493287679175, time: 33.838
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-6.755  -0.215  -3.7403]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-3.025  -0.09   -1.5275]
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -100.39574540551068, time: 33.79
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-32.48    -0.59   -16.1595]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-1.365  -0.04   -0.6617]
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -102.36350413722667, time: 33.991
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-38.865   -0.685  -19.4933]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-3.21   -0.055  -1.5924]
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -103.59225006168596, time: 34.057
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.74    -0.685  -18.5163]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-2.42   -0.04   -1.3704]
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -95.9054487367961, time: 33.816
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.725   -0.655  -18.2277]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-8.89   -0.17   -4.2578]
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -90.82307425245352, time: 34.547
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.715   -0.765  -19.8267]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-10.315   -0.15    -4.8729]
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -83.11373260411146, time: 34.024
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.19    -0.79   -22.3658]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-13.335   -0.215   -6.6222]
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -100.6998380696055, time: 34.293
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.14   -0.88  -24.225]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-9.135  -0.075  -4.2915]
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -103.37394761309388, time: 33.755
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.825   -0.81   -22.9037]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-10.525   -0.07    -4.6705]
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -89.12780535137877, time: 33.801
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.58    -0.87   -23.8723]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-13.585   -0.09    -5.7841]
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -84.94113362814477, time: 34.346
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.885   -0.935  -24.2088]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-20.955   -0.27    -9.3044]
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -103.60780461658027, time: 33.691
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.99    -0.74   -22.3742]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-21.325   -0.24   -10.0661]
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -84.52691130871175, time: 33.701
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.255   -0.8    -22.5358]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-39.725   -0.5    -19.1789]
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -76.39558587062236, time: 33.224
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.605   -0.945  -24.6042]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-35.24    -0.445  -16.4959]
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -91.54464898282562, time: 33.993
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.58    -0.89   -23.9321]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.835   -0.41   -18.9566]
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -83.85159740446194, time: 34.108
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.605   -0.935  -24.6358]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-35.45    -0.48   -17.4683]
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -78.74947448120349, time: 33.735
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.285   -0.94   -24.4629]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.415   -0.67   -23.7105]
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -70.81049497317376, time: 33.817
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.075   -0.91   -24.7841]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.85    -0.585  -22.9922]
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -65.10324354543467, time: 34.207
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.755   -0.915  -24.5942]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.385   -0.685  -23.5378]
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -70.46120094990279, time: 33.899
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.445   -0.94   -25.0684]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.01    -0.725  -23.5746]
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -66.56807049787577, time: 34.53
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.205   -0.99   -24.9683]
+agent1_energy_min, agent1_energy_max, agent1_energy_avgUsing good policy ddpg and adv policy ddpg
+Starting iterations of wanderer1_2agents-4__2018-07-11_22-51-38...
+200 50
+steps: 9950, episodes: 200, mean episode reward: -151.30835592719637, time: 24.714
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.25628141  -0.47236181 -12.26844221]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-24.1758794   -0.48743719 -12.41005025]
+400 50
+steps: 19950, episodes: 400, mean episode reward: -152.6982622436479, time: 25.463
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.125   -0.48   -12.2504]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-23.91    -0.49   -12.2716]
+600 50
+steps: 29950, episodes: 600, mean episode reward: -149.1361075322243, time: 25.183
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-23.965   -0.5    -12.2864]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-23.965   -0.53   -12.3625]
+800 50
+steps: 39950, episodes: 800, mean episode reward: -165.27694466767701, time: 25.205
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.3     -0.49   -12.4036]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-23.535   -0.48   -11.9821]
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -154.01642383823625, time: 25.369
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.355   -0.445  -12.3847]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-24.235   -0.47   -12.2711]
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -601.5884024280301, time: 34.423
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-22.23    -0.54   -11.8443]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-27.81   -0.485 -14.025]
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -323.5018653898718, time: 36.018
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.28    -0.39   -15.1639]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-8.2    -0.175  -4.0734]
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -173.4414471366394, time: 35.803
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-21.585   -0.615  -11.7185]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-6.23   -0.165  -3.3313]
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -163.7264090441414, time: 35.739
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-22.27    -0.595  -11.5583]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-2.395 -0.095 -1.262]
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -137.3022877713157, time: 35.337
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-18.55    -0.54    -9.8147]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-3.62   -0.115  -1.9057]
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -136.20378275131733, time: 35.436
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-5.695  -0.35   -3.2093]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-10.575   -0.14    -5.0841]
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -175.2769896753892, time: 35.493
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-13.05    -0.44    -6.5538]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-10.345   -0.095   -5.1872]
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -127.34866619309707, time: 35.119
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-7.655  -0.34   -4.3199]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-0.85   -0.02   -0.4906]
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -109.39669612306471, time: 35.188
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-11.475   -0.505   -6.2406]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-3.645  -0.1    -2.0002]
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -97.26719912298834, time: 34.297
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-6.015  -0.415  -3.4117]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-12.125   -0.145   -5.7882]
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -99.976283179616, time: 34.389
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-6.6    -0.395  -3.6875]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-30.02    -0.4    -14.3726]
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -93.35498121786071, time: 33.539
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-7.2    -0.37   -3.9027]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-33.2     -0.375  -15.6652]
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -83.1167359777207, time: 33.438
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-6.44   -0.42   -3.8295]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-32.08    -0.375  -15.2363]
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -86.01711290521558, time: 33.698
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-5.885  -0.345  -3.3058]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-37.865   -0.59   -18.1867]
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -84.62055729551459, time: 33.543
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-6.74   -0.34   -3.5834]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-35.8     -0.59   -17.5512]
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -82.48121243265756, time: 33.914
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-8.485  -0.365  -4.8867]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.635   -0.695  -20.3683]
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -69.62534182146706, time: 33.529
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-9.6    -0.395  -5.5646]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.345  -0.755 -19.122]
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -71.12607377002578, time: 33.176
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-10.175   -0.355   -5.5154]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-37.17    -0.625  -18.3421]
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -77.28072106636583, time: 33.372
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-8.97   -0.25   -4.6938]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.71    -0.7    -20.1225]
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -74.43751978636656, time: 33.382
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-8.87   -0.4    -5.3093]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.17    -0.8    -20.4703]
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -79.74743033422088, time: 34.342
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-11.04   -0.415  -6.073]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.515   -0.73   -20.8544]
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -69.45946024741865, time: 33.527
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-11.065   -0.375   -6.1194]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.04    -0.73   -20.6799]
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -65.34570435371278, time: 33.258
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-12.57    -0.4     -6.9791]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.785   -0.68   -20.9821]
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -66.20336202995185, time: 34.092
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-14.04    -0.415   -7.3602]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.865   -0.775  -20.6577]
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -63.028849472533636, time: 33.61
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-14.685   -0.385   -7.5113]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-36.68    -0.765  -18.9648]
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -64.370632556366, time: 34.234
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-13.125  -0.315  -6.555]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.17   -0.79  -22.418]Using good policy ddpg and adv policy ddpg
+Starting iterations of wanderer1_2agents-4__2018-07-11_22-51-40...
+200 50
+steps: 9950, episodes: 200, mean episode reward: -158.032572304565, time: 24.83
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.35678392  -0.48743719 -12.96462312]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-28.2361809   -0.55778894 -14.26994975]
+400 50
+steps: 19950, episodes: 400, mean episode reward: -155.1959035666435, time: 24.792
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.34    -0.495  -12.9218]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-28.68    -0.53   -14.4631]
+600 50
+steps: 29950, episodes: 600, mean episode reward: -157.6813917849603, time: 25.42
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-26.125   -0.455  -13.1862]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-28.375   -0.545  -14.2829]
+800 50
+steps: 39950, episodes: 800, mean episode reward: -154.92114125574196, time: 25.463
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.95    -0.52   -13.1015]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-27.945   -0.49   -13.9006]
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -181.2776816047249, time: 25.224
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.53    -0.465  -12.9354]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-28.43    -0.535  -14.1861]
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -412.3546992561264, time: 34.465
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-26.78    -0.455  -13.5348]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-31.01    -0.565  -15.5855]
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -133.2913598783188, time: 35.056
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-9.62   -0.28   -4.7724]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-17.735   -0.44    -8.9788]
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -148.66728619006642, time: 35.208
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-15.755   -0.205   -7.6449]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-18.985   -0.525  -10.4467]
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -108.94056606237486, time: 35.176
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-20.18   -0.235  -9.727]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-16.855   -0.525   -8.9976]
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -108.41476775013594, time: 35.105
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-17.89   -0.26   -8.395]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-10.84    -0.36    -6.0531]
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -106.06637495211325, time: 35.478
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-21.26    -0.24    -9.5327]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-16.29    -0.385   -8.3195]
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -106.83737174234487, time: 35.26
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-20.025   -0.285   -9.3873]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-10.74    -0.23    -5.4496]
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -93.13270019573264, time: 34.569
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-22.44   -0.325 -10.639]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-7.175  -0.13   -3.6519]
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -90.79186763731832, time: 34.892
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-28.89    -0.4    -13.9031]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-13.4     -0.345   -7.0386]
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -80.95681996476155, time: 34.848
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-34.785   -0.45   -16.8463]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-18.905   -0.345   -9.5031]
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -76.36523408373898, time: 35.55
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.145   -0.39   -16.3242]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-22.66    -0.36   -11.0565]
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -80.62153577140705, time: 34.759
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.445   -0.465  -18.9916]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-31.465   -0.515  -15.7735]
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -69.41535793849613, time: 34.76
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-37.55    -0.49   -18.7427]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-33.31    -0.45   -16.2011]
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -66.66988069984812, time: 35.217
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-38.56   -0.53  -19.672]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-35.715   -0.635  -17.6571]
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -63.57589350871603, time: 34.599
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-42.555   -0.855  -21.9168]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.635   -0.7    -22.5706]
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -62.745473159732455, time: 34.695
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.59    -0.9    -22.9487]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.245   -0.77   -23.4859]
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -59.17900763995499, time: 34.338
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.415   -0.92   -23.3794]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.54    -0.66   -20.6455]
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -60.24941189095537, time: 34.728
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.145   -0.955  -23.6314]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.875   -0.76   -21.8446]
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -53.813240186690656, time: 34.627
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.935   -0.985  -23.9164]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.52    -0.8    -22.8268]
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -52.62719016272267, time: 34.233
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.14   -0.995 -23.957]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.775   -0.87   -24.5246]
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -54.87149408759754, time: 34.342
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.845   -0.985  -24.3494]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.425   -0.945  -25.1185]
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -55.318290396338604, time: 34.41
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.645   -1.     -24.1616]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.52   -0.905 -25.098]
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -56.813488548081985, time: 34.128
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.02    -0.995  -24.3853]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.625   -0.95   -25.1922]
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -55.12829205283268, time: 33.797
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.14    -0.99   -24.4231]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.555   -0.925  -25.1327]
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -54.535184921608355, time: 33.72
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.055   -1.     -24.9162]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.445  -0.935 -25.068]
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -56.40904034003886, time: 33.933
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.1     -1.     -24.8689]
+agent1_energy_min, agent1_energy_max, agent1_energy_avgUsing good policy ddpg and adv policy ddpg
+Starting iterations of wanderer1_2agents-4__2018-07-11_22-51-42...
+200 50
+steps: 9950, episodes: 200, mean episode reward: -176.13865054034903, time: 24.287
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-27.27638191  -0.50753769 -13.65889447]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-25.68844221  -0.52763819 -13.05005025]
+400 50
+steps: 19950, episodes: 400, mean episode reward: -174.2112443444999, time: 25.171
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-27.035   -0.515  -13.5056]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-25.78    -0.525  -13.2161]
+600 50
+steps: 29950, episodes: 600, mean episode reward: -168.38903081430675, time: 25.69
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-27.115  -0.6   -13.694]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-26.28   -0.55  -13.474]
+800 50
+steps: 39950, episodes: 800, mean episode reward: -168.05821225504462, time: 24.924
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-26.7     -0.575  -13.4765]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-26.135   -0.48   -13.1951]
+1000 50
+steps: 49950, episodes: 1000, mean episode reward: -168.7221739661368, time: 25.126
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-26.745   -0.525  -13.4446]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-25.7     -0.535  -13.1903]
+1200 50
+steps: 59950, episodes: 1200, mean episode reward: -471.09377055671945, time: 34.851
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.365   -0.58   -13.2172]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-21.405   -0.445  -11.3593]
+1400 50
+steps: 69950, episodes: 1400, mean episode reward: -358.95478641932715, time: 35.56
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.08    -0.65   -15.5188]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-28.105   -0.59   -14.6267]
+1600 50
+steps: 79950, episodes: 1600, mean episode reward: -154.85999298551351, time: 35.474
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-15.805   -0.29    -7.7205]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.18    -0.82   -20.9829]
+1800 50
+steps: 89950, episodes: 1800, mean episode reward: -101.12688625896212, time: 34.905
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-27.735   -0.56   -14.0073]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-39.07    -0.695  -20.1871]
+2000 50
+steps: 99950, episodes: 2000, mean episode reward: -110.60499154173627, time: 34.677
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-29.545   -0.6    -15.2974]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-36.35    -0.635  -18.9875]
+2200 50
+steps: 109950, episodes: 2200, mean episode reward: -105.5387393149711, time: 35.385
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-22.74    -0.49   -11.8696]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.865   -0.75   -20.2901]
+2400 50
+steps: 119950, episodes: 2400, mean episode reward: -106.25288904220677, time: 34.861
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-19.38    -0.385   -9.6688]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-36.86    -0.67   -19.1252]
+2600 50
+steps: 129950, episodes: 2600, mean episode reward: -94.22331322880636, time: 34.521
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-28.3     -0.42   -13.4792]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-39.345   -0.71   -20.5374]
+2800 50
+steps: 139950, episodes: 2800, mean episode reward: -81.13597685472486, time: 34.475
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.145   -0.515  -16.0875]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.28    -0.81   -20.7279]
+3000 50
+steps: 149950, episodes: 3000, mean episode reward: -81.19482101450059, time: 34.568
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-34.56    -0.635  -17.1962]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-37.18   -0.72  -19.597]
+3200 50
+steps: 159950, episodes: 3200, mean episode reward: -71.0739105182717, time: 35.529
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.475   -0.675  -19.6391]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.205   -0.65   -20.2995]
+3400 50
+steps: 169950, episodes: 3400, mean episode reward: -80.97634329004212, time: 34.697
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.895   -0.775  -22.3918]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-39.25    -0.715  -19.9622]
+3600 50
+steps: 179950, episodes: 3600, mean episode reward: -70.96890018541582, time: 34.559
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.09    -0.815  -22.6075]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.88    -0.715  -21.9051]
+3800 50
+steps: 189950, episodes: 3800, mean episode reward: -74.6484889174013, time: 34.962
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.155   -0.815  -23.0374]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-43.58    -0.77   -21.8774]
+4000 50
+steps: 199950, episodes: 4000, mean episode reward: -68.59305367896167, time: 34.31
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.47    -0.9    -23.8127]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.225   -0.845  -23.3314]
+4200 50
+steps: 209950, episodes: 4200, mean episode reward: -74.35489611485508, time: 35.048
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.215   -0.835  -23.5377]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.      -0.855  -23.5945]
+4400 50
+steps: 219950, episodes: 4400, mean episode reward: -63.84035739793877, time: 34.553
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.155   -0.855  -23.3603]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.935   -0.815  -24.2706]
+4600 50
+steps: 229950, episodes: 4600, mean episode reward: -63.875676237271854, time: 34.35
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.35    -0.885  -24.2045]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.25    -0.88   -24.3744]
+4800 50
+steps: 239950, episodes: 4800, mean episode reward: -65.55567097037714, time: 36.585
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.69    -0.775  -22.9167]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.02    -0.985  -24.4282]
+5000 50
+steps: 249950, episodes: 5000, mean episode reward: -66.63952149688852, time: 34.347
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.785   -0.955  -24.6092]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.835   -0.96   -24.3918]
+5200 50
+steps: 259950, episodes: 5200, mean episode reward: -68.9648377838674, time: 35.592
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.365   -0.89   -23.5047]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.79   -0.945 -24.706]
+5400 50
+steps: 269950, episodes: 5400, mean episode reward: -66.19913223507722, time: 34.834
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.22    -0.87   -24.2323]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.56    -0.985  -24.5641]
+5600 50
+steps: 279950, episodes: 5600, mean episode reward: -69.51080189614147, time: 34.866
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.62    -0.905  -24.4926]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.29    -0.86   -22.0543]
+5800 50
+steps: 289950, episodes: 5800, mean episode reward: -59.94913748575297, time: 34.707
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.005   -0.9    -24.0995]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.085   -0.97   -24.2485]
+6000 50
+steps: 299950, episodes: 6000, mean episode reward: -64.87502901032555, time: 34.501
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.235   -0.955  -24.2581]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.145   -0.96   -23.1429]
+6200 50
+steps: 309950, episodes: 6200, mean episode reward: -72.76088182635611, time: 35.621
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.58    -0.92   -24.1249]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.015   -0.82   -24.0533]
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -68.64077601203353, time: 33.49
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.545   -0.975  -25.1893]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.81    -0.69   -23.8041]
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -64.6314066867786, time: 34.328
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.495   -0.99   -25.1578]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.665   -0.63   -22.9221]
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -63.672508214786774, time: 33.94
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.405   -0.955  -25.0732]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.085  -0.755 -23.356]
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -62.12046392677963, time: 34.11
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.63    -0.955  -25.2112]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.87    -0.73   -23.7712]
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -67.15116203083792, time: 34.507
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.57    -0.935  -25.1812]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.      -0.835  -23.9463]
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -58.697591604608604, time: 33.86
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.73    -0.97   -25.2989]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.61    -0.665  -22.9665]
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -64.14795113894756, time: 33.992
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.52    -0.95   -25.1556]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.37    -0.82   -23.5562]
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -65.74228620116483, time: 33.869
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.43   -0.985 -25.15 ]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.525   -0.74   -23.1481]
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -65.28343361802862, time: 33.63
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.16    -0.935  -25.0484]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.325   -0.82   -23.5934]
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -62.06404497137465, time: 34.095
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.56    -0.945  -25.2103]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.495   -0.805  -23.5352]
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -58.995932092115055, time: 34.549
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.775   -0.99   -25.3437]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.3     -0.805  -24.1034]
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -59.18835820183313, time: 33.669
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.635   -0.985  -25.2579]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.275   -0.645  -22.5379]
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -62.57815333361075, time: 33.854
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.8     -0.985  -24.9098]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.55    -0.775  -23.5623]
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -57.367855631178124, time: 33.382
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.175   -0.935  -24.1676]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.8     -0.86   -24.5313]
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -50.5246334542345, time: 34.852
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.225   -0.96   -21.0712]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.395   -0.915  -24.2942]
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -57.95189794850707, time: 34.286
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.74    -0.94   -21.2525]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.98    -0.88   -24.6949]
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -60.388556128599475, time: 34.377
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-41.825   -0.975  -22.2035]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.94    -0.91   -24.7097]
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -60.740541381012754, time: 33.416
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-41.76   -1.    -22.045]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.11    -0.885  -24.9081]
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -58.80571334662343, time: 33.902
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.9    -0.995 -21.608]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.065   -0.805  -24.0697]
+10200 50
+steps: 509950, episodes: 10200, mean episode reward: -53.52447701957046, time: 34.577
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.965   -0.99   -21.6848]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.88    -0.84   -24.6968]
+10400 50
+steps: 519950, episodes: 10400, mean episode reward: -54.474525570924044, time: 33.46
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-38.1     -0.985  -20.6908]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.655  -0.915 -24.593]
+10600 50
+steps: 529950, episodes: 10600, mean episode reward: -55.695980915960824, time: 33.702
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-38.505   -0.98   -20.6743]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.96    -0.925  -24.7913]
+10800 50
+steps: 539950, episodes: 10800, mean episode reward: -63.62130934743093, time: 33.872
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-41.68    -0.985  -22.0621]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.57    -0.925  -24.5789]
+11000 50
+steps: 549950, episodes: 11000, mean episode reward: -54.01331935357076, time: 34.447
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.145   -1.     -21.5279]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.93    -0.865  -24.6703]
+11200 50
+steps: 559950, episodes: 11200, mean episode reward: -55.57579924077209, time: 34.363
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.77    -1.     -21.1038]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.545   -0.905  -24.5463]
+11400 50
+steps: 569950, episodes: 11400, mean episode reward: -51.273698273658276, time: 33.87
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-41.195   -1.     -21.6965]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.915   -0.8    -24.7365]
+11600 50
+steps: 579950, episodes: 11600, mean episode reward: -61.57570909162498, time: 34.144
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-41.605   -0.985  -22.0735]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.59    -0.715  -24.3947]
+11800 50
+steps: 589950, episodes: 11800, mean episode reward: -53.35947187618192, time: 33.638
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-42.155   -0.99   -22.3031]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.895   -0.925  -24.7844]
+12000 50
+steps: 599950, episodes: 12000, mean episode reward: -51.681352604329476, time: 34.015
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.695   -0.965  -20.9646]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.355  -0.875 -25.026]
+12200 50
+steps: 609950, episodes: 12200, mean episode reward: -67.82852647779505, time: 34.622
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-41.115   -1.     -21.7653]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.25    -0.92   -25.0621]
+12400 50
+steps: 619950, episodes: 12400, mean episode reward: -46.54509223590146, time: 33.929
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.375   -0.99   -19.6739]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.18    -0.93   -24.8405]
+12600
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -65.60216336622354, time: 33.907
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-14.83    -0.38    -8.1141]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.19    -0.815  -22.8833]
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -63.30771403569068, time: 33.606
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-15.325   -0.37    -7.5449]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.68   -0.78  -21.278]
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -60.89339627287252, time: 33.72
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-11.03    -0.275   -5.7452]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.28  -0.81 -21.19]
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -55.83781522930075, time: 33.382
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-17.73    -0.39    -8.9797]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.205   -0.81   -21.3002]
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -62.46754533860301, time: 34.177
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-17.615   -0.41    -9.1104]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-43.87    -0.915  -22.2189]
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -62.49487450506218, time: 33.27
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-13.795  -0.365  -7.151]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.74    -0.86   -21.4315]
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -64.4724159790272, time: 33.163
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-15.47    -0.345   -7.9558]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.43   -0.9   -22.262]
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -54.918782239901844, time: 33.732
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-16.2     -0.38    -8.5096]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.805   -0.98   -23.3677]
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -61.607026647140565, time: 34.227
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-18.97    -0.36    -9.4142]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.2     -0.94   -23.1784]
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -69.60853467439989, time: 34.518
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-23.27    -0.44   -11.5764]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.05    -0.955  -23.1569]
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -53.72634438659602, time: 34.2
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.325   -0.46   -12.3578]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.15   -0.985 -22.913]
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -69.77846251029762, time: 33.688
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.28    -0.465  -12.2085]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.505   -0.96   -23.2695]
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -57.934015970587105, time: 33.748
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.235   -0.43   -11.8774]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.295   -0.91   -21.1517]
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -57.8016960957815, time: 33.537
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.285   -0.44   -11.8165]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.145   -0.965  -22.9583]
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -56.36867763907853, time: 33.623
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-28.865   -0.59   -14.4223]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.475   -0.975  -23.2423]
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -55.164820544822284, time: 33.295
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.145   -0.6    -13.1454]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.25    -0.98   -22.8787]
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -54.825067123397055, time: 33.543
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-32.79    -0.695  -16.6576]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.89    -0.965  -22.9807]
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -58.06321255835652, time: 33.507
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-34.25    -0.785  -17.2968]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.32    -0.99   -23.1445]
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -60.90254624863861, time: 33.423
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-26.385   -0.695  -14.0374]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.39   -1.    -23.357]
+10200 50
+steps: 509950, episodes: 10200, mean episode reward: -57.53310171982297, time: 34.22
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.935  -0.775 -18.135]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.445   -0.995  -23.2636]
+10400 50
+steps: 519950, episodes: 10400, mean episode reward: -52.5069697251294, time: 33.412
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.555   -0.795  -17.9776]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.325   -1.     -22.8354]
+10600 50
+steps: 529950, episodes: 10600, mean episode reward: -49.769028451606935, time: 33.889
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-28.065   -0.63   -14.3166]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.8     -1.     -21.8363]
+10800 50
+steps: 539950, episodes: 10800, mean episode reward: -54.29600663330879, time: 34.279
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-29.805   -0.72   -15.2539]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.595   -0.995  -21.3524]
+11000 50
+steps: 549950, episodes: 11000, mean episode reward: -49.795836139515615, time: 34.263
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.69    -0.805  -18.1177]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.72    -0.99   -21.2322]
+11200 50
+steps: 559950, episodes: 11200, mean episode reward: -55.879493249546684, time: 33.771
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-34.815   -0.835  -17.6826]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.195   -1.     -22.8863]
+11400 50
+steps: 569950, episodes: 11400, mean episode reward: -53.69951890587438, time: 33.488
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.97    -0.76   -16.3292]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.605   -0.99   -22.0256]
+11600 50
+steps: 579950, episodes: 11600, mean episode reward: -53.809742346071346, time: 33.683
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.62    -0.895  -17.1293]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-43.19    -0.995  -22.2201]
+11800 50
+steps: 589950, episodes: 11800, mean episode reward: -52.618829842108205, time: 33.403
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-26.705   -0.76   -14.3861]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.22    -0.985  -22.9946]
+12000 50
+steps: 599950, episodes: 12000, mean episode reward: -46.87743434948481, time: 34.293
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-32.38    -0.745  -16.1039]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.05   -1.    -22.891]
+12200 50
+steps: 609950, episodes: 12200, mean episode reward: -45.464869057758754, time: 33.942
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.035   -0.9    -19.8124]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.84    -1.     -21.9565]
+12400 50
+steps: 619950, episodes: 12400, mean episode reward: -46.16742196293541, time: 33.876
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.81    -0.81   -17.9648]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.165   -0.995  -23.3498]
+12600 50
+steps: 629950, episodes: 12600, mean episode reward: -53.83432194510675, time: 33.767
+[-49.745   -0.96   -25.2859]
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -52.845206817533, time: 33.186
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.87    -1.     -24.6977]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.73    -0.955  -25.2773]
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -51.843113863163396, time: 33.428
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.74    -1.     -24.6042]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.645   -0.97   -25.2202]
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -56.56814800861129, time: 33.501
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.16   -0.985 -24.877]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.605   -0.985  -25.1697]
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -53.966267254300995, time: 33.373
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.925  -0.995 -24.774]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.665   -0.94   -25.1946]
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -52.508482788594435, time: 34.054
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.01    -1.     -24.8225]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.785   -0.99   -25.3267]
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -53.6028554639651, time: 32.57
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.235   -1.     -24.9496]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.675   -0.965  -25.2303]
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -53.708902809663215, time: 32.847
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.005   -0.995  -24.8032]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.78    -0.99   -25.3259]
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -50.67789434588813, time: 32.791
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.84    -0.99   -24.6542]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.675  -0.995 -25.244]
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -50.56109660201788, time: 32.845
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.06    -0.995  -24.8376]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.8     -0.98   -25.3302]
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -48.48538449822015, time: 33.44
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.56    -1.     -24.4759]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.77    -0.98   -25.3292]
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -52.671387207987884, time: 33.281
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.515   -1.     -24.5158]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.745   -0.995  -25.3584]
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -56.526745491096726, time: 33.271
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.685   -0.985  -24.6677]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.085   -0.975  -24.9377]
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -66.0938517394518, time: 32.9
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.015  -1.    -24.936]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.055  -1.    -24.989]
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -53.657983062206256, time: 33.122
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.785   -1.     -24.2176]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.08    -0.975  -24.9592]
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -53.879184113762605, time: 33.962
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.95    -0.99   -23.4794]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.97    -0.99   -24.8176]
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -53.14627769940922, time: 33.246
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.235   -0.995  -23.0583]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.75    -0.93   -24.5236]
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -41.199329321519, time: 33.45
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.74    -0.99   -23.5831]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.77    -1.     -25.3318]
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -47.51542907305125, time: 33.344
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.63    -1.     -24.0378]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.78    -0.975  -24.7049]
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -56.65450246978149, time: 33.517
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.535   -0.995  -24.1149]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.225   -0.995  -25.0604]
+10200 50
+steps: 509950, episodes: 10200, mean episode reward: -53.519894190421226, time: 33.501
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.635   -0.99   -23.7478]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.075   -0.995  -24.9457]
+10400 50
+steps: 519950, episodes: 10400, mean episode reward: -52.98883645195087, time: 33.524
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.225   -1.     -24.4174]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.22    -0.995  -25.0069]
+10600 50
+steps: 529950, episodes: 10600, mean episode reward: -47.40724212519699, time: 33.447
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.29    -1.     -24.4061]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.935   -0.99   -25.0147]
+10800 50
+steps: 539950, episodes: 10800, mean episode reward: -54.52913275267175, time: 33.411
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.515   -0.995  -23.9653]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.85    -0.99   -24.6335]
+11000 50
+steps: 549950, episodes: 11000, mean episode reward: -53.913703067946315, time: 33.49
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.895  -1.    -22.964]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.04    -0.98   -24.9176]
+11200 50
+steps: 559950, episodes: 11200, mean episode reward: -51.913651456647806, time: 34.1
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.155  -1.    -23.775]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.96    -0.995  -24.9413]
+11400 50
+steps: 569950, episodes: 11400, mean episode reward: -43.631944806487525, time: 33.35
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.45    -1.     -24.0404]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.445   -1.     -25.2377]
+11600 50
+steps: 579950, episodes: 11600, mean episode reward: -48.2722470837331, time: 33.663
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.765   -0.985  -23.2072]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.77    -0.98   -24.9332]
+11800 50
+steps: 589950, episodes: 11800, mean episode reward: -53.612357842202215, time: 34.318
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.36    -1.     -22.7686]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.89    -1.     -24.9649]
+12000 50
+steps: 599950, episodes: 12000, mean episode reward: -49.35365736488009, time: 33.925
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.06    -1.     -23.8959]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.395   -1.     -25.0916]
+12200 50
+steps: 609950, episodes: 12200, mean episode reward: -46.000328878412354, time: 34.083
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.275   -1.     -23.4062]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.61    -0.995  -25.2138]
+12400 50
+steps: 619950, episodes: 12400, mean episode reward: -43.73895721609828, time: 33.376
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-43.035   -1.     -22.2036]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.5     -0.995  -25.1568]
+12600 50
+[-47.405   -0.985  -23.8945]
+6400 50
+steps: 319950, episodes: 6400, mean episode reward: -60.80771692692894, time: 34.296
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.625   -0.885  -23.8302]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.02    -0.97   -22.9687]
+6600 50
+steps: 329950, episodes: 6600, mean episode reward: -72.55573049319766, time: 35.048
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.775   -0.755  -22.6645]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.7     -0.97   -23.9996]
+6800 50
+steps: 339950, episodes: 6800, mean episode reward: -64.4090649623483, time: 34.961
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.465   -0.845  -23.7082]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.275   -0.97   -24.4339]
+7000 50
+steps: 349950, episodes: 7000, mean episode reward: -71.60471132456983, time: 35.483
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.36    -0.935  -23.7929]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.59   -0.95  -23.875]
+7200 50
+steps: 359950, episodes: 7200, mean episode reward: -63.582736156393224, time: 35.231
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.255   -0.96   -23.7508]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.31    -0.9    -23.7268]
+7400 50
+steps: 369950, episodes: 7400, mean episode reward: -61.62658803786766, time: 34.733
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.465   -0.97   -23.5287]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.71    -0.94   -24.0623]
+7600 50
+steps: 379950, episodes: 7600, mean episode reward: -67.20183332870232, time: 34.486
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.4     -0.87   -23.7065]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.515   -0.955  -24.6089]
+7800 50
+steps: 389950, episodes: 7800, mean episode reward: -65.71991194274216, time: 34.359
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.02    -0.88   -24.1098]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.185   -0.985  -24.3879]
+8000 50
+steps: 399950, episodes: 8000, mean episode reward: -68.2835783696704, time: 34.095
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.77    -0.88   -23.3021]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.705   -0.99   -24.6583]
+8200 50
+steps: 409950, episodes: 8200, mean episode reward: -55.358958413599936, time: 34.577
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.15   -0.935 -23.131]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.41    -0.985  -24.4767]
+8400 50
+steps: 419950, episodes: 8400, mean episode reward: -57.78345634145866, time: 33.766
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.62    -0.91   -23.8621]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.775   -0.975  -24.6546]
+8600 50
+steps: 429950, episodes: 8600, mean episode reward: -61.034519980528046, time: 34.295
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.655   -0.75   -22.4618]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.035  -0.96  -24.061]
+8800 50
+steps: 439950, episodes: 8800, mean episode reward: -59.33011427016961, time: 33.864
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.295   -0.915  -24.2365]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.3     -0.985  -25.0241]
+9000 50
+steps: 449950, episodes: 9000, mean episode reward: -70.47503701133715, time: 33.951
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.915   -0.995  -24.1158]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.18    -0.955  -24.2584]
+9200 50
+steps: 459950, episodes: 9200, mean episode reward: -68.12999423628598, time: 34.108
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.48   -0.89  -22.653]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.825  -0.955 -24.067]
+9400 50
+steps: 469950, episodes: 9400, mean episode reward: -56.61937549674036, time: 33.607
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.155   -0.99   -24.2208]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.125   -0.92   -24.4196]
+9600 50
+steps: 479950, episodes: 9600, mean episode reward: -70.78822146333715, time: 33.987
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.76    -1.     -24.2663]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.445   -0.97   -23.6952]
+9800 50
+steps: 489950, episodes: 9800, mean episode reward: -54.54592974344206, time: 33.648
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.755   -0.965  -24.6282]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.11    -0.935  -22.9721]
+10000 50
+steps: 499950, episodes: 10000, mean episode reward: -58.77839669389755, time: 33.47
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.685   -0.985  -24.6862]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.92    -0.985  -23.1375]
+10200 50
+steps: 509950, episodes: 10200, mean episode reward: -52.901275713060116, time: 33.746
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.67    -0.99   -24.0078]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.14    -0.925  -23.8289]
+10400 50
+steps: 519950, episodes: 10400, mean episode reward: -56.34855611184688, time: 33.36
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.365   -1.     -23.7651]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.16    -0.99   -24.3142]
+10600 50
+steps: 529950, episodes: 10600, mean episode reward: -53.80086913811554, time: 33.36
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.72    -0.995  -24.5405]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.06    -0.985  -23.9883]
+10800 50
+steps: 539950, episodes: 10800, mean episode reward: -53.09558236451339, time: 33.536
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.7     -0.94   -24.0533]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.46    -0.9    -22.9487]
+11000 50
+steps: 549950, episodes: 11000, mean episode reward: -61.1225878090077, time: 34.758
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.545   -0.995  -24.5244]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.705   -0.97   -23.2613]
+11200 50
+steps: 559950, episodes: 11200, mean episode reward: -51.11730746133607, time: 33.788
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.16    -1.     -24.9117]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.01    -0.985  -23.5306]
+11400 50
+steps: 569950, episodes: 11400, mean episode reward: -51.095907231339105, time: 33.044
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.57    -0.97   -24.5027]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-43.045   -0.995  -22.3337]
+11600 50
+steps: 579950, episodes: 11600, mean episode reward: -52.00222147802517, time: 32.81
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.455   -0.945  -24.4438]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.435   -0.965  -23.1114]
+11800 50
+steps: 589950, episodes: 11800, mean episode reward: -54.011233728024955, time: 33.44
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.925   -1.     -24.7937]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.22    -0.98   -24.0468]
+12000 50
+steps: 599950, episodes: 12000, mean episode reward: -56.983191451056065, time: 33.253
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.7     -0.975  -24.6453]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.05    -0.935  -22.6224]
+12200 50
+steps: 609950, episodes: 12200, mean episode reward: -59.19403983135493, time: 33.685
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.725  -1.    -24.673]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.185   -0.945  -23.0705]
+12400 50
+steps: 619950, episodes: 12400, mean episode reward: -55.310830074632904, time: 33.24
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.045   -0.995  -24.8444]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.925   -0.95   -23.6612]
+12600 50
+steps: 629950, episodes: 12600, mean episode reward: -62.264759530481896, time: 33.382
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.125   -1.     -24.2751]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.515   -0.86   -22.5036]
+12800 50
+steps: 639950, episodes: 12800, mean episode reward: -57.29953341380455, time: 33.529
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.285   -0.99   -24.3458]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.35    -0.985  -23.5229]
+13000 50
+steps: 649950, episodes: 13000, mean episode reward: -53.24837146796799, time: 32.967
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.615   -0.995  -23.8155]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.195   -0.98   -22.5091]
+13200 50
+steps: 659950, episodes: 13200, mean episode reward: -48.80180886504582, time: 34.512
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.825  -0.98  -23.205]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.7     -0.97   -23.7223]
+13400 50
+steps: 669950, episodes: 13400, mean episode reward: -51.99307510019372, time: 33.615
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-42.71   -0.915 -21.516]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.475   -0.965  -24.0417]
+13600 50
+steps: 679950, episodes: 13600, mean episode reward: -65.76165265970837, time: 33.506
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.435   -0.955  -22.9786]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.21    -0.965  -22.4893]
+13800 50
+steps: 689950, episodes: 13800, mean episode reward: -57.164737250522286, time: 33.279
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.705   -0.925  -22.8807]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.905   -0.95   -21.4971]
+14000 50
+steps: 699950, episodes: 14000, mean episode reward: -50.670636737794965, time: 33.46
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.715   -0.995  -23.7014]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.645   -0.92   -23.3035]
+14200 50
+steps: 709950, episodes: 14200, mean episode reward: -56.0112018405508, time: 34.216
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.395   -0.96   -23.4542]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.92    -0.99   -24.2917]
+14400 50
+steps: 719950, episodes: 14400, mean episode reward: -58.0309909606483, time: 34.122
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.465   -0.99   -24.3903]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.045   -0.98   -24.3498]
+14600 50
+steps: 729950, episodes: 14600, mean episode reward: -53.68062254164806, time: 33.266
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.075   -0.95   -23.2844]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.635   -0.97   -24.6074]
+14800 50
+steps: 739950, episodes: 14800, mean episode reward: -55.18938370779705, time: 33.367
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.005   -0.99   -23.3116]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.055   -0.985  -23.2838]
+15000 50
+steps: 749950, episodes: 15000, mean episode reward: -52.54290695217553, time: 33.686
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.27    -0.985  -23.3804]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-43.505   -0.93   -21.8947]
+15200 50
+steps: 759950, episodes: 15200, mean episode reward: -53.077263266301436, time: 33.767
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.915   -0.98   -23.2535]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.065   -0.99   -24.3448]
+15400 50
+steps: 769950, episodes: 15400, mean episode reward: -57.30024716526958, time: 33.158
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.98    -0.965  -23.1557]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.805  -0.98  -24.122]
+15600 50
+steps: 779950, episodes: 15600, mean episode reward: -61.852441932269265, time: 33.446
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.63    -0.965  -21.5464]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.345   -1.     -23.2328]
+15800 50
+steps: 789950, episodes: 15800, mean episode reward: -75.64453510852157, time: 33.669
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.825   -0.975  -21.7261]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.31    -0.98   -21.0802]
+16000 50
+steps: 799950, episodes: 16000, mean episode reward: -57.434458491887746, time: 34.159
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.775   -0.975  -23.9061]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.085   -0.98   -21.1174]
+16200 50
+steps: 809950, episodes: 16200, mean episode reward: -53.17568229543408, time: 34.392
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.485   -0.965  -22.8746]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.66    -0.99   -20.5162]
+16400 50
+steps: 819950, episodes: 16400, mean episode reward: -52.528941532939314, time: 33.653
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.775   -0.985  -23.8306]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.405   -0.99   -21.1972]
+16600 50
+steps: 829950, episodes: 16600, mean episode reward: -53.57896465330654, time: 33.368
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.445   -0.985  -23.7002]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-37.79    -0.89   -19.6155]
+16800 50
+steps: 839950, episodes: 16800, mean episode reward: -54.354268763573806, time: 33.876
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.105   -0.985  -24.0771]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-37.28    -0.98   -19.3145]
+17000 50
+steps: 849950, episodes: 17000, mean episode reward: -76.09380004949962, time: 33.268
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.23    -0.995  -24.1281]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-39.77    -0.985  -20.9964]
+17200 50
+steps: 859950, episodes: 17200, mean episode reward: -52.4069216396359, time: 33.679
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.545  -0.995 -24.412]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-39.97    -0.855  -20.4397]
+17400 50
+steps: 869950, episodes: 17400, mean episode reward: -50.469857313206475, time: 33.555
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.63    -0.965  -23.0098]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.405   -0.955  -21.3363]
+17600 50
+steps: 879950, episodes: 17600, mean episode reward: -56.53101167957357, time: 33.477
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.83    -0.99   -24.6534]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.215   -0.98   -23.1664]
+17800 50
+steps: 889950, episodes: 17800, mean episode reward: -55.7934199536354, time: 33.588
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.355   -0.945  -23.8778]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.21    -0.96   -21.4678]
+18000 50
+steps: 899950, episodes: 18000, mean episode reward: -61.82655333369987, time: 34.174
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.735   -0.99   -24.5695]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-39.145   -0.97   -20.7436]
+18200 50
+steps: 909950, episodes: 18200, mean episode reward: -50.276962658872456, time: 33.87
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.43    -0.995  -24.3741]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-39.025   -0.97   -20.3136]
+18400 50
+steps: 919950, episodes: 18400, mean episode reward: -46.37629252966452, time: 33.428
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.13    -0.915  -22.8291]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.46    -0.925  -21.4081]
+18600 50
+steps: 929950, episodes: 18600, mean episode reward: -43.73082687586183, time: 33.527
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.95   -0.975 -23.985]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-37.04   -0.97  -19.466] 50
+steps: 629950, episodes: 12600, mean episode reward: -53.876246803067005, time: 33.611
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-42.275   -0.985  -22.0775]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.73    -0.755  -24.4663]
+12800 50
+steps: 639950, episodes: 12800, mean episode reward: -56.12150534181702, time: 34.07
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.47    -0.935  -21.2178]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.715   -0.735  -24.5386]
+13000 50
+steps: 649950, episodes: 13000, mean episode reward: -46.241201467738975, time: 35.845
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.04   -0.87  -22.794]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.07    -0.78   -24.7278]
+13200 50
+steps: 659950, episodes: 13200, mean episode reward: -58.64135480682992, time: 35.051
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.78    -0.955  -21.1169]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.215   -0.93   -24.9255]
+13400 50
+steps: 669950, episodes: 13400, mean episode reward: -48.1433891107586, time: 34.026
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.98    -1.     -23.6927]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.53    -0.805  -24.3361]
+13600 50
+steps: 679950, episodes: 13600, mean episode reward: -46.9649445510236, time: 33.73
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.85    -0.99   -20.9822]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.72    -0.765  -24.4569]
+13800 50
+steps: 689950, episodes: 13800, mean episode reward: -49.862046940541916, time: 33.647
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.47    -0.995  -19.7071]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.71   -0.83  -23.745]
+14000 50
+steps: 699950, episodes: 14000, mean episode reward: -50.72905971683527, time: 33.95
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.955   -0.975  -18.7021]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.74    -0.905  -24.5479]
+14200 50
+steps: 709950, episodes: 14200, mean episode reward: -55.04294925535882, time: 34.005
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-37.61    -1.     -20.3693]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.705   -0.825  -24.5419]
+14400 50
+steps: 719950, episodes: 14400, mean episode reward: -50.52773954873228, time: 34.071
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-42.15  -1.   -21.77]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.22   -0.93  -24.227]
+14600 50
+steps: 729950, episodes: 14600, mean episode reward: -54.12943694096229, time: 33.763
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.31   -0.995 -24.21 ]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.7     -0.92   -24.5843]
+14800 50
+steps: 739950, episodes: 14800, mean episode reward: -47.91914818673844, time: 33.64
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-43.175   -0.97   -22.2765]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.225  -0.885 -24.09 ]
+15000 50
+steps: 749950, episodes: 15000, mean episode reward: -52.25254483293695, time: 33.521
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.12    -0.97   -23.1943]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.77    -0.835  -23.8346]
+15200 50
+steps: 759950, episodes: 15200, mean episode reward: -47.852425036196756, time: 34.226
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.38    -0.97   -24.0853]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.25  -0.9  -24.16]
+15400 50
+steps: 769950, episodes: 15400, mean episode reward: -50.61115113272213, time: 33.597
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.315   -0.995  -19.7954]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.38    -0.9    -24.2748]
+15600 50
+steps: 779950, episodes: 15600, mean episode reward: -47.86147792781834, time: 33.166
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-42.405   -0.985  -22.2878]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.555   -0.825  -23.4935]
+15800 50
+steps: 789950, episodes: 15800, mean episode reward: -60.99711030676083, time: 33.497
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.29    -0.995  -19.5432]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.195   -0.875  -23.4965]
+16000 50
+steps: 799950, episodes: 16000, mean episode reward: -47.351070033180676, time: 33.857
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.985   -0.98   -20.0523]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.02    -0.93   -23.9939]
+16200 50
+steps: 809950, episodes: 16200, mean episode reward: -48.7709914137204, time: 33.93
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.21    -0.99   -19.7958]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.775   -0.905  -24.5061]
+16400 50
+steps: 819950, episodes: 16400, mean episode reward: -46.861634091759555, time: 33.309
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.935   -0.995  -19.5133]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.975   -0.885  -23.9889]
+16600 50
+steps: 829950, episodes: 16600, mean episode reward: -42.95484743692284, time: 33.344
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.77    -0.985  -21.1307]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.58    -0.92   -23.6373]
+16800 50
+steps: 839950, episodes: 16800, mean episode reward: -41.15638323659627, time: 33.331
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-37.335  -0.965 -19.893]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.55    -0.95   -24.4047]
+17000 50
+steps: 849950, episodes: 17000, mean episode reward: -45.08133659736543, time: 33.601
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.15    -0.935  -22.6897]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.57    -0.875  -23.6733]
+17200 50
+steps: 859950, episodes: 17200, mean episode reward: -47.44101048106067, time: 33.579
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.49    -0.975  -21.4779]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.415   -0.9    -24.3025]
+17400 50
+steps: 869950, episodes: 17400, mean episode reward: -48.500209370114554, time: 34.359
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.67    -0.94   -19.7176]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.61    -0.955  -24.4665]
+17600 50
+steps: 879950, episodes: 17600, mean episode reward: -44.79502851410001, time: 33.148
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.275   -0.985  -19.4021]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.91    -0.975  -24.6724]
+17800 50
+steps: 889950, episodes: 17800, mean episode reward: -41.68599815715548, time: 33.317
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.195   -0.995  -21.4032]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.815   -0.945  -24.6349]
+18000 50
+steps: 899950, episodes: 18000, mean episode reward: -46.32779219363683, time: 33.186
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.185   -0.99   -19.8282]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.915   -0.96   -23.9877]
+18200 50
+steps: 909950, episodes: 18200, mean episode reward: -51.115078721972516, time: 33.587
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.45    -0.99   -18.7093]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.2     -0.895  -24.1224]
+18400 50
+steps: 919950, episodes: 18400, mean episode reward: -49.89938542244245, time: 33.192
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.335   -0.99   -18.7179]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.2     -0.905  -24.1013]
+18600 50
+steps: 929950, episodes: 18600, mean episode reward: -43.72832686877792, time: 33.569
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.39    -0.995  -18.7461]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.     -0.915 -24.724]
+18800 50
+steps: 939950, episodes: 18800, mean episode reward: -47.940067168992094, time: 33.283
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.75    -0.895  -18.4971]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.5     -0.995  -23.6505]
+12800 50
+steps: 639950, episodes: 12800, mean episode reward: -46.10667051932927, time: 33.759
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.25    -0.77   -17.7812]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.445   -1.     -23.4367]
+13000 50
+steps: 649950, episodes: 13000, mean episode reward: -49.804436442609045, time: 33.786
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.12    -0.685  -14.8442]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.925   -1.     -22.1123]
+13200 50
+steps: 659950, episodes: 13200, mean episode reward: -54.697128942978395, time: 34.223
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-32.3     -0.69   -16.5215]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.66    -1.     -21.8131]
+13400 50
+steps: 669950, episodes: 13400, mean episode reward: -51.9612272978378, time: 33.733
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.035  -0.705 -18.072]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-45.85    -0.995  -23.3864]
+13600 50
+steps: 679950, episodes: 13600, mean episode reward: -42.642997232364635, time: 33.343
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.235   -0.9    -18.3298]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.045   -0.995  -24.2282]
+13800 50
+steps: 689950, episodes: 13800, mean episode reward: -47.45933097598514, time: 33.427
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.48    -0.795  -16.8434]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.87    -0.995  -23.7075]
+14000 50
+steps: 699950, episodes: 14000, mean episode reward: -53.54210728401459, time: 33.344
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.19    -0.81   -16.5803]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.67    -0.995  -24.7188]
+14200 50
+steps: 709950, episodes: 14200, mean episode reward: -55.40916301458758, time: 34.267
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-37.98    -0.88   -19.4237]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.945   -1.     -24.2481]
+14400 50
+steps: 719950, episodes: 14400, mean episode reward: -46.68900293457646, time: 33.536
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.895   -0.77   -16.5149]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.335   -0.985  -24.5921]
+14600 50
+steps: 729950, episodes: 14600, mean episode reward: -51.2794826179095, time: 33.772
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-24.895   -0.665  -13.4534]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.045   -0.995  -24.4685]
+14800 50
+steps: 739950, episodes: 14800, mean episode reward: -45.7848520524197, time: 33.584
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.4     -0.74   -14.0313]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-46.475   -1.     -23.6949]
+15000 50
+steps: 749950, episodes: 15000, mean episode reward: -44.26799142894545, time: 33.698
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.36   -0.745 -17.359]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.74    -1.     -21.8869]
+15200 50
+steps: 759950, episodes: 15200, mean episode reward: -51.6940972411554, time: 34.485
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.59    -0.8    -17.5399]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.835   -1.     -21.0231]
+15400 50
+steps: 769950, episodes: 15400, mean episode reward: -43.729094674563406, time: 33.753
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-32.175   -0.8    -16.9299]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.11    -0.995  -22.1801]
+15600 50
+steps: 779950, episodes: 15600, mean episode reward: -48.690030735361105, time: 33.757
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.06    -0.825  -16.7167]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.42    -1.     -21.4467]
+15800 50
+steps: 789950, episodes: 15800, mean episode reward: -47.717144678256965, time: 33.706
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.08    -0.8    -18.2791]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.335  -1.    -22.204]
+16000 50
+steps: 799950, episodes: 16000, mean episode reward: -44.801933769791155, time: 33.814
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.98    -0.815  -16.5948]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.065   -1.     -20.7372]
+16200 50
+steps: 809950, episodes: 16200, mean episode reward: -44.4166594723277, time: 34.121
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.285   -0.825  -17.8417]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.585   -1.     -22.5985]
+16400 50
+steps: 819950, episodes: 16400, mean episode reward: -45.13820102351403, time: 33.766
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-26.85    -0.785  -14.9012]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-36.94    -1.     -20.1127]
+16600 50
+steps: 829950, episodes: 16600, mean episode reward: -46.20985583935548, time: 34.198
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.35    -0.85   -17.0499]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-43.375  -1.    -22.701]
+16800 50
+steps: 839950, episodes: 16800, mean episode reward: -43.09266439515035, time: 33.9
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-32.855   -0.885  -17.9164]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.12    -1.     -22.7637]
+17000 50
+steps: 849950, episodes: 17000, mean episode reward: -44.304516724509284, time: 33.978
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.85   -0.845 -17.966]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.055   -1.     -22.1259]
+17200 50
+steps: 859950, episodes: 17200, mean episode reward: -45.270296444085325, time: 34.318
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.91    -0.945  -18.8603]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.425   -0.995  -23.1429]
+17400 50
+steps: 869950, episodes: 17400, mean episode reward: -38.3218917954084, time: 34.072
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.31    -0.895  -17.6628]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.73    -1.     -22.1094]
+17600 50
+steps: 879950, episodes: 17600, mean episode reward: -46.89109970783267, time: 33.574
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-28.105   -0.82   -16.0061]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-42.96    -1.     -22.5127]
+17800 50
+steps: 889950, episodes: 17800, mean episode reward: -46.38663166363611, time: 33.725
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.465  -0.935 -18.579]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-44.185   -1.     -22.9677]
+18000 50
+steps: 899950, episodes: 18000, mean episode reward: -48.44893520357612, time: 34.242
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-32.095   -0.925  -18.0097]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.535   -1.     -24.1958]
+18200 50
+steps: 909950, episodes: 18200, mean episode reward: -47.073582116335054, time: 34.026
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-29.725   -0.95   -17.0422]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.68    -1.     -24.4043]
+18400 50
+steps: 919950, episodes: 18400, mean episode reward: -51.23894454838557, time: 33.169
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.79    -0.945  -18.1565]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.22    -1.     -24.1049]
+18600 50
+steps: 929950, episodes: 18600, mean episode reward: -44.85954502530916, time: 33.989
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-28.69   -0.965 -17.063]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.29    -1.     -24.0267]
+18800 50
+steps: 939950, episodes: 18800, mean episode reward: -41.07301334563379, time: 33.678
+steps: 629950, episodes: 12600, mean episode reward: -49.013713297840496, time: 33.733
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.15   -0.995 -22.828]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.63    -0.995  -25.2382]
+12800 50
+steps: 639950, episodes: 12800, mean episode reward: -44.92422875360136, time: 34.143
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.68    -1.     -23.0831]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.76    -1.     -25.3303]
+13000 50
+steps: 649950, episodes: 13000, mean episode reward: -50.52750171810264, time: 35.322
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.62    -0.995  -24.2958]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.635   -0.995  -25.2498]
+13200 50
+steps: 659950, episodes: 13200, mean episode reward: -41.117569685641314, time: 33.977
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.44    -0.995  -24.2998]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.305   -0.995  -25.1394]
+13400 50
+steps: 669950, episodes: 13400, mean episode reward: -46.6013009445825, time: 33.707
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-45.285   -0.98   -23.1677]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.64    -0.995  -25.2754]
+13600 50
+steps: 679950, episodes: 13600, mean episode reward: -48.880841145877554, time: 33.539
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.255  -0.995 -22.918]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.3     -0.99   -25.0083]
+13800 50
+steps: 689950, episodes: 13800, mean episode reward: -41.74235709612347, time: 33.181
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.195   -0.99   -20.7624]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.68    -1.     -25.2807]
+14000 50
+steps: 699950, episodes: 14000, mean episode reward: -45.5653329631235, time: 33.89
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-39.87   -0.985 -20.976]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.385   -0.98   -25.0551]
+14200 50
+steps: 709950, episodes: 14200, mean episode reward: -42.71562954246579, time: 33.897
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-42.49   -1.    -22.329]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.76    -1.     -25.3282]
+14400 50
+steps: 719950, episodes: 14400, mean episode reward: -47.98010399553534, time: 33.169
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.185   -1.     -21.3634]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.335   -0.995  -25.0577]
+14600 50
+steps: 729950, episodes: 14600, mean episode reward: -47.455368750743965, time: 33.838
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-44.07    -1.     -22.6978]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.655   -0.995  -25.2683]
+14800 50
+steps: 739950, episodes: 14800, mean episode reward: -48.97604792199233, time: 33.415
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-42.53    -0.995  -21.9624]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.615   -1.     -25.2489]
+15000 50
+steps: 749950, episodes: 15000, mean episode reward: -52.28589918081048, time: 33.345
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-37.805   -0.935  -19.6037]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.54    -0.995  -25.1865]
+15200 50
+steps: 759950, episodes: 15200, mean episode reward: -48.31280608357358, time: 34.481
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-41.385  -0.97  -21.562]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.62    -1.     -25.2557]
+15400 50
+steps: 769950, episodes: 15400, mean episode reward: -59.37653967423057, time: 33.627
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.675  -1.    -21.356]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.6     -1.     -25.2526]
+15600 50
+steps: 779950, episodes: 15600, mean episode reward: -62.72365966427931, time: 32.925
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.685   -1.     -19.7462]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.195   -1.     -25.0616]
+15800 50
+steps: 789950, episodes: 15800, mean episode reward: -47.87636059275155, time: 33.508
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-34.1     -1.     -18.8318]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.7     -1.     -25.3242]
+16000 50
+steps: 799950, episodes: 16000, mean episode reward: -51.07722052173963, time: 33.481
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.085   -1.     -18.2421]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.74   -0.995 -25.333]
+16200 50
+steps: 809950, episodes: 16200, mean episode reward: -44.97849236180485, time: 34.722
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-32.205  -1.    -18.238]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.69    -1.     -25.2963]
+16400 50
+steps: 819950, episodes: 16400, mean episode reward: -46.13414514498227, time: 33.838
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.505   -0.985  -18.0669]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.37    -0.985  -25.0977]
+16600 50
+steps: 829950, episodes: 16600, mean episode reward: -43.265350403303344, time: 33.903
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.965  -1.    -17.575]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.305   -0.99   -25.0741]
+16800 50
+steps: 839950, episodes: 16800, mean episode reward: -44.37264916211902, time: 33.834
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.565   -1.     -19.1072]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.275   -0.995  -24.7245]
+17000 50
+steps: 849950, episodes: 17000, mean episode reward: -42.898942176341606, time: 34.304
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.255   -0.995  -18.8681]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.255   -1.     -25.1075]
+17200 50
+steps: 859950, episodes: 17200, mean episode reward: -40.24429602993661, time: 34.086
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.63    -1.     -18.2627]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.42    -0.995  -25.2161]
+17400 50
+steps: 869950, episodes: 17400, mean episode reward: -42.49160562247367, time: 34.139
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-27.75    -1.     -16.8527]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.74    -0.995  -25.3436]
+17600 50
+steps: 879950, episodes: 17600, mean episode reward: -48.05819197519249, time: 33.419
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.275  -1.    -17.507]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.795   -1.     -25.3599]
+17800 50
+steps: 889950, episodes: 17800, mean episode reward: -44.41021620544692, time: 33.547
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.87   -0.99  -18.515]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.72    -1.     -25.3265]
+18000 50
+steps: 899950, episodes: 18000, mean episode reward: -43.40063237187073, time: 33.282
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-26.62   -1.    -16.451]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.76    -0.985  -25.3272]
+18200 50
+steps: 909950, episodes: 18200, mean episode reward: -46.42774053765631, time: 34.023
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.03    -0.995  -18.0045]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.72    -0.995  -25.2943]
+18400 50
+steps: 919950, episodes: 18400, mean episode reward: -48.21854679789865, time: 33.939
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.615   -1.     -19.2292]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.625   -1.     -25.2869]
+18600 50
+steps: 929950, episodes: 18600, mean episode reward: -41.54517167945222, time: 33.774
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.34    -1.     -17.6151]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.675   -1.     -25.2935]
+18800 50
+steps: 939950, episodes: 18800, mean episode reward: -43.65226682908635, time: 33.733
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-34.72    -0.995  -18.9918]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.95   -0.955 -24.702]
+19000 50
+steps: 949950, episodes: 19000, mean episode reward: -39.66298846803923, time: 32.978
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.695   -0.945  -19.1444]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.07    -0.935  -24.7761]
+19200 50
+steps: 959950, episodes: 19200, mean episode reward: -42.899405343937275, time: 33.523
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-37.065   -0.975  -20.1005]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.335   -0.885  -24.2412]
+19400 50
+steps: 969950, episodes: 19400, mean episode reward: -43.039731338082454, time: 33.305
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.63    -0.945  -19.9006]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.125   -0.94   -24.8148]
+19600 50
+steps: 979950, episodes: 19600, mean episode reward: -44.24360043748702, time: 33.232
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-36.66    -0.99   -20.1493]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.655   -0.915  -24.5076]
+19800 50
+steps: 989950, episodes: 19800, mean episode reward: -48.61605994683063, time: 33.438
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.805   -0.975  -21.5435]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.08    -0.905  -24.8225]
+20000 50
+steps: 999950, episodes: 20000, mean episode reward: -50.79619433799946, time: 33.636
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-40.6     -0.98   -21.1537]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.195  -0.925 -24.905]
+...Finished!
+Trained episodes: 1 -> 20000
+Total time: 0.93 hr
+
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.425   -0.995  -18.5641]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.61    -1.     -25.2498]
+19000 50
+steps: 949950, episodes: 19000, mean episode reward: -44.413006108989094, time: 34.762
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-34.715   -1.     -19.4702]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.785   -1.     -25.3661]
+19200 50
+steps: 959950, episodes: 19200, mean episode reward: -43.46118063974606, time: 33.761
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.73   -1.    -17.771]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.895   -1.     -25.4511]
+19400 50
+steps: 969950, episodes: 19400, mean episode reward: -37.849079369210365, time: 33.781
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-30.66    -1.     -17.8412]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.87    -0.995  -25.4151]
+19600 50
+steps: 979950, episodes: 19600, mean episode reward: -46.18768897337061, time: 33.896
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-34.485   -0.995  -19.2994]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.585   -1.     -25.2274]
+19800 50
+steps: 989950, episodes: 19800, mean episode reward: -44.75359890298134, time: 33.661
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-28.015   -0.99   -16.5322]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.495   -0.99   -25.1911]
+20000 50
+steps: 999950, episodes: 20000, mean episode reward: -46.16454388027348, time: 33.461
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-33.475   -0.995  -19.1902]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-49.505   -1.     -25.1672]
+...Finished!
+Trained episodes: 1 -> 20000
+Total time: 0.93 hr
+
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-27.595   -0.98   -16.5991]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.68    -0.995  -24.6879]
+19000 50
+steps: 949950, episodes: 19000, mean episode reward: -47.537134752614655, time: 34.968
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-25.89    -0.96   -15.6905]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.795   -0.99   -21.8217]
+19200 50
+steps: 959950, episodes: 19200, mean episode reward: -51.18862921338775, time: 34.164
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-27.64    -0.91   -16.0059]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.98    -1.     -24.3149]
+19400 50
+steps: 969950, episodes: 19400, mean episode reward: -42.33028548514685, time: 33.921
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-31.395  -0.935 -17.418]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.965   -0.99   -24.8061]
+19600 50
+steps: 979950, episodes: 19600, mean episode reward: -45.31238465766464, time: 34.142
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-35.975   -0.945  -19.0659]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.835   -1.     -24.7983]
+19800 50
+steps: 989950, episodes: 19800, mean episode reward: -45.99029453876029, time: 33.551
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-28.78    -0.98   -17.0966]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-48.73   -1.    -24.904]
+20000 50
+steps: 999950, episodes: 20000, mean episode reward: -41.076773981677924, time: 33.528
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-29.825   -0.94   -17.6724]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-47.93    -1.     -24.5674]
+...Finished!
+Trained episodes: 1 -> 20000
+Total time: 0.93 hr
+
+18800 50
+steps: 939950, episodes: 18800, mean episode reward: -51.60917748616736, time: 33.86
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-49.375   -1.     -25.0479]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-37.325   -0.94   -19.8517]
+19000 50
+steps: 949950, episodes: 19000, mean episode reward: -40.680431525711526, time: 33.418
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.64    -0.965  -23.9123]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-41.68    -0.985  -21.7653]
+19200 50
+steps: 959950, episodes: 19200, mean episode reward: -47.654997835870525, time: 33.848
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.    -0.97 -24.22]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.13    -0.885  -19.7712]
+19400 50
+steps: 969950, episodes: 19400, mean episode reward: -56.590301779615494, time: 33.914
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-47.725   -0.95   -24.1251]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-40.545   -1.     -21.5462]
+19600 50
+steps: 979950, episodes: 19600, mean episode reward: -63.66499938745644, time: 33.522
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.365   -0.95   -24.3717]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.315  -1.    -20.289]
+19800 50
+steps: 989950, episodes: 19800, mean episode reward: -57.27977205795842, time: 33.797
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-48.035  -0.915 -24.217]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.175   -0.995  -19.9335]
+20000 50
+steps: 999950, episodes: 20000, mean episode reward: -42.961664270791296, time: 30.808
+agent0_energy_min, agent0_energy_max, agent0_energy_avg
+[-46.405   -1.     -23.8999]
+agent1_energy_min, agent1_energy_max, agent1_energy_avg
+[-38.975   -0.985  -20.5003]
+...Finished!
+Trained episodes: 1 -> 20000
+Total time: 0.93 hr

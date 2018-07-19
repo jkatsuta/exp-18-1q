@@ -67,7 +67,11 @@ class MultiAgentEnv(gym.Env):
                 self.action_space.append(total_action_space[0])
         # add by JK
         for space in self.action_space:
-            self.world.action_trajectory.append([np.zeros(space.n)])
+            if isinstance(space, gym.spaces.multi_discrete.MultiDiscrete):
+                n = sum(space.nvec)
+            else:
+                n = space.n
+            self.world.action_trajectory.append([np.zeros(n)])
         # observation space
         for agent in self.agents:
             obs_dim = len(observation_callback(agent, self.world))
@@ -82,6 +86,8 @@ class MultiAgentEnv(gym.Env):
             self.viewers = [None] * self.n
         self._reset_render()
 
+        # added by JK
+        self.dic_visible_radius = {}
 
     def step(self, action_n):
         obs_n = []
@@ -251,6 +257,20 @@ class MultiAgentEnv(gym.Env):
                 self.render_geoms.append(geom)
                 self.render_geoms_xform.append(xform)
 
+            # added by JK ##################
+            for entity in self.world.entities:
+                if hasattr(entity, 'trade'):
+                    radius0 = entity.size
+                    geom = rendering.make_circle(radius0, res=120)
+                    xform = rendering.Transform()
+                    geom.set_color(*entity.color, alpha=0.1)
+                    geom.add_attr(xform)
+                    self.render_geoms.append(geom)
+                    self.render_geoms_xform.append(xform)
+                    self.dic_visible_radius[entity.name] =\
+                        {'geom': geom, 'xform': xform, 'radius0': radius0}
+            ###############################
+
             # add geoms to viewer
             for viewer in self.viewers:
                 viewer.geoms = []
@@ -270,6 +290,14 @@ class MultiAgentEnv(gym.Env):
             # update geometry positions
             for e, entity in enumerate(self.world.entities):
                 self.render_geoms_xform[e].set_translation(*entity.state.p_pos)
+
+                # added by JK
+                if entity.name in self.dic_visible_radius.keys():
+                    dic = self.dic_visible_radius[entity.name]
+                    scale = entity.state.visible_radius / dic['radius0']
+                    dic['xform'].set_translation(*entity.state.p_pos)
+                    dic['xform'].set_scale(scale, scale)
+                ###
             # render to display or array
             results.append(self.viewers[i].render(return_rgb_array = mode=='rgb_array'))
         # mod by JK

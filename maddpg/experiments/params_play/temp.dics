@@ -1,12 +1,14 @@
 [
 {
- 'p_dir': './exp_results/exp4_180319',
- 'exp_dir': 'simple_tag__2018-03-20_14-44-50_seed10',
- 'n_epis': [80000],
+ 'p_dir': './exp_results/exp9_180712',
+ 'exp_dir': 'wanderer1_4agents-1__2018-07-12_00-27-43',
+ 'n_epis': [40000],
+ 'num_episodes': 5,
+ 'max_episode_len': 50,
+ 'good_policy': 'ddpg',
  'adv_policy': 'ddpg',
- 'num_episodes': 4,
- 'max_episode_len': 200,
  'outfile_suffix': None,
- 'display_speed': 'high',
+ 'display_speed': 'slow',
+ 'exec': True,
 },
 ]

@@ -14,6 +14,10 @@ class AgentState(EntityState):
         super(AgentState, self).__init__()
         # communication utterance
         self.c = None
+        # added by JK
+        self.energy = 0.0
+        self.attention = 0.0
+        self.visible_radius = 0.0
 
 # action of the agent
 class Action(object):
@@ -22,6 +26,7 @@ class Action(object):
         self.u = None
         # communication action
         self.c = None
+        self.visible_radius_color = None
 
 # properties and state of physical world entity
 class Entity(object):
@@ -77,6 +82,8 @@ class Agent(Entity):
         self.action = Action()
         # script behavior to execute
         self.action_callback = None
+        # added by JK
+        self.trade = False
 
 # multi-agent world
 class World(object):
@@ -177,7 +184,7 @@ class World(object):
             agent.state.c = np.zeros(self.dim_c)
         else:
             noise = np.random.randn(*agent.action.c.shape) * agent.c_noise if agent.c_noise else 0.0
-            agent.state.c = agent.action.c + noise      
+            agent.state.c = agent.action.c + noise
 
     # get collision forces for any contact between two entities
     def get_collision_force(self, entity_a, entity_b):

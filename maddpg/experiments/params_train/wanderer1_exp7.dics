@@ -1,0 +1,12 @@
+[
+# exp7
+{
+'scenarios': ['wanderer1_1agent-%d' % (i+1) for i in range(4)],
+'num_episodes': [10000],
+'is_parallel': True,
+'good_policy': 'ddpg',
+'adv_policy': 'ddpg',
+'max_episode_lens': [50],
+'is_variable_max_episode_len': False,
+},
+]

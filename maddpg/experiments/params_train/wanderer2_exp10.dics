@@ -1,0 +1,11 @@
+[
+{
+'scenarios': ['wanderer2_2agents-%d' % i for i in [1, 2]],
+'num_episodes': [40000, 40000, 40000],
+'is_parallel': True,
+'good_policy': 'ddpg',
+'adv_policy': 'ddpg',
+'max_episode_lens': [50, 50, 50],
+'is_variable_max_episode_len': False,
+},
+]
